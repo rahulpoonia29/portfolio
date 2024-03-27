@@ -1,0 +1,87 @@
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 20px;
+	margin: 20px;
+}
+
+.project-card {
+	width: 30%;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.project-info {
+	padding: 20px;
+}
+
+.project-title {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.project-description {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 15px;
+}
+
+.visit-button {
+	display: inline-block;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: #fff;
+	font-size: 0.9rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.visit-button:hover {
+	background-color: #0056b3;
+}
+
+@media screen and (max-width: 1300px) {
+	.project-card {
+		width: 48%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.project-card {
+		width: 95%;
+	}
+}
+@media screen and (max-width: 576px) {
+	.skills {
+		margin: 20px;
+	}
+	.skill-card {
+		width: 100%;
+	}
+	.skill-title {
+		font-size: 16px;
+		margin: 10px;
+	}
+	.skill-description {
+		margin: 0 10px 10px 10px;
+	}
+}
