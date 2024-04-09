@@ -1,6 +1,6 @@
 var list = ["Web Developer", "Web Designer", "Student", "Python Developer"];
 
-var element = document.getElementById("text");
+var element = document.getElementById("intro-text");
 var content = element.innerText;
 var i = 0;
 var j = 0;
@@ -52,7 +52,7 @@ function showSlides() {
 		slideIndex = 1;
 	}
 	slides[slideIndex - 1].style.display = "block";
-	setTimeout(showSlides, 3500); // Change image every 2 seconds
+	setTimeout(showSlides, 5500); // Change image every 2 seconds
 }
 
 let cards = document.getElementsByClassName("info-card");

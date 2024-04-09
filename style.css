@@ -21,22 +21,34 @@ body {
 
 #main {
 	display: grid;
-	margin: 0;
-	height: 100vh;
+	margin: 40px;
+	height: 90vh;
+	gap: 20px;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-items: center;
+	margin: 0px 80px;
+	width: 90vw;
+	box-sizing: border-box;
 }
 
 #left {
-	margin-left: 70px;
+	/* margin-left: 70px; */
 	display: flex;
 	flex-direction: column;
 }
 
+#intro-text-para {
+	font-size: 25px;
+}
+#intro-text {
+	color: rgb(109, 40, 217);
+	/* font-size: 25px; */
+}
+
 #intro {
 	padding: 10px;
-	font-size: 60px;
+	font-size: 50px;
 }
 
 .contact_btn {
@@ -58,7 +70,7 @@ body {
 }
 
 .image {
-	width: 300px;
+	width: 350px;
 	border-radius: 50%;
 	background-color: #add9f0;
 }
