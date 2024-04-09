@@ -83,9 +83,9 @@
 		>
 			About Me
 		</h2> -->
-		<section class="about-me">
+		<section id="about" class="about-me">
 			<div class="about-info">
-				<h2 id="about">About Me</h2>
+				<h2>About Me</h2>
 				<h4>&centerdot; My intro 👋</h4>
 				<p id="about-info">
 					I'm Rahul a passionate web developer. I love creating
@@ -95,6 +95,7 @@
 					enjoying a cup of tea while brainstorming new projects
 					ideas.
 				</p>
+				<hr style="margin-bottom: 15px;">
 				<h4>&centerdot; Know about me 😀</h4>
 				<div class="info">
 					<div class="info-element">
@@ -107,57 +108,87 @@
 						<p onclick="showCard('3')">Experience</p>
 					</div>
 				</div>
-				<div class="info-card" id="1">
-					<p>
-						Front-end Devlopment &nbsp;
-						<img
-							src="./resources/React.svg"
-							alt="Skill Icon"
-							height="20px"
-						/>
-					</p>
-					<p>
-						Back-end Devlopment &nbsp;
-						<img
-							src="./resources/Node.js.svg"
-							alt="Skill Icon"
-							height="20px"
-						/>
-					</p>
-					<p>
-						Python Automation &nbsp;
-						<img
-							src="./resources/Python.svg"
-							alt="Skill Icon"
-							height="20px"
-						/>
-					</p>
+				<div class="info-card skills-card" id="1">
+					<div>
+						<p>
+							Front-end Development &nbsp;
+							<img
+								src="./resources/React.svg"
+								alt="Skill Icon"
+								height="20px"
+							/>
+						</p>
+						<p>Building user interfaces with React</p>
+					</div>
+					<div>
+						<p>
+							Back-end Development &nbsp;
+							<img
+								src="./resources/Node.js.svg"
+								alt="Skill Icon"
+								height="20px"
+							/>
+						</p>
+						<p>Developing server-side applications with Node.js</p>
+					</div>
+					<div>
+						<p>
+							Python Automation &nbsp;
+							<img
+								src="./resources/Python.svg"
+								alt="Skill Icon"
+								height="20px"
+							/>
+						</p>
+						<p>Automating tasks using Python scripts</p>
+					</div>
 				</div>
-				<div class="info-card" id="2">
-					<p>Front-end Devlopment</p>
-					<!-- <p>Back-end Devlopment</p> -->
-					<p>Python Devlopment</p>
+				<div class="info-card education-card" id="2">
+					<div>
+						<p>Indian Institute of Technology, Kharaagpur</p>
+						<p>Bachelor of Technology (2023-present)</p>
+					</div>
+					<div>
+						<p>Matrix High School, Sikar</p>
+						<p>Higher Secondary Education (2021-2023)</p>
+					</div>
+					<div>
+						<p>Lord's High School, Sikar</p>
+						<p>Secondary Education (2021)</p>
+					</div>
 				</div>
-				<div class="info-card" id="3">
-					<!-- <p>Front-end Devlopment</p> -->
-					<p>Back-end Devlopment</p>
-					<p>Python Devlopment</p>
+				<div class="info-card education-card" id="3">
+					<div>
+						<p>Indian Institute of Technology, Kharaagpur</p>
+						<p>Bachelor of Technology (2023-present)</p>
+					</div>
+					<div>
+						<p>Matrix High School, Sikar</p>
+						<p>Higher Secondary Education (2021-2023)</p>
+					</div>
+					<div>
+						<p>Lord's High School, Sikar</p>
+						<p>Secondary Education (2021)</p>
+					</div>
 				</div>
 			</div>
 			<div class="slidshow">
 				<div class="mySlides fade">
-					<img src="./resources/img1.png" style="width: 100%" />
+					<img src="./resources/startup.gif" style="width: 100%" />
+					<div class="text">Caption Three</div>
+				</div>
+				<div class="mySlides fade">
+					<img src="./resources/coding.gif" style="width: 100%" />
 					<div class="text">Caption Text</div>
 				</div>
 
 				<div class="mySlides fade">
-					<img src="./resources/img2.png" style="width: 100%" />
+					<img src="./resources/web-design.gif" style="width: 100%" />
 					<div class="text">Caption Two</div>
 				</div>
-
 				<div class="mySlides fade">
-					<img src="./resources/img3.png" style="width: 100%" />
-					<div class="text">Caption Three</div>
+					<img src="./resources/html.gif" style="width: 100%" />
+					<div class="text">Caption Two</div>
 				</div>
 			</div>
 		</section>

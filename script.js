@@ -52,7 +52,7 @@ function showSlides() {
 		slideIndex = 1;
 	}
 	slides[slideIndex - 1].style.display = "block";
-	setTimeout(showSlides, 2000); // Change image every 2 seconds
+	setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
 
 let cards = document.getElementsByClassName("info-card");
@@ -68,7 +68,7 @@ function showCard(id) {
 	for (let i = 0; i < cards.length; i++) {
 		let elements = document.getElementsByClassName("info-element");
 		// console.log(elements[i].children[0]);
-		elements[i].children[0].style.textDecoration = "none";
+		elements[i].children[0].id = "none";
 	}
 	let card = document.getElementById(id);
 	card.style.display = "block";
@@ -76,7 +76,7 @@ function showCard(id) {
 		`.info-element:nth-child(${id}) p`
 	);
 	// console.log(selectedElement);
-	selectedElement.style.textDecoration = "underline";
+	selectedElement.id = "underline";
 }
 
 // showCard("2");

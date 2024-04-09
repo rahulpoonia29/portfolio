@@ -3,6 +3,7 @@
 	justify-content: space-around;
 	align-items: center;
 	margin-bottom: 60px;
+	padding-top: 20px;
 }
 
 .about-info {
@@ -23,9 +24,6 @@
 	margin: 0;
 	padding: 0;
 	margin-bottom: 5px;
-	/* color: #007bff; */
-	/* font-size: 35px; */
-	/* margin-bottom: 20px; */
 }
 
 #about-info {
@@ -47,25 +45,62 @@
 .info-element {
 	cursor: pointer;
 	padding-bottom: 0px;
+	position: relative;
+}
+
+#underline::after {
+	content: "";
+	position: absolute;
+	width: 90%;
+	border-radius: 100px;
+	height: 2px;
+	bottom: -1px;
+	left: 0;
+	background-color: black;
+	transform-origin: bottom left;
+	/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+	animation: scale 0.25s ease-out forwards;
+}
+
+@keyframes scale {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
 }
 
 .info-card {
 	margin-left: 20px;
-	margin: 20px 0px 0px 10px;
+	margin: 30px 0px 0px 10px;
 	font-size: 14px;
-	min-height: 140px;
+	min-height: 200px;
+}
+
+.info-card > div:before {
+	content: "•";
+	font-size: 20px;
+	margin-right: 10px;
+	position: absolute;
+	top: -2px;
+	left: -15px;
+}
+
+.info-card > div {
+	position: relative;
+	margin: 0px 0px 10px 15px;
 }
 
 .info-card p {
 	display: flex;
 	align-items: center;
-	margin: 0px 0px 10px 0px;
+	/* margin: 0px 0px 10px 0px; */
 }
 
-.info-card p::before {
-	content: '•';
-	font-size: 20px;
-	margin-right: 10px;
+.info-card p:nth-child(1) {
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .slidshow {
@@ -88,14 +123,20 @@
 
 .fade {
 	animation-name: fade;
-	animation-duration: 1.5s;
+	animation-duration: 4.5s;
 }
 
 @keyframes fade {
-	from {
+	0% {
 		translate: 40vw;
+		opacity: 0.5;
 	}
-	to {
+	50% {
 		translate: 0px;
+		opacity: 1;
+	}
+	100% {
+		translate: -40vw;
+		opacity: 0.4;
 	}
 }

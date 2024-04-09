@@ -31,13 +31,19 @@
 	bottom: 3px;
 	left: 0;
 	background-color: #0087ca;
-	transform-origin: bottom right;
-	transition: transform 0.25s ease-out;
+	transform-origin: bottom left;
 }
 
 .nav-element:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+	animation: scale 0.25s ease-out forwards;
+}
+@keyframes scale {
+	0% {
+		transform: scaleX(0);
+	}
+	100% {
+		transform: scaleX(1);
+	}
 }
 
 .contact {
