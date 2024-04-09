@@ -176,7 +176,7 @@
 						<p>Automating tasks using Python scripts</p>
 					</div>
 				</div>
-				<div class="info-card education-card" id="2">
+				<div class="info-card" id="2">
 					<div>
 						<p>Indian Institute of Technology, Kharaagpur</p>
 						<p>Bachelor of Technology (2023-present)</p>
@@ -190,7 +190,7 @@
 						<p>Secondary Education (2021)</p>
 					</div>
 				</div>
-				<div class="info-card education-card" id="3">
+				<div class="info-card" id="3">
 					<div>
 						<p>Indian Institute of Technology, Kharaagpur</p>
 						<p>Bachelor of Technology (2023-present)</p>
@@ -334,12 +334,17 @@
 
 		<h2
 			id="skills"
-			style="margin-bottom: 10px; margin-top: 60px; text-align: center"
+			style="margin-bottom: 10px; margin-top: 60px; align-self: center"
 		>
-			My Skills and Achievements
+			My Skills
 		</h2>
+		<div class="skill-selector">
+			<div class="skill-select" onclick="showSkills('4')">Frontend</div>
+			<div class="skill-select" onclick="showSkills(`5`)">Backend</div>
+			<div class="skill-select" onclick="showSkills(`6`)">Others</div>
+		</div>
 
-		<section class="skills">
+		<div class="skills" id="4">
 			<div class="skill-card">
 				<h3 class="skill-title">
 					HTML &nbsp<img
@@ -393,6 +398,9 @@
 					Experience in React for building single-page applications.
 				</p>
 			</div>
+		</div>
+
+		<div class="skills" id="5">
 			<div class="skill-card">
 				<h3 class="skill-title">
 					Node.js &nbsp<img
@@ -419,6 +427,9 @@
 					Experience in Express for building RESTful APIs.
 				</p>
 			</div>
+		</div>
+
+		<div class="skills" id="6">
 			<div class="skill-card">
 				<h3 class="skill-title">
 					MongoDB &nbsp<img
@@ -445,9 +456,7 @@
 					Experience in Git for version control and collaboration.
 				</p>
 			</div>
-
-			<!-- Add more skill cards as needed -->
-		</section>
+		</div>
 
 		<form id="contact">
 			<fieldset class="contact-form">

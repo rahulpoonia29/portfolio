@@ -56,10 +56,6 @@ function showSlides() {
 }
 
 let cards = document.getElementsByClassName("info-card");
-for (let i = 0; i < cards.length; i++) {
-	cards[i].style.display = "none";
-}
-showCard("1");
 
 function showCard(id) {
 	for (let i = 0; i < cards.length; i++) {
@@ -78,5 +74,27 @@ function showCard(id) {
 	// console.log(selectedElement);
 	selectedElement.id = "underline";
 }
+showCard("1");
 
-// showCard("2");
+let skills = document.getElementsByClassName("skills");
+
+function showSkills(id) {
+	for (let i = 0; i < skills.length; i++) {
+		skills[i].style.display = "none";
+	}
+
+	let selectedElement = document.querySelector(`.skill-selector`);
+	for (let i = 0; i < selectedElement.children.length; i++) {
+		selectedElement.children[i].style.backgroundColor = "#fff";
+		selectedElement.children[i].style.color = "rgb(0, 0, 0)";
+	}
+
+	let card = document.getElementById(id);
+	card.style.display = "grid";
+	console.log(selectedElement.children[id - 4]);
+	selectedElement.children[id - 4].style.backgroundColor =
+		"rgb(124, 58, 237)";
+	selectedElement.children[id - 4].style.color = "rgb(255, 255, 255)";
+}
+
+showSkills("4");

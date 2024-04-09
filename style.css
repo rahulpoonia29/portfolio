@@ -10,6 +10,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	font-style: normal;
+	background-color:rgb(243 244 246);
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -42,7 +43,7 @@ body {
 	font-size: 25px;
 }
 #intro-text {
-	color: rgb(109, 40, 217);
+	color: rgb(124, 58, 237);
 	/* font-size: 25px; */
 }
 
