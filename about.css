@@ -1,0 +1,101 @@
+.about-me {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 60px;
+}
+
+.about-info {
+	max-width: 50%;
+	background-color: #f0f0f0;
+	margin-left: 6vw;
+	padding: 20px;
+	border-radius: 10px;
+	color: #333;
+}
+
+.about-info h2 {
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+
+.about-info h4 {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 5px;
+	/* color: #007bff; */
+	/* font-size: 35px; */
+	/* margin-bottom: 20px; */
+}
+
+#about-info {
+	/* border-left: 2px solid #333; */
+	padding-left: 8px;
+	font-size: 15px;
+	line-height: 1.8;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.info {
+	display: flex;
+	gap: 35px;
+	margin-left: 8px;
+	margin-top: 15px;
+}
+
+.info-element {
+	cursor: pointer;
+	padding-bottom: 0px;
+}
+
+.info-card {
+	margin-left: 20px;
+	margin: 20px 0px 0px 10px;
+	font-size: 14px;
+	min-height: 140px;
+}
+
+.info-card p {
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 10px 0px;
+}
+
+.info-card p::before {
+	content: '•';
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.slidshow {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.mySlides {
+	display: none;
+	width: 50%;
+}
+
+.text {
+	color: black;
+	text-align: center;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {
+		translate: 40vw;
+	}
+	to {
+		translate: 0px;
+	}
+}

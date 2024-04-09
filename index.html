@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Home</title>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			rel="stylesheet"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -14,6 +18,8 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
+		<link rel="stylesheet" href="navbar.css" />
+		<link rel="stylesheet" href="about.css" />
 		<link rel="stylesheet" href="projects.css" />
 		<link rel="stylesheet" href="skills.css" />
 		<link rel="stylesheet" href="contact.css" />
@@ -24,7 +30,7 @@
 		<nav id="nav1" class="nav">
 			<div class="nav-element logo">Rahul</div>
 			<!-- <a class="nav-element" href="index.html#main">Home</a> -->
-			<a class="nav-element" href="index.html#main">About</a>
+			<a class="nav-element" href="index.html#about">About</a>
 			<a class="nav-element" href="index.html#projects">Projects</a>
 			<a class="nav-element" href="index.html#skills">Skills</a>
 			<a class="nav-element contact" href="index.html#contact">Contact</a>
@@ -46,7 +52,7 @@
 				</a>
 			</div>
 			<div class="ham_menu" id="ham_menu">
-				<a class="ham-element" href="index.html#main">About</a>
+				<a class="ham-element" href="index.html#about">About</a>
 				<a class="ham-element" href="index.html#projects">Projects</a>
 				<a class="ham-element" href="index.html#skills">Skills</a>
 				<a class="ham-element" href="index.html#contact">Contact</a>
@@ -56,17 +62,103 @@
 		<section id="main">
 			<div id="left">
 				<div id="intro">
-					Hi,<br />
-					I'm Rahul <br />
-					<span style="color: #007bff">W</span>eb
-					<span style="color: #007bff">D</span>eveloper
+					Hi There,<br />
+					I'm Rahul Poonia<br />
+					<span id="text" style="color: #007bff">Web Developer</span>
 				</div>
 				<a class="contact_btn" href="index.html#contact">Contact Me</a>
 			</div>
 			<div id="right">
-				<!-- <div class="image"> -->
-					<img class="image" src="./resources/boy.png" alt="Profile Pic" />
-				<!-- </div> -->
+				<img
+					class="image"
+					src="./resources/boy.png"
+					alt="Profile Pic"
+				/>
+			</div>
+		</section>
+
+		<!-- <h2
+			id="about"
+			style="margin-bottom: 10px; margin-top: 20px; text-align: center"
+		>
+			About Me
+		</h2> -->
+		<section class="about-me">
+			<div class="about-info">
+				<h2 id="about">About Me</h2>
+				<h4>&centerdot; My intro 👋</h4>
+				<p id="about-info">
+					I'm Rahul a passionate web developer. I love creating
+					beautiful and functional websites that provide great user
+					experiences. When I'm not coding, you can find me exploring
+					new technologies, experimenting with different ideas, or
+					enjoying a cup of tea while brainstorming new projects
+					ideas.
+				</p>
+				<h4>&centerdot; Know about me 😀</h4>
+				<div class="info">
+					<div class="info-element">
+						<p onclick="showCard('1')">Skills</p>
+					</div>
+					<div class="info-element education">
+						<p onclick="showCard('2')">Education</p>
+					</div>
+					<div class="info-element education">
+						<p onclick="showCard('3')">Experience</p>
+					</div>
+				</div>
+				<div class="info-card" id="1">
+					<p>
+						Front-end Devlopment &nbsp;
+						<img
+							src="./resources/React.svg"
+							alt="Skill Icon"
+							height="20px"
+						/>
+					</p>
+					<p>
+						Back-end Devlopment &nbsp;
+						<img
+							src="./resources/Node.js.svg"
+							alt="Skill Icon"
+							height="20px"
+						/>
+					</p>
+					<p>
+						Python Automation &nbsp;
+						<img
+							src="./resources/Python.svg"
+							alt="Skill Icon"
+							height="20px"
+						/>
+					</p>
+				</div>
+				<div class="info-card" id="2">
+					<p>Front-end Devlopment</p>
+					<!-- <p>Back-end Devlopment</p> -->
+					<p>Python Devlopment</p>
+				</div>
+				<div class="info-card" id="3">
+					<!-- <p>Front-end Devlopment</p> -->
+					<p>Back-end Devlopment</p>
+					<p>Python Devlopment</p>
+				</div>
+			</div>
+			<div class="slidshow">
+				<div class="mySlides fade">
+					<img src="./resources/img1.png" style="width: 100%" />
+					<div class="text">Caption Text</div>
+				</div>
+
+				<div class="mySlides fade">
+					<img src="./resources/img2.png" style="width: 100%" />
+					<div class="text">Caption Two</div>
+				</div>
+
+				<div class="mySlides fade">
+					<img src="./resources/img3.png" style="width: 100%" />
+					<div class="text">Caption Three</div>
+				</div>
 			</div>
 		</section>
 
@@ -125,7 +217,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="project-card">
+			<!-- <div class="project-card">
 				<img
 					class="project-image"
 					src="https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -172,7 +264,7 @@
 						Visit
 					</button>
 				</div>
-			</div>
+			</div> -->
 		</section>
 
 		<h2
@@ -323,6 +415,7 @@
 		<footer class="footer">
 			Made with &nbsp; <i class="fa fa-heart"></i> &nbsp; by Rahul
 		</footer>
+		<script src="script.js"></script>
 		<script>
 			function myFunction() {
 				var x = document.getElementById("ham_menu");
