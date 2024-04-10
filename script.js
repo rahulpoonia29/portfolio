@@ -85,7 +85,8 @@ function showSkills(id) {
 
 	let selectedElement = document.querySelector(`.skill-selector`);
 	for (let i = 0; i < selectedElement.children.length; i++) {
-		selectedElement.children[i].style.backgroundColor = "#fff";
+		// selectedElement.children[i].style.backgroundColor = "none";
+		selectedElement.children[i].style.backgroundColor = "white";
 		selectedElement.children[i].style.color = "rgb(0, 0, 0)";
 	}
 

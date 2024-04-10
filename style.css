@@ -1,6 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	scroll-padding: 60px;
+	scroll-padding: 80px;
 }
 * {
 	padding: 0;
@@ -10,7 +10,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	font-style: normal;
-	background-color:rgb(243 244 246);
+	background-color: rgb(249 250 251);
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -54,20 +54,28 @@ body {
 
 .contact_btn {
 	padding: 10px;
-	background-color: rgb(41, 197, 246);
+	width: 110px;
+	background-color: rgb(37 99 235);
 	border-radius: 10px;
+	margin-top: 10px;
 	margin-left: 10px;
 	transition: all 0.2s ease-in-out;
 	cursor: pointer;
-	width: 110px;
 	text-align: center;
-	margin-top: 10px;
 	text-decoration: none;
-	color: black;
+	color: #fff;
 }
 
 .contact_btn:hover {
-	scale: 1.1;
+	background: rgb(29 78 216);
+}
+
+.contact_btn i {
+	transition: all 0.2s ease-in-out;
+}
+.contact_btn:hover i {
+	rotate: 90deg;
+	translate: 2px;
 }
 
 .image {
@@ -77,7 +85,8 @@ body {
 }
 
 .footer {
-	background-color: #add9f0;
+	background-color: rgb(124, 58, 237);
+	color: #fff;
 	padding: 20px;
 	display: flex;
 	justify-content: center;
