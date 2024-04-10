@@ -153,13 +153,8 @@
 
 	.about-info {
 		max-width: 90%;
-		margin: 0px;
+		margin: 0px 20px;
 		margin-bottom: 20px;
-	}
-
-	.info {
-		/* flex-direction: column; */
-		margin-left: 0;
 	}
 
 	.info-card {

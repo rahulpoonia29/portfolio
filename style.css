@@ -151,10 +151,33 @@ body {
 		order: 1;
 		justify-self: flex-start;
 		margin-left: 5vw;
-		/* margin: 0px; */
-		/* padding: 0px; */
 	}
 	.image {
 		width: 300px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#main {
+		grid-template-columns: 1fr;
+		gap: 25px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		width: 100%;
+		height: auto;
+	}
+	#left {
+		margin-left: 20px;
+	}
+	.image {
+		width: 200px;
+	}
+	#intro {
+		font-size: 30px;
+	}
+	#intro-text-para {
+		font-size: 16px;
 	}
 }
