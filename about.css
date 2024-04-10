@@ -37,6 +37,7 @@
 
 .info {
 	display: flex;
+	flex-direction: row;
 	gap: 35px;
 	margin-left: 8px;
 	margin-top: 15px;
@@ -131,7 +132,7 @@
 
 @keyframes fade {
 	0% {
-		translate: 40vw;
+		translate: 50vw;
 		opacity: 0.5;
 	}
 	50% {
@@ -139,7 +140,50 @@
 		opacity: 1;
 	}
 	100% {
-		translate: -40vw;
+		translate: -50vw;
 		opacity: 0.4;
+	}
+}
+
+@media screen and (max-width: 1005px) {
+	.about-me {
+		flex-direction: column;
+		/* margin-bottom: 20px; */
+	}
+
+	.about-info {
+		max-width: 90%;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+
+	.info {
+		/* flex-direction: column; */
+		margin-left: 0;
+	}
+
+	.info-card {
+		margin-left: 0;
+	}
+
+	.slidshow {
+		width: 100%;
+	}
+	.mySlides {
+		width: 30%;
+	}
+	@keyframes fade {
+		0% {
+			translate: 100vw;
+			opacity: 0.5;
+		}
+		50% {
+			translate: 0px;
+			opacity: 1;
+		}
+		100% {
+			translate: -100vw;
+			opacity: 0.4;
+		}
 	}
 }

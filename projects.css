@@ -49,6 +49,7 @@
 	margin-right: 10px;
 	background-color: rgb(37 99 235);
 	color: #fff;
+	text-decoration: none;
 	border-radius: 5px;
 	font-size: 14px;
 	cursor: pointer;
@@ -70,15 +71,18 @@
 @media screen and (max-width: 1300px) {
 	.projects {
 		grid-template-columns: 1fr 1fr;
+		margin: 40px 50px 60px 50px;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.projects {
 		grid-template-columns: 1fr;
+		margin: 40px 30px 60px 30px;
+
 	}
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
 	.projects {
 		margin: 20px;
 	}

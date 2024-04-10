@@ -1,3 +1,11 @@
+:root {
+	--gray-50: rgb(249 250 251);
+	--white: #ffffff;
+	--purple: rgb(124, 58, 237);
+	--blue: rgb(37 99 235);
+	--dark-blue: rgb(29 78 216);
+}
+
 html {
 	scroll-behavior: smooth;
 	scroll-padding: 80px;
@@ -10,7 +18,7 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 600;
 	font-style: normal;
-	background-color: rgb(249 250 251);
+	background-color: var(--gray-50);
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -23,12 +31,12 @@ body {
 #main {
 	display: grid;
 	margin: 40px;
-	height: 90vh;
+	height: 800px;
 	gap: 20px;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	justify-items: center;
-	margin: 0px 80px;
+	margin: 0px 5vw;
 	width: 90vw;
 	box-sizing: border-box;
 }
@@ -43,7 +51,7 @@ body {
 	font-size: 25px;
 }
 #intro-text {
-	color: rgb(124, 58, 237);
+	color: var(--purple);
 	/* font-size: 25px; */
 }
 
@@ -55,7 +63,7 @@ body {
 .contact_btn {
 	padding: 10px;
 	width: 110px;
-	background-color: rgb(37 99 235);
+	background-color: var(--blue);
 	border-radius: 10px;
 	margin-top: 10px;
 	margin-left: 10px;
@@ -67,7 +75,7 @@ body {
 }
 
 .contact_btn:hover {
-	background: rgb(29 78 216);
+	background: var(--dark-blue);
 }
 
 .contact_btn i {
@@ -85,7 +93,7 @@ body {
 }
 
 .footer {
-	background-color: rgb(124, 58, 237);
+	background-color: var(--purple);
 	color: #fff;
 	padding: 20px;
 	display: flex;
@@ -93,7 +101,7 @@ body {
 	align-items: center;
 }
 
-@media screen and (max-width: 850px) {
+/* @media screen and (max-width: 850px) {
 	#nav1 {
 		display: none;
 	}
@@ -106,15 +114,15 @@ body {
 	}
 
 	#main {
-		/* display: grid; */
-		/* grid-template-columns: 1fr; */
+		display: grid;
+		grid-template-columns: 1fr;
 		margin: 0;
 		height: 90vh;
 		align-items: center;
 		justify-items: center;
 	}
 	#left {
-		/* order: 1; */
+		order: 1;
 		margin: 0px;
 		padding: 0px;
 	}
@@ -132,39 +140,21 @@ body {
 		font-size: 16px;
 		padding: 8px;
 	}
-}
-@media screen and (max-width: 600px) {
-	.contact-form {
-		margin: 20px;
-		margin-top: 50px;
-	}
+} */
 
+@media screen and (max-width: 1005px) {
 	#main {
-		/* display: grid; */
 		grid-template-columns: 1fr;
-		margin: 0;
-		height: 60vh;
-		align-items: center;
-		justify-items: center;
+		gap: 0px;
 	}
 	#left {
 		order: 1;
-		margin: 0px;
-		padding: 0px;
+		justify-self: flex-start;
+		margin-left: 5vw;
+		/* margin: 0px; */
+		/* padding: 0px; */
 	}
-
 	.image {
-		width: 40vw;
-		border-radius: 50%;
-		background-color: #add9f0;
-		margin-top: 80px;
-	}
-	#intro {
-		margin-top: 40px;
-		padding: 10px;
-		font-size: 38px;
-	}
-	#projects {
-		margin-top: 100px;
+		width: 300px;
 	}
 }

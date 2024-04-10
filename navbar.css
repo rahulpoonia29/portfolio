@@ -11,9 +11,12 @@
 	position: sticky;
 	top: 0px;
 	z-index: 10;
+	/* opacity: 0.5; */
+	/* filter: blur(5px); */
 }
 
 .nav-element {
+	opacity: 1;
 	color: black;
 	padding: 10px;
 	font-weight: bold;
@@ -46,8 +49,8 @@
 	}
 }
 
-.contact {
-	margin-right: 8vw;
+#nav1 .nav-element:last-child {
+	margin-right: 10vw;
 }
 
 .nav-element:hover #r {
