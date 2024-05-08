@@ -65,11 +65,9 @@
 	<body>
 		<nav id="nav1" class="nav">
 			<a class="nav-element logo" href="index.html#main">Rahul</a>
-			<!-- <a class="nav-element" href="index.html#main">Home</a> -->
 			<a class="nav-element" href="index.html#about">About</a>
 			<a class="nav-element" href="index.html#projects">Projects</a>
 			<a class="nav-element" href="index.html#skills">Skills</a>
-			<!-- <a class="nav-element contact" href="index.html#contact">Contact</a> -->
 		</nav>
 
 		<nav id="nav2">
@@ -91,7 +89,6 @@
 				<a class="ham-element" href="index.html#about">About</a>
 				<a class="ham-element" href="index.html#projects">Projects</a>
 				<a class="ham-element" href="index.html#skills">Skills</a>
-				<!-- <a class="ham-element" href="index.html#contact">Contact</a> -->
 			</div>
 		</nav>
 
@@ -150,12 +147,6 @@
 			</div>
 		</section>
 
-		<!-- <h2
-			id="about"
-			style="margin-bottom: 10px; margin-top: 20px; text-align: center"
-		>
-			About Me
-		</h2> -->
 		<section id="about" class="about-me">
 			<div class="about-info">
 				<h2>About Me</h2>
@@ -177,9 +168,9 @@
 					<div class="info-element education">
 						<p onclick="showCard('2')">Education</p>
 					</div>
-					<div class="info-element education">
+					<!-- <div class="info-element education">
 						<p onclick="showCard('3')">Experience</p>
-					</div>
+					</div> -->
 				</div>
 				<div class="info-card skills-card" id="1">
 					<div>
@@ -230,7 +221,7 @@
 						<p>Secondary Education (2021)</p>
 					</div>
 				</div>
-				<div class="info-card" id="3">
+				<!-- <div class="info-card" id="3">
 					<div>
 						<p>Indian Institute of Technology, Kharaagpur</p>
 						<p>Bachelor of Technology (2023-present)</p>
@@ -243,26 +234,18 @@
 						<p>Lord's High School, Sikar</p>
 						<p>Secondary Education (2021)</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="slidshow">
 				<div class="mySlides fade">
 					<img src="./resources/startup.gif" style="width: 100%" />
-					<!-- <div class="text">Caption Three</div> -->
 				</div>
-
-				<!-- <div class="mySlides fade">
-					<img src="./resources/coding.gif" style="width: 100%" />
-					<div class="text">Coding</div>
-				</div> -->
 
 				<div class="mySlides fade">
 					<img src="./resources/web-design.gif" style="width: 100%" />
-					<!-- <div class="text">Design</div> -->
 				</div>
 				<div class="mySlides fade">
 					<img src="./resources/html.gif" style="width: 100%" />
-					<!-- <div class="text">Softwares</div> -->
 				</div>
 			</div>
 		</section>
@@ -279,7 +262,7 @@
 					"
 				></div>
 				<div class="project-info">
-					<h3 class="project-title">ShareIt</h3>
+					<h3 class="project-title">Currency Exchange App</h3>
 					<p class="project-description">
 						React App to convert currency with real-time exchange
 						rates
@@ -300,6 +283,64 @@
 					</a>
 				</div>
 			</div>
+			<div class="project-card">
+				<div
+					class="project-image"
+					style="
+						background-image: url(./resources/projects/project3.png);
+					"
+				></div>
+				<div class="project-info">
+					<h3 class="project-title">Password Generater</h3>
+					<p class="project-description">
+						Generates a random password with the click of a button.
+					</p>
+					<a
+						class="visit-button live-preview"
+						href="https://password-generator-sage-chi.vercel.app"
+						target="_blank"
+					>
+						Visit &nbsp; <i class="fa-solid fa-eye"></i>
+					</a>
+					<a
+						class="visit-button github-code"
+						href="https://github.com/rahulpoonia29/Paassword-Generator"
+						target="_blank"
+					>
+						GitHub &nbsp; <i class="fa-solid fa-code"></i>
+					</a>
+				</div>
+			</div>
+			<div class="project-card">
+				<div
+					class="project-image"
+					style="
+						background-image: url(./resources/projects/project4.png);
+					"
+				></div>
+				<div class="project-info">
+					<h3 class="project-title">Search a Word</h3>
+					<p class="project-description">
+						Search for a word using an API and get its detailed
+						info.
+					</p>
+					<a
+						class="visit-button live-preview"
+						href="https://search-a-word.vercel.app/search/earth"
+						target="_blank"
+					>
+						Visit &nbsp; <i class="fa-solid fa-eye"></i>
+					</a>
+					<a
+						class="visit-button github-code"
+						href="https://github.com/rahulpoonia29/Search-a-Word"
+						target="_blank"
+					>
+						GitHub &nbsp; <i class="fa-solid fa-code"></i>
+					</a>
+				</div>
+			</div>
+
 			<div class="project-card">
 				<div
 					class="project-image"
@@ -327,33 +368,6 @@
 					>
 						GitHub &nbsp; <i class="fa-solid fa-code"></i>
 					</a>
-				</div>
-			</div>
-
-			<div class="project-card">
-				<div
-					class="project-image"
-					style="
-						background-image: url(https://images.pexels.com/photos/1820563/pexels-photo-1820563.jpeg?auto=compress&cs=tinysrgb&w=600);
-					"
-				></div>
-				<div class="project-info">
-					<h3 class="project-title">Random password generator</h3>
-					<p class="project-description">
-						Generates a random password with the click of a button.
-					</p>
-					<div
-						class="visit-button live-preview"
-						onclick="changeButton(tis)"
-					>
-						Visit &nbsp; <i class="fa-solid fa-eye"></i>
-					</div>
-					<div
-						class="visit-button github-code"
-						onclick="changeButton(tis)"
-					>
-						GitHub &nbsp; <i class="fa-solid fa-code"></i>
-					</div>
 				</div>
 			</div>
 		</section>
