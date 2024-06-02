@@ -14,7 +14,7 @@ function About() {
 						width={1000}
 						height={1000}
 						loading={"lazy"}
-						className="h-60 w-full rounded-2xl bg-violet-100 object-cover grayscale transition-all hover:grayscale-0 md:h-80 lg:h-96"
+						className="h-60 w-full rounded-2xl bg-violet-100 object-top object-cover grayscale transition-all hover:grayscale-0 md:h-80 lg:h-96"
 						src={"/self.jpg"}
 					/>
 					<span className="font-sans font-medium dark:text-gray-300">
