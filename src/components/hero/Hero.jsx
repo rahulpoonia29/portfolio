@@ -16,7 +16,7 @@ function Hero() {
 					/>
 					Hey
 				</p>
-				<h1 className="font-bold md:text-6xl">I'm Rahul Poonia</h1>
+				<h1 className="font-bold md:text-6xl">I&apos;m Rahul Poonia</h1>
 				<div className="font-semibold md:text-2xl">
 					I am a{" "}
 					<Typewriter
