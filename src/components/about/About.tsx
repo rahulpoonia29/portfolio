@@ -29,12 +29,12 @@ function About() {
 							Full stack Developer
 						</p>
 						<p className="text-sm font-semibold text-gray-600 md:text-lg dark:text-zinc-400">
-							Hey there! I'm a full-stack developer currently studying at IIT
-							Kharagpur. I'm all about crafting cool digital stuff that works
-							like a charm. Whether it's making sleek front-end designs or
+							Hey there! I&apos;m a full-stack developer currently studying at IIT
+							Kharagpur. I&apos;m all about crafting cool digital stuff that works
+							like a charm. Whether it&apos;s making sleek front-end designs or
 							building sturdy back-end systems, I love turning ideas into
-							reality with code. I'm always up for learning new things and
-							teaming up on exciting projects. Let's chat and see what awesome
+							reality with code. I&apos;m always up for learning new things and
+							teaming up on exciting projects. Let&apos;s chat and see what awesome
 							things we can create together!
 						</p>
 						<div className="flex items-center gap-4 md:mt-4">
