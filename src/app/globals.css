@@ -16,6 +16,11 @@
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
@@ -39,10 +44,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-800 rounded-md
+	@apply rounded-sm bg-zinc-800;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	@apply bg-zinc-700
+	@apply bg-zinc-700;
 }

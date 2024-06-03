@@ -31,7 +31,7 @@ function Hero() {
 				</p>
 				<Link
 					className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 md:text-base dark:bg-violet-700 hover:dark:bg-violet-800"
-					href={"/about"}
+					href={"#about"}
 				>
 					<span>About Me</span>
 					<svg

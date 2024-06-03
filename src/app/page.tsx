@@ -114,7 +114,7 @@ export default function Home() {
 							"A sleek blog app with user authentication and profiles.",
 						techStack: "React, Redux, Tailwind CSS, TinyMCE, Appwrite",
 						link: "#",
-						image: "/projects/project3.png",
+						image: "/projects/blogify.png",
 						github: "",
 					},
 					{
@@ -123,7 +123,7 @@ export default function Home() {
 							"Search for a word using an API and get its detailed info.",
 						techStack: "React, React Router, Tailwind CSS, Dictionary API",
 						link: "#",
-						image: "/projects/project3.png",
+						image: "/projects/searchaword.png",
 						github: "",
 					},
 					{
@@ -132,16 +132,16 @@ export default function Home() {
 							"React App to convert currency with real-time exchange rates",
 						techStack: "React, Tailwind CSS",
 						link: "#",
-						image: "/projects/project3.png",
+						image: "/projects/currencymaster.png",
 						github: "",
 					},
 					{
-						title: "Password Generater",
+						title: "Password Forge",
 						description:
 							"Generates a random password with the click of a button.",
 						techStack: "React, Tailwind CSS",
 						link: "#",
-						image: "/projects/project3.png",
+						image: "/projects/passwordforge.png",
 						github: "",
 					},
 				]}

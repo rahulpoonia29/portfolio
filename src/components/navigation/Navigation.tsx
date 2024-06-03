@@ -6,15 +6,19 @@ function Navigation() {
 	const Links: Links[] = [
 		{
 			label: "Home",
-			href: "/",
+			href: "#home",
 		},
 		{
 			label: "About",
-			href: "/about",
+			href: "#about",
+		},
+		{
+			label: "Skills",
+			href: "#skills",
 		},
 		{
 			label: "Projects",
-			href: "/projects",
+			href: "#projects",
 		},
 	];
 
