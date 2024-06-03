@@ -17,7 +17,7 @@ function Skills({ categories, skillData }: Props) {
 	const [category, setCategory] = useState(categories[0]);
 
 	return (
-		<div id="skills" className="mx-4 mt-12 min-h-screen md:mx-0 md:mt-20">
+		<div id="skills" className="mx-6 mt-12 min-h-screen md:mx-0 md:mt-20">
 			<h2 className="text-center text-4xl">Tech Stack</h2>
 
 			<div className="scroll-hide dark:bg-grey-800 mx-auto mt-6 flex items-center justify-between gap-3 overflow-x-auto rounded-md bg-zinc-800 p-2 md:w-1/2 lg:w-1/3">

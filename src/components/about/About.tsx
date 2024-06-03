@@ -23,7 +23,7 @@ function About() {
 					</span>
 				</div>
 
-				<div className="mx-4 mt-8 flex-1 text-left md:mx-0 md:mt-0 md:p-6">
+				<div className="mx-6 mt-8 flex-1 text-left md:mx-0 md:mt-0 md:p-6">
 					<div className="flex flex-col gap-2.5">
 						<p className="text-3xl font-semibold">Rahul Poonia</p>
 						<p className="w-fit rounded bg-violet-50 px-2 py-1 text-sm text-violet-800 dark:bg-violet-600/15 dark:text-violet-500">
