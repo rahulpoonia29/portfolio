@@ -23,9 +23,9 @@ function Hero() {
 								x2="236"
 								y2="0"
 							>
-								<stop stop-color="#2EB9DF" stop-opacity="0"></stop>
-								<stop offset="0.5" stop-color="#2EB9DF"></stop>
-								<stop offset="1" stop-color="#9E00FF" stop-opacity="0"></stop>
+								<stop stopColor="#2EB9DF" stopOpacity="0"></stop>
+								<stop offset="0.5" stopColor="#2EB9DF"></stop>
+								<stop offset="1" stopColor="#9E00FF" stopOpacity="0"></stop>
 							</linearGradient>
 
 							<mask id="mask">

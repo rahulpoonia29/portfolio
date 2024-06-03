@@ -51,3 +51,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-zinc-700;
 }
+
+.border-gradient {
+	border: 10px solid transparent;
+	border-image: linear-gradient(
+		to right,
+		rgba(46, 185, 223, 0),
+		rgba(46, 185, 223, 1) 50%,
+		rgba(158, 0, 255, 0) 100%
+	);
+	border-image-slice: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-image-slice: 10;
+}
