@@ -39,10 +39,7 @@ const SkillCard = ({ name, image }: skill) => {
 					width={80}
 					height={80}
 					className={`size-12 object-contain md:size-14 ${
-						name === "GitHub" ||
-						name === "Vercel" ||
-						name === "NextJS" ||
-						name === "Express JS"
+						name === "GitHub" || name === "Vercel" || name === "Express JS"
 							? "invert"
 							: ""
 					}`}

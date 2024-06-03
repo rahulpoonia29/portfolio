@@ -60,18 +60,33 @@ export default function Home() {
 					],
 					Backend: [
 						{ name: "Node.js", image: "/skills/Nodejs.svg" },
-						{ name: "Express JS", image: "/skills/Express.svg" },
+						{
+							name: "Express JS",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+						},
 						{
 							name: "AppWrite",
 							image:
 								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/appwrite/appwrite-original.svg",
 						},
-						{ name: "MongoDB", image: "/skills/MongoDB.svg" },
+						{
+							name: "MongoDB",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+						},
 					],
 					Others: [
-						{ name: "Googling", image: "/skills/Google.svg" },
-						{ name: "Python", image: "/skills/Python.svg" },
-						{ name: "GitHub", image: "/skills/GitHub.svg" },
+						{
+							name: "Python",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+						},
+						{
+							name: "GitHub",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+						},
 						{
 							name: "Vercel",
 							image:
@@ -82,7 +97,11 @@ export default function Home() {
 							image:
 								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
 						},
-						{ name: "Git", image: "/skills/Git.svg" },
+						{
+							name: "Git",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+						},
 					],
 				}}
 			/>
