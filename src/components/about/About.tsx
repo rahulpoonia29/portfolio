@@ -5,7 +5,7 @@ import React from "react";
 function About() {
 	return (
 		<div>
-			<h2 id="about" className="mb-8 text-center text-4xl lg:mb-0">
+			<h2 id="about" className="mt-8 mb-8 text-center text-4xl lg:mb-0 lg:mt-0">
 				About Me
 			</h2>
 			<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
@@ -23,7 +23,7 @@ function About() {
 					</span>
 				</div>
 
-				<div className="mx-4 mt-4 flex-1 text-left md:mx-0 md:mt-0 md:p-6">
+				<div className="mx-4 mt-8 flex-1 text-left md:mx-0 md:mt-0 md:p-6">
 					<div className="flex flex-col gap-2.5">
 						<p className="text-3xl font-semibold">Rahul Poonia</p>
 						<p className="w-fit rounded bg-violet-50 px-2 py-1 text-sm text-violet-800 dark:bg-violet-600/15 dark:text-violet-500">
@@ -38,9 +38,9 @@ function About() {
 							and teaming up on exciting projects. Let&apos;s chat and see what
 							awesome things we can create together!
 						</p>
-						<div className="flex items-center gap-4 md:mt-4">
+						<div className="mt-2 flex items-center gap-4 md:mt-4">
 							<Link
-								href="/my-cv.pdf"
+								href="/resume.pdf"
 								target="_blank"
 								className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 md:text-base dark:bg-violet-700 hover:dark:bg-violet-800"
 							>

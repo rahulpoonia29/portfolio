@@ -113,36 +113,36 @@ export default function Home() {
 						description:
 							"A sleek blog app with user authentication and profiles.",
 						techStack: "React, Redux, Tailwind CSS, TinyMCE, Appwrite",
-						link: "#",
 						image: "/projects/blogify.png",
-						github: "",
+						link: "https://blogify-app-sage.vercel.app",
+						github: "https://github.com/rahulpoonia29/React-Blog-app",
 					},
 					{
 						title: "Search a Word",
 						description:
 							"Search for a word using an API and get its detailed info.",
 						techStack: "React, React Router, Tailwind CSS, Dictionary API",
-						link: "#",
 						image: "/projects/searchaword.png",
-						github: "",
+						link: "https://search-a-word.vercel.app/search/earth",
+						github: "https://github.com/rahulpoonia29/Search-a-Word",
 					},
 					{
 						title: "Currency Exchange App",
 						description:
 							"React App to convert currency with real-time exchange rates",
 						techStack: "React, Tailwind CSS",
-						link: "#",
 						image: "/projects/currencymaster.png",
-						github: "",
+						link: "https://currency-exchange-wine.vercel.app/",
+						github: "https://github.com/rahulpoonia29/Currency-Exchange-App",
 					},
 					{
 						title: "Password Forge",
 						description:
 							"Generates a random password with the click of a button.",
 						techStack: "React, Tailwind CSS",
-						link: "#",
 						image: "/projects/passwordforge.png",
-						github: "",
+						link: "https://passwordforge.vercel.app/",
+						github: "https://github.com/rahulpoonia29/Paassword-Generator",
 					},
 				]}
 			/>

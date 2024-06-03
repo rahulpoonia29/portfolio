@@ -4,7 +4,7 @@ import Typewriter from "@/components/utils/Typewriter";
 
 function Hero() {
 	return (
-		<div className="flex h-[calc(100vh-64px)] flex-col-reverse items-center justify-around gap-10 lg:flex-row lg:gap-0 ">
+		<div className="flex min-h-[calc(100vh-64px)] flex-col-reverse items-center justify-around gap-10 lg:flex-row lg:gap-0">
 			<div className="mx-4 flex flex-col gap-4 text-left md:mx-6 md:gap-6 lg:w-1/2 xl:mx-0 2xl:w-1/3">
 				<p className="flex items-center gap-2 font-semibold md:text-2xl">
 					<Image
@@ -48,7 +48,7 @@ function Hero() {
 					</svg>
 				</Link>
 			</div>
-			<div className="h-56 w-56 md:h-80 md:w-80 lg:-translate-x-16">
+			<div className="mt-8 h-56 w-56 md:h-80 md:w-80 lg:mt-0 lg:-translate-x-16">
 				<Image
 					alt="avatar"
 					width={1000}
