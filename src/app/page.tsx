@@ -3,10 +3,11 @@ import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import Projects from "@/components/projects/Projects";
+import { TracingBeam } from "@/components/Aceternity/tracing-beam";
 
 export default function Home() {
 	return (
-		<>
+		<div>
 			<Hero />
 			<About />
 			<Skills
@@ -146,6 +147,6 @@ export default function Home() {
 					},
 				]}
 			/>
-		</>
+		</div>
 	);
 }

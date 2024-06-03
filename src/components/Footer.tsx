@@ -9,7 +9,7 @@ function Footer({}: Props) {
 				Made with
 				<span className="animate-pulse"> ❤️ </span>
 				by
-				<span className="text-violet-700 font-bold"> Rahul</span>
+				<span className="text-violet-600 font-bold"> Rahul</span>
 			</p>
 		</div>
 	);

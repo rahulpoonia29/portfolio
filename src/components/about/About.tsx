@@ -29,7 +29,7 @@ function About() {
 						<p className="w-fit rounded bg-violet-50 px-2 py-1 text-sm text-violet-800 dark:bg-violet-600/15 dark:text-violet-500">
 							Full stack Developer
 						</p>
-						<p className="text-sm font-semibold text-gray-600 md:text-lg dark:text-zinc-400">
+						<p className="text-sm font-semibold md:text-lg text-zinc-400">
 							Hey there! I&apos;m a full-stack developer currently studying at
 							IIT Kharagpur. I&apos;m all about crafting cool digital stuff that
 							works like a charm. Whether it&apos;s making sleek front-end
