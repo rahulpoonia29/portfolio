@@ -18,7 +18,7 @@ function Skills({ categories, skillData }: Props) {
 	return (
 		<div
 			id="skills"
-			className="mx-4 mt-12 min-h-screen md:mx-0 md:mt-0 xl:my-20 2xl:my-0"
+			className="mx-4 mt-12 min-h-screen md:mx-0 md:mt-20"
 		>
 			<h2 className="text-center text-4xl">Tech Stack</h2>
 

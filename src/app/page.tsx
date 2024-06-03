@@ -12,23 +12,77 @@ export default function Home() {
 				categories={["Frontend", "Backend", "Others"]}
 				skillData={{
 					Frontend: [
-						{ name: "JavaScript", image: "/skills/javascript.svg" },
-						{ name: "React", image: "/skills/React.svg" },
-						{ name: "Tailwind CSS", image: "/skills/tailwind-css.svg" },
-						{ name: "HTML", image: "/skills/html5.svg" },
-						{ name: "CSS", image: "/skills/css3.svg" },
-						{ name: "Bootstrap", image: "/skills/bootstrap.svg" },
+						{
+							name: "JavaScript",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+						},
+						{
+							name: "Next JS",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+						},
+						{
+							name: "React",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+						},
+						{
+							name: "Redux",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+						},
+						{
+							name: "TypeScript",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+						},
+						{
+							name: "Tailwind CSS",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+						},
+						{
+							name: "HTML",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons//html5/html5-original.svg",
+						},
+						{
+							name: "CSS",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons//css3/css3-original.svg",
+						},
+						{
+							name: "Bootstrap",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons//bootstrap/bootstrap-original.svg",
+						},
 					],
 					Backend: [
-						{ name: "Node.js", image: "/skills/node.js.svg" },
-						{ name: "Express", image: "/skills/express.svg" },
-						{ name: "MongoDB", image: "/skills/mongodb.svg" },
+						{ name: "Node.js", image: "/skills/Nodejs.svg" },
+						{ name: "Express JS", image: "/skills/Express.svg" },
+						{
+							name: "AppWrite",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/appwrite/appwrite-original.svg",
+						},
+						{ name: "MongoDB", image: "/skills/MongoDB.svg" },
 					],
 					Others: [
-						{ name: "Googling", image: "/skills/google.svg" },
-						{ name: "Python", image: "/skills/python.svg" },
-						{ name: "GitHub", image: "/skills/github.svg" },
-						{ name: "Git", image: "/skills/git.svg" },
+						{ name: "Googling", image: "/skills/Google.svg" },
+						{ name: "Python", image: "/skills/Python.svg" },
+						{ name: "GitHub", image: "/skills/GitHub.svg" },
+						{
+							name: "Vercel",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+						},
+						{
+							name: "Netlify",
+							image:
+								"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+						},
+						{ name: "Git", image: "/skills/Git.svg" },
 					],
 				}}
 			/>
