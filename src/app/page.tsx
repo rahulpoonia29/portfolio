@@ -1,9 +1,8 @@
 import Skills from "@/components/skill/Skills";
 import About from "@/components/about/About";
-import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import Projects from "@/components/projects/Projects";
-import { TracingBeam } from "@/components/Aceternity/tracing-beam";
+
 
 export default function Home() {
 	return (
