@@ -2,6 +2,7 @@ import Skills from "@/components/skill/Skills";
 import About from "@/components/about/About";
 import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
+import Projects from "@/components/projects/Projects";
 
 export default function Home() {
 	return (
@@ -105,7 +106,46 @@ export default function Home() {
 					],
 				}}
 			/>
-			<Contact />
+			<Projects
+				projectData={[
+					{
+						title: "Blogify",
+						description:
+							"A sleek blog app with user authentication and profiles.",
+						techStack: "React, Redux, Tailwind CSS, TinyMCE, Appwrite",
+						link: "#",
+						image: "/projects/project3.png",
+						github: "",
+					},
+					{
+						title: "Search a Word",
+						description:
+							"Search for a word using an API and get its detailed info.",
+						techStack: "React, React Router, Tailwind CSS, Dictionary API",
+						link: "#",
+						image: "/projects/project3.png",
+						github: "",
+					},
+					{
+						title: "Currency Exchange App",
+						description:
+							"React App to convert currency with real-time exchange rates",
+						techStack: "React, Tailwind CSS",
+						link: "#",
+						image: "/projects/project3.png",
+						github: "",
+					},
+					{
+						title: "Password Generater",
+						description:
+							"Generates a random password with the click of a button.",
+						techStack: "React, Tailwind CSS",
+						link: "#",
+						image: "/projects/project3.png",
+						github: "",
+					},
+				]}
+			/>
 		</>
 	);
 }
