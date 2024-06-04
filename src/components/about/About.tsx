@@ -9,7 +9,7 @@ function About() {
 				About Me
 			</h2>
 			<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
-				<div className="dark:bg-grey-800 mx-auto flex w-56 flex-col items-center gap-2 self-start rounded-2xl bg-white p-3 transition-transform duration-300 hover:-translate-y-2 md:w-2/5 lg:mx-16 lg:w-72 lg:-rotate-3 dark:bg-zinc-800">
+				<div className="dark:bg-grey-800 mx-auto flex w-56 flex-col items-center gap-2 self-start rounded-2xl bg-white p-3 transition-transform duration-300 hover:-translate-y-2 md:w-2/5 lg:mx-16 lg:w-72 lg:-rotate-3 dark:bg-zinc-900">
 					<Image
 						alt={"/self.jpg"}
 						width={1000}
