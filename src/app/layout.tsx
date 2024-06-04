@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		siteName: "Rahul Poonia's Portfolio",
 		images: [
 			{
-				url: "https://rahulpoonia.vercel.app/og.png",
+				url: "https://rahulpoonia.vercel.app/og/og.png",
 			},
 		],
 		locale: "en_US",
@@ -36,18 +36,15 @@ export const metadata: Metadata = {
 		index: true,
 		follow: true,
 	},
-	icons: {
-		icon: "/favicon.png",
-		shortcut: "/favicon.png",
-	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Rahul Poonia's Portfolio",
+		title: "Portfolio | Rahul Poonia - Full Stack Developer",
 		description:
 			"I'm Rahul Poonia, a web developer based in Kharagpur, India. I currently study at IIT Kharagpur and love to code and build websites.",
 		creator: "@rahulpoonia229",
-		images: ["https://rahulpoonia.vercel.app/og.png"],
+		images: ["https://rahulpoonia.vercel.app/og/og.png"],
 	},
+
 	keywords:
 		"rahul poonia, portfolio, rahul, full stack dev, nextjs portfolio, portfolio design, portfolio website, personal portfolio",
 };
