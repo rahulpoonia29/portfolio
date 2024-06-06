@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/navigation/Navigation";
 import Footer from "@/components/Footer";
 import { URL } from "url";
+import Head from "next/head";
 
 const poppin = Poppins({ subsets: ["latin"], weight: "600" });
 
@@ -56,6 +57,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="dark">
+			<Head>
+				<link
+					href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+					rel="stylesheet"
+				/>
+			</Head>
 			<body
 				className={
 					poppin.className +
