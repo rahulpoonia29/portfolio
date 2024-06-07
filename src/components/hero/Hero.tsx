@@ -81,59 +81,91 @@ function Hero() {
 						Dedicated to crafting immersive digital experiences that captivate,
 						engage, and inspire users worldwide.
 					</p>
-
-					<Link
-						className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-700 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-800 md:text-base"
-						href={"#about"}
-					>
-						<span>About Me</span>
-						<svg
-							stroke="currentColor"
-							fill="currentColor"
-							strokeWidth="0"
-							viewBox="0 0 512 512"
-							className="transition-transform group-hover:translate-x-1"
-							height="1em"
-							width="1em"
-							xmlns="http://www.w3.org/2000/svg"
+					<div className="flex items-center space-x-6">
+						<Link
+							className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-700 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-800 md:text-base"
+							href={"#about"}
 						>
-							<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
-						</svg>
-					</Link>
-					<div className="socials">
-						hello
-						<a
-							className="linkedin"
-							aria-label="LinkedIn"
-							href="https://www.linkedin.com/in/rahulpoonia"
-							target="_blank"
-						>
-							<i className="fa-brands fa-xl fa-linkedin"></i>
-						</a>
-						<a
-							className="github"
-							aria-label="GitHub"
-							href="https://github.com/rahulpoonia29"
-							target="_blank"
-						>
-							<i className="fa-brands fa-xl fa-github"></i>
-						</a>
-						<a
-							className="instagram"
-							aria-label="Instagram"
-							href="https://www.instagram.com/rahulpoonia029/"
-							target="_blank"
-						>
-							<i className="fa-brands fa-xl fa-instagram"></i>
-						</a>
-						<a
-							className="twitter"
-							aria-label="Twitter"
-							href="https://twitter.com/Rahul187379"
-							target="_blank"
-						>
-							<i className="fa-brands fa-xl fa-twitter"></i>
-						</a>
+							<span>About Me</span>
+							<svg
+								stroke="currentColor"
+								fill="currentColor"
+								strokeWidth="0"
+								viewBox="0 0 512 512"
+								className="transition-transform group-hover:translate-x-1"
+								height="1em"
+								width="1em"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+							</svg>
+						</Link>
+						<div className="flex space-x-6">
+							<Link
+								href="https://www.linkedin.com/in/rahulpoonia"
+								className="text-blue-700 transition hover:text-blue-500"
+								aria-label="LinkedIn"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="h-6 w-6"
+								>
+									<path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.3 19h-2.6v-9h2.6v9zm-1.3-10.2c-.84 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12.3 10.2h-2.6v-4.8c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.84 1.25-1.84 2.54v4.89h-2.6v-9h2.5v1.23h.04c.35-.67 1.21-1.38 2.5-1.38 2.67 0 3.17 1.75 3.17 4.03v5.12z" />
+								</svg>
+							</Link>
+							<Link
+								href="https://github.com/rahulpoonia29"
+								className="text-gray-800 transition hover:text-gray-600"
+								aria-label="GitHub"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="h-6 w-6"
+								>
+									<path d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.05-1.61-4.05-1.61-.54-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.94 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.52 11.52 0 016.01 0c2.29-1.55 3.29-1.23 3.29-1.23.67 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.47 5.94.43.37.82 1.1.82 2.22v3.28c0 .32.22.69.83.58A12 12 0 0012 .5z" />
+								</svg>
+							</Link>
+							<Link
+								href="https://www.instagram.com/rahulpoonia029/"
+								className="text-pink-600 transition hover:text-pink-400"
+								aria-label="Instagram"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="h-6 w-6"
+								>
+									<path d="M12 0c-3.33 0-3.74.01-5.03.07-1.27.06-2.15.26-2.92.55-.78.29-1.42.67-2.08 1.34C.28 2.68.01 3.32-.28 4.1-.57 4.86-.77 5.74-.83 7.03-.9 8.32-.9 8.73-.9 12s0 3.68.06 5.03c.06 1.27.26 2.16.55 2.92.29.78.67 1.42 1.34 2.08.68.68 1.32.95 2.1 1.24.76.29 1.65.49 2.92.55 1.3.06 1.7.06 5.03.06s3.74 0 5.03-.06c1.27-.06 2.16-.26 2.92-.55.78-.29 1.42-.67 2.08-1.34.68-.68.95-1.32 1.24-2.1.29-.76.49-1.65.55-2.92.06-1.3.06-1.7.06-5.03s0-3.74-.06-5.03c-.06-1.27-.26-2.15-.55-2.92-.29-.78-.67-1.42-1.34-2.08-.68-.68-1.32-.95-2.1-1.24-.76-.29-1.65-.49-2.92-.55-1.3-.06-1.7-.06-5.03-.06zm0 1.5c3.26 0 3.67.01 4.96.07 1.23.06 1.91.25 2.35.42.6.23.96.5 1.37.91.4.4.67.77.91 1.37.17.44.36 1.11.42 2.35.06 1.29.07 1.7.07 4.96s0 3.67-.07 4.96c-.06 1.23-.25 1.91-.42 2.35-.23.6-.5.96-.91 1.37-.4.4-.77.67-1.37.91-.44.17-1.11.36-2.35.42-1.29.06-1.7.07-4.96.07s-3.67 0-4.96-.07c-1.23-.06-1.91-.25-2.35-.42-.6-.23-.96-.5-1.37-.91-.4-.4-.67-.77-.91-1.37-.17-.44-.36-1.11-.42-2.35-.06-1.29-.07-1.7-.07-4.96s0-3.67.07-4.96c.06-1.23.25-1.91.42-2.35.23-.6.5-.96.91-1.37.4-.4.77-.67 1.37-.91.44-.17 1.11-.36 2.35-.42 1.29-.06 1.7-.07 4.96-.07zm0 4.49a5.51 5.51 0 100 11.01 5.51 5.51 0 000-11.01zm0 1.5a4 4 0 110 8 4 4 0 010-8zm6.38-1.1a1.3 1.3 0 100 2.6 1.3 1.3 0 000-2.6z" />
+								</svg>
+							</Link>
+							<Link
+								href="https://twitter.com/rahulpoonia229"
+								className="text-blue-500 transition hover:text-blue-300"
+								aria-label="Twitter"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									className="h-6 w-6"
+								>
+									<path d="M23.43 4.8c-.81.36-1.69.6-2.6.71a4.51 4.51 0 001.98-2.5 9.01 9.01 0 01-2.88 1.1 4.49 4.49 0 00-7.64 4.1A12.79 12.79 0 011.64 3.15a4.49 4.49 0 001.39 6.01 4.45 4.45 0 01-2.03-.56v.06a4.49 4.49 0 003.6 4.4 4.52 4.52 0 01-2.02.08 4.5 4.5 0 004.21 3.13A9.01 9.01 0 010 20.25a12.74 12.74 0 006.91 2.02c8.3 0 12.85-6.87 12.85-12.84 0-.2 0-.4-.02-.6A9.23 9.23 0 0024 5.41c-.87.39-1.8.65-2.76.76a4.49 4.49 0 001.98-2.5z" />
+								</svg>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<div className="mt-8 h-56 w-56 md:h-80 md:w-80 lg:mt-0 lg:-translate-x-16">
