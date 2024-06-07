@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { skill } from "./Skills";
 import { FastAverageColor } from "fast-average-color";
+import ScrollWrapper from "../utils/ScrollWrapper";
 
 const SkillCard = ({ name, image }: skill) => {
 	const [bgColor, setBgColor] = useState("#fff");
@@ -28,26 +29,28 @@ const SkillCard = ({ name, image }: skill) => {
 	}, [image]);
 
 	return (
-		<div className="flex flex-col items-center justify-center gap-2">
-			<div
-				title={name}
-				style={{ backgroundColor: bgColor }}
-				className={`dark:bg-grey-800 flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 md:size-24`}
-			>
-				<Image
-					alt="skill"
-					width={80}
-					height={80}
-					className={`size-12 object-contain md:size-14 ${
-						name === "GitHub" || name === "Vercel" || name === "Express JS"
-							? "invert"
-							: ""
-					}`}
-					src={image}
-				/>
+		<ScrollWrapper>
+			<div className="flex flex-col items-center justify-center gap-2">
+				<div
+					title={name}
+					style={{ backgroundColor: bgColor }}
+					className={`dark:bg-grey-800 flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 md:size-24`}
+				>
+					<Image
+						alt="skill"
+						width={80}
+						height={80}
+						className={`size-12 object-contain md:size-14 ${
+							name === "GitHub" || name === "Vercel" || name === "Express JS"
+								? "invert"
+								: ""
+						}`}
+						src={image}
+					/>
+				</div>
+				<p className="text-sm md:text-base">{name}</p>
 			</div>
-			<p className="text-sm md:text-base">{name}</p>
-		</div>
+		</ScrollWrapper>
 	);
 };
 
