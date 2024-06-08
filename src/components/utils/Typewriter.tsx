@@ -15,7 +15,7 @@ function MyTypewriter({ words, speed, className }: Props) {
 			<Typewriter
 				words={words}
 				cursor
-				cursorColor="zinc"
+				cursorColor="grey"
 				typeSpeed={speed}
 				deleteSpeed={70}
 				delaySpeed={2000}

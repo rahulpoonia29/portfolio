@@ -23,13 +23,13 @@ export default function ProjectCard({
 }: project) {
 	return (
 		<ScrollWrapper>
-			<div className="dark:bg-grey-800 flex max-w-md flex-col gap-2 rounded-lg bg-zinc-900 p-4">
-				<div className="group relative rounded-lg bg-violet-50">
+			<div className="dark:bg-grey-800 group flex max-w-md flex-col gap-2 rounded-lg bg-zinc-900 p-4 ">
+				<div className="relative rounded-lg">
 					<Image
 						alt={title}
 						width={1000}
 						height={1000}
-						className="aspect-video h-48 max-h-full max-w-full rounded-lg border-2 border-zinc-500 object-cover object-top"
+						className="aspect-video h-48 max-h-full max-w-full rounded-lg border-2 border-zinc-500 object-cover object-top transition-transform group-hover:scale-105 "
 						src={image}
 					/>
 				</div>

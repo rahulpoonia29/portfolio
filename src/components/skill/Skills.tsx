@@ -19,7 +19,7 @@ function Skills({ categories, skillData }: Props) {
 
 	return (
 		<ScrollWrapper>
-			<div className="mx-6 mb-28 mt-12 min-h-[60vh] md:mx-0 md:mb-0 md:mt-20 md:min-h-screen">
+			<div id="skills" className="mx-6 mb-28 mt-12 min-h-[60vh] md:mx-0 md:mb-0 md:mt-20 md:min-h-screen">
 				<h2 className="text-center text-4xl">Tech Stack</h2>
 
 				<div className="scroll-hide mx-auto mt-6 flex items-center justify-between gap-3 overflow-x-auto rounded-md bg-zinc-800 p-2 py-3 sm:w-3/5 md:w-1/2 lg:w-1/3">

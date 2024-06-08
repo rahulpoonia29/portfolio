@@ -119,7 +119,7 @@ function Hero() {
 							</Link>
 							<Link
 								href="https://github.com/rahulpoonia29"
-								className="text-gray-800 transition hover:text-gray-600"
+								className="text-gray-600 transition hover:text-gray-500"
 								aria-label="GitHub"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -151,7 +151,7 @@ function Hero() {
 							</Link>
 							<Link
 								href="https://twitter.com/rahulpoonia229"
-								className="text-blue-500 transition hover:text-blue-300"
+								className="text-zinc-600 transition hover:text-zinc-500"
 								aria-label="Twitter"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -162,7 +162,7 @@ function Hero() {
 									fill="currentColor"
 									className="h-6 w-6"
 								>
-									<path d="M23.43 4.8c-.81.36-1.69.6-2.6.71a4.51 4.51 0 001.98-2.5 9.01 9.01 0 01-2.88 1.1 4.49 4.49 0 00-7.64 4.1A12.79 12.79 0 011.64 3.15a4.49 4.49 0 001.39 6.01 4.45 4.45 0 01-2.03-.56v.06a4.49 4.49 0 003.6 4.4 4.52 4.52 0 01-2.02.08 4.5 4.5 0 004.21 3.13A9.01 9.01 0 010 20.25a12.74 12.74 0 006.91 2.02c8.3 0 12.85-6.87 12.85-12.84 0-.2 0-.4-.02-.6A9.23 9.23 0 0024 5.41c-.87.39-1.8.65-2.76.76a4.49 4.49 0 001.98-2.5z" />
+									<path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z" />
 								</svg>
 							</Link>
 						</div>
