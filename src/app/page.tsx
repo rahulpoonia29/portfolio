@@ -1,5 +1,3 @@
-'use client'
-
 import Skills from "@/components/skill/Skills";
 import About from "@/components/about/About";
 import Hero from "@/components/hero/Hero";
