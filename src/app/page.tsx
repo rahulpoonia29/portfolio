@@ -9,6 +9,12 @@ import ProjectModel, { Project } from "@/model/projects.model";
 export default async function Home() {
 	await dbConnect();
 
+	// SkillModel.create({
+	// 	name: "Markdown",
+	// 	logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg",
+	// 	category: "Frontend",
+	// });
+
 	const skillData = await SkillModel.find({}).lean();
 	const skills: Skill[] = skillData.map((skill) => ({
 		name: skill.name,

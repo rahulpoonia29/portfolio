@@ -23,13 +23,13 @@ export default function ProjectCard({
 }: Project) {
 	return (
 		<ScrollWrapper>
-			<div className="dark:bg-grey-800 group flex max-w-md flex-col gap-2 rounded-lg bg-zinc-900 p-4 ">
+			<div className="dark:bg-grey-800 flex h-full max-w-md flex-col gap-2 rounded-lg bg-zinc-900 p-4 transition-transform md:hover:scale-105 ">
 				<div className="relative rounded-lg">
 					<Image
 						alt={title}
 						width={1000}
 						height={1000}
-						className="aspect-video h-48 max-h-full max-w-full rounded-lg border-2 border-zinc-500 object-cover object-top transition-transform group-hover:scale-105 "
+						className="aspect-video max-h-full max-w-full rounded-lg border-2 border-zinc-500 object-cover object-top  "
 						src={logo}
 					/>
 				</div>
@@ -38,27 +38,25 @@ export default function ProjectCard({
 					<h3 className="text-xl font-medium">{title}</h3>
 					<p className="text-sm text-gray-400">{description}</p>
 					<p className="text-sm text-gray-200">
-						Tech Stack: <span className="text-gray-400">{techStack}</span>
+						Tech Stack:{" "}
+						<span className="text-gray-400">{techStack.join(", ")}</span>
 					</p>
 					<div className="mt-2 flex items-center gap-4">
-						<div className="flex items-center gap-4">
-							<Link
-								href={websiteLink}
-								target="_blank"
-								className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
-							>
-								Visit
-							</Link>
-						</div>
-						<div className="flex items-center gap-4">
-							<Link
-								href={githubLink}
-								target="_blank"
-								className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
-							>
-								Github
-							</Link>
-						</div>
+						<Link
+							href={websiteLink}
+							target="_blank"
+							className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
+						>
+							Visit
+						</Link>
+
+						<Link
+							href={githubLink}
+							target="_blank"
+							className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
+						>
+							Github
+						</Link>
 					</div>
 				</div>
 			</div>
