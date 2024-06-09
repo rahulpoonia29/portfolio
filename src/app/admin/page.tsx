@@ -18,14 +18,14 @@ export default async function Admin({}: Props) {
 	// 	sessionStorage.setItem;
 	// };
 
-	const skillData = await SkillModel.find({}).lean();
+	// const skillData = await SkillModel.find({}).lean();
 	// const projectData = await ProjectModel.find({}).lean();
 
 	return (
 		<div className="mt-16">
-			{skillData.map((skill: Skill) => {
+			{/* {skillData.map((skill: Skill) => {
 				return <span key={skill.name}>{skill.name}</span>;
-			})}
+			})} */}
 		</div>
 		// <div className="flex min-h-screen items-center justify-center">
 		// 	<form>
