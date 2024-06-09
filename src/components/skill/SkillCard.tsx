@@ -2,17 +2,17 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { skill } from "./Skills";
 import { FastAverageColor } from "fast-average-color";
 import ScrollWrapper from "../utils/ScrollWrapper";
+import { Skill } from "@/model/skill.model";
 
-const SkillCard = ({ name, image }: skill) => {
+const SkillCard = ({ name, logo }: Skill) => {
 	const [bgColor, setBgColor] = useState("#fff");
 
 	useEffect(() => {
 		const fac = new FastAverageColor();
 		fac
-			.getColorAsync(image)
+			.getColorAsync(logo)
 			.then((color) => {
 				const rgba = color.rgb.split(")");
 				// console.log(rgba);
@@ -26,7 +26,7 @@ const SkillCard = ({ name, image }: skill) => {
 		return () => {
 			fac.destroy();
 		};
-	}, [image]);
+	}, [logo]);
 
 	return (
 		<ScrollWrapper>
@@ -45,7 +45,7 @@ const SkillCard = ({ name, image }: skill) => {
 								? "invert"
 								: ""
 						}`}
-						src={image}
+						src={logo}
 					/>
 				</div>
 				<p className="text-sm md:text-base">{name}</p>

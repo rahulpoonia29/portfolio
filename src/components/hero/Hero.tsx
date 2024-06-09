@@ -51,7 +51,7 @@ function Hero() {
 							<path
 								d="M0.5 0.5H89C90.6569 0.5 92 1.84315 92 3.5V29C92 30.6569 93.3431 32 95 32H148.5C150.157 32 151.5 33.3431 151.5 35V64C151.5 65.6569 152.843 67 154.5 67H235.5"
 								stroke="url(#paint0_linear)"
-								stroke-width="2"
+								strokeWidth="2"
 								mask="url(#mask)"
 							/>
 						</svg>
