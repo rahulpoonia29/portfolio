@@ -6,7 +6,7 @@ import { FastAverageColor } from "fast-average-color";
 import ScrollWrapper from "../utils/ScrollWrapper";
 import { Skill } from "@/model/skill.model";
 
-const SkillCard = ({ name, logo }: Skill) => {
+const SkillCard = ({ name, logo, invert }: Skill) => {
 	const [bgColor, setBgColor] = useState("#fff");
 
 	useEffect(() => {
@@ -15,7 +15,6 @@ const SkillCard = ({ name, logo }: Skill) => {
 			.getColorAsync(logo)
 			.then((color) => {
 				const rgba = color.rgb.split(")");
-				// console.log(rgba);
 				setBgColor(rgba[0] + ",0.25)");
 			})
 			.catch((e) => {
@@ -41,9 +40,7 @@ const SkillCard = ({ name, logo }: Skill) => {
 						width={80}
 						height={80}
 						className={`size-12 object-contain md:size-14 ${
-							name === "GitHub" || name === "Vercel" || name === "Express JS"
-								? "invert"
-								: ""
+							invert && "invert"
 						}`}
 						src={logo}
 					/>

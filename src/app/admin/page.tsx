@@ -1,15 +1,19 @@
 "use client";
-import { useState } from "react";
+
+import React, { useState } from "react";
 
 type Props = {};
 
-function page({}: Props) {
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
+function Admin({}: Props) {
+	const [username, setUsername] = useState<string>("");
+	const [password, setPassword] = useState<string>("");
 
 	const handleSubmit = () => {
-		console.log(username === process.env.NEXT_PUBLIC_USERNAME && password === process.env.NEXT_PUBLIC_PASSWORD);
-        sessionStorage.setItem
+		console.log(
+			username === process.env.NEXT_PUBLIC_USERNAME &&
+				password === process.env.NEXT_PUBLIC_PASSWORD,
+		);
+		sessionStorage.setItem;
 	};
 
 	return (
@@ -63,4 +67,4 @@ function page({}: Props) {
 	);
 }
 
-export default page;
+export default Admin;

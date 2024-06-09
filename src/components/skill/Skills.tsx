@@ -7,10 +7,10 @@ import { Skill } from "@/model/skill.model";
 
 type Props = {
 	categories: string[];
-	skillData: Skill[];
+	skills: Skill[];
 };
 
-function Skills({ categories, skillData }: Props) {
+function Skills({ categories, skills }: Props) {
 	const [category, setCategory] = useState(categories[0]);
 
 	return (
@@ -34,7 +34,7 @@ function Skills({ categories, skillData }: Props) {
 				</div>
 
 				<div className="mx-auto my-8 grid grid-cols-3 place-items-center gap-8 md:grid-cols-4 md:px-12 lg:w-3/4 xl:grid-cols-5 2xl:w-3/5">
-					{skillData
+					{skills
 						.filter((skill) => skill.category === category)
 						.map((s: any, key: number) => (
 							<SkillCard key={key} {...s} />

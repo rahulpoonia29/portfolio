@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { project } from "./Projects";
 import ScrollWrapper from "../utils/ScrollWrapper";
+import { Project } from "@/model/projects.model";
 
 const cardVariants = {
 	hidden: { y: 50, opacity: 0 },
@@ -15,12 +15,12 @@ const cardVariants = {
 
 export default function ProjectCard({
 	title,
-	techStack,
+	logo,
 	description,
-	link,
-	image,
-	github,
-}: project) {
+	techStack,
+	websiteLink,
+	githubLink,
+}: Project) {
 	return (
 		<ScrollWrapper>
 			<div className="dark:bg-grey-800 group flex max-w-md flex-col gap-2 rounded-lg bg-zinc-900 p-4 ">
@@ -30,7 +30,7 @@ export default function ProjectCard({
 						width={1000}
 						height={1000}
 						className="aspect-video h-48 max-h-full max-w-full rounded-lg border-2 border-zinc-500 object-cover object-top transition-transform group-hover:scale-105 "
-						src={image}
+						src={logo}
 					/>
 				</div>
 
@@ -43,7 +43,7 @@ export default function ProjectCard({
 					<div className="mt-2 flex items-center gap-4">
 						<div className="flex items-center gap-4">
 							<Link
-								href={link}
+								href={websiteLink}
 								target="_blank"
 								className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
 							>
@@ -52,7 +52,7 @@ export default function ProjectCard({
 						</div>
 						<div className="flex items-center gap-4">
 							<Link
-								href={github}
+								href={githubLink}
 								target="_blank"
 								className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
 							>
