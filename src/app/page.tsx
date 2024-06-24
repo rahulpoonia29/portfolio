@@ -9,13 +9,7 @@ import ProjectModel, { Project } from "@/model/projects.model";
 export default async function Home() {
 	await dbConnect();
 
-	// SkillModel.create({
-	// 	name: "Markdown",
-	// 	logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg",
-	// 	category: "Frontend",
-	// });
-
-	const skillData = await SkillModel.find({}).lean();
+	const skillData = await SkillModel.find({}).lean(true);
 	const skills: Skill[] = skillData.map((skill) => ({
 		name: skill.name,
 		logo: skill.logo,
@@ -23,9 +17,16 @@ export default async function Home() {
 		invert: skill.invert,
 	}));
 
-	const categories = Array.from(new Set(skills.map((skill) => skill.category)));
+	const categories = Array.from(
+		new Set([
+			"Frontend",
+			"Backend",
+			"Others",
+			...skills.map((skill) => skill.category),
+		]),
+	);
 
-	const projectData = await ProjectModel.find({}).lean();
+	const projectData = await ProjectModel.find({}).lean(true);
 	const projects: Project[] = projectData.map((project) => ({
 		title: project.title,
 		description: project.description,
@@ -34,6 +35,8 @@ export default async function Home() {
 		websiteLink: project.websiteLink,
 		githubLink: project.githubLink,
 	}));
+
+
 
 	return (
 		<div>
