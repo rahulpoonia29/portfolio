@@ -12,6 +12,7 @@ function Hero() {
 					className="-top-40 left-0 md:-top-20 md:left-60"
 					fill="grey"
 				/>
+
 				<div className="relative mx-6 flex flex-col gap-4 text-left md:mx-6 md:gap-6 lg:w-1/2 xl:mx-0 2xl:w-1/3">
 					<div className="absolute -top-8">
 						<svg

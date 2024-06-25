@@ -14,9 +14,9 @@ type Props = {
 function Projects({ projects }: Props) {
 	return (
 		<ScrollWrapper>
-			<div id="projects" className="mx-6 mb-10 min-h-screen md:mx-0">
+			<div id="projects" className="mx-0 mb-10 min-h-screen md:mx-0">
 				<h2 className="text-center text-4xl">My Projects</h2>
-				<div className="mx-auto max-w-7xl px-8">
+				<div className="mx-auto max-w-7xl px-4">
 					<HoverEffect items={projects} />
 				</div>
 			</div>

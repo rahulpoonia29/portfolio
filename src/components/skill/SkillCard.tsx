@@ -28,7 +28,7 @@ const SkillCard = ({ name, logo, invert }: Skill) => {
 	}, [logo]);
 
 	return (
-		<ScrollWrapper>
+		// <ScrollWrapper>
 			<div className="flex flex-col items-center justify-center gap-2">
 				<div
 					title={name}
@@ -47,7 +47,7 @@ const SkillCard = ({ name, logo, invert }: Skill) => {
 				</div>
 				<p className="text-sm md:text-base">{name}</p>
 			</div>
-		</ScrollWrapper>
+		// </ScrollWrapper>
 	);
 };
 

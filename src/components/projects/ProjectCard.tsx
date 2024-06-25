@@ -7,23 +7,9 @@ import { Oxanium } from "next/font/google";
 import { AnimatedTooltip } from "../Aceternity/animated-tooltip";
 import { BackgroundGradientAnimation } from "../Aceternity/background-gradient-animation";
 import { Meteors } from "../Aceternity/metores";
+import generateCardColors from "@/utils/generateColors";
 
 const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
-
-const people = [
-	{
-		id: 1,
-		name: "React",
-		image:
-			"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-	},
-	{
-		id: 2,
-		name: "React",
-		image:
-			"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-	},
-];
 
 export default function ProjectCard({
 	title,
@@ -31,10 +17,12 @@ export default function ProjectCard({
 	techStack,
 	websiteLink,
 }: Project) {
+	const colors = generateCardColors();
+
 	return (
 		<div className="my-2 flex flex-col gap-3">
 			<BackgroundGradientAnimation
-				containerClassName="w-full aspect-video h-full rounded-2xl grid items-center"
+				containerClassName="w-full aspect-video h-full rounded-2xl"
 				className="flex h-full w-full items-center"
 			>
 				<h3
@@ -42,7 +30,7 @@ export default function ProjectCard({
 				>
 					{title}
 				</h3>
-				<Meteors number={30} />
+				<Meteors number={10} />
 			</BackgroundGradientAnimation>
 			<p className="text-s text-gray-400">{description}</p>
 
@@ -52,7 +40,7 @@ export default function ProjectCard({
 				</div>
 
 				<Link href={websiteLink} target="_blank">
-					<button className="animate-shimmer inline-flex w-fit items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+					<button className="md:text-md inline-flex w-fit animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-2 text-sm font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
 						Visit Live Site
 					</button>
 				</Link>

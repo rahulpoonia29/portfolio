@@ -15,7 +15,10 @@ function About() {
 					About Me
 				</h2>
 				<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
-					<BackgroundGradient className="w-full" containerClassName="mx-auto flex w-56 flex-col items-center gap-2 self-start rounded-lg p-1 transition-transform duration-300 hover:-translate-y-2 md:w-2/5 lg:mx-16 lg:w-72 lg:-rotate-3">
+					<BackgroundGradient
+						className="w-full"
+						containerClassName="mx-auto flex w-56 flex-col items-center gap-2 self-start rounded-lg p-1 transition-transform duration-300 hover:-translate-y-2 md:w-2/5 lg:mx-16 lg:w-72 lg:-rotate-3"
+					>
 						<div className="mx-auto flex w-full flex-col items-center gap-2 self-start rounded-2xl bg-zinc-900 p-3">
 							<Image
 								alt={"/self.jpg"}
@@ -53,6 +56,24 @@ function About() {
 									className="w-fit cursor-pointer rounded-md bg-violet-500 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 md:text-base"
 								>
 									Resume
+								</Link>
+								<Link
+									className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-700 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-800 md:text-base"
+									href={"#skills"}
+								>
+									<span>My Skills</span>
+									<svg
+										stroke="currentColor"
+										fill="currentColor"
+										strokeWidth="0"
+										viewBox="0 0 512 512"
+										className="transition-transform group-hover:translate-x-1"
+										height="1em"
+										width="1em"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+									</svg>
 								</Link>
 							</div>
 						</div>
