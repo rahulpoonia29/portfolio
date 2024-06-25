@@ -1,7 +1,8 @@
+'use client';
+
 import { Project } from "@/model/projects.model";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 import ProjectCard from "../projects/ProjectCard";
 

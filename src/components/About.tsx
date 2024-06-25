@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ScrollWrapper from "../utils/ScrollWrapper";
-import { BackgroundGradient } from "../Aceternity/background-gradient";
+import ScrollWrapper from "@/components/utils/ScrollWrapper";
+import { BackgroundGradient } from "@/components/Aceternity/background-gradient";
 
 function About() {
 	return (

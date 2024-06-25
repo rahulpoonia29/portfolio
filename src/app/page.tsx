@@ -1,10 +1,14 @@
 import Skills from "@/components/skill/Skills";
-import About from "@/components/about/About";
-import Hero from "@/components/hero/Hero";
+import About from "@/components/About";
+import Hero from "@/components/Hero";
 import Projects from "@/components/projects/Projects";
 import dbConnect from "@/db";
 import SkillModel, { Skill } from "@/model/skill.model";
 import ProjectModel, { Project } from "@/model/projects.model";
+import Contact from "@/components/utils/Contact";
+import { BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { LiaLinkedinIn } from "react-icons/lia";
+
 
 export default async function Home() {
 	await dbConnect();
@@ -36,14 +40,36 @@ export default async function Home() {
 		githubLink: project.githubLink,
 	}));
 
-
+	const socialMedia = [
+		{
+			name: "LinkedIn",
+			link: "https://www.linkedin.com/in/rahulpoonia",
+			logo: LiaLinkedinIn,
+		},
+		{
+			name: "GitHub",
+			link: "https://github.com/rahulpoonia29",
+			logo: BsGithub,
+		},
+		{
+			name: "Instagram",
+			link: "https://www.instagram.com/rahulpoonia029/",
+			logo: BsInstagram,
+		},
+		{
+			name: "Twitter",
+			link: "https://twitter.com/rahulpoonia229",
+			logo: BsTwitter,
+		},
+	];
 
 	return (
-		<div>
-			<Hero />
+		<div className="select-none">
+			<Hero socialMedia={socialMedia} />
 			<About />
 			<Skills categories={categories} skills={skills} />
 			<Projects projects={projects} />
+			<Contact socialMedia={socialMedia} />
 		</div>
 	);
 }

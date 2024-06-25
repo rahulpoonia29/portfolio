@@ -1,15 +1,11 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import ScrollWrapper from "../utils/ScrollWrapper";
 import { Project } from "@/model/projects.model";
-import { Oxanium } from "next/font/google";
 import { AnimatedTooltip } from "../Aceternity/animated-tooltip";
 import { BackgroundGradientAnimation } from "../Aceternity/background-gradient-animation";
 import { Meteors } from "../Aceternity/metores";
 import generateCardColors from "@/utils/generateColors";
-
-const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
+import { oxanium } from "@/app/page";
 
 export default function ProjectCard({
 	title,

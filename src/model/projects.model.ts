@@ -58,7 +58,7 @@ const ProjectSchema = new mongoose.Schema<Project>({
 });
 
 const ProjectModel =
-	(mongoose.models.Project as mongoose.Model<Project>) ||
+	(mongoose.models?.Project as mongoose.Model<Project>) ||
 	mongoose.model<Project>("Project", ProjectSchema);
 
 export default ProjectModel;

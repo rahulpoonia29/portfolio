@@ -28,7 +28,7 @@ const SkillSchema = new mongoose.Schema<Skill>({
 });
 
 const SkillModel =
-	(mongoose.models.Skill as mongoose.Model<Skill>) ||
+	(mongoose.models?.Skill as mongoose.Model<Skill>) ||
 	mongoose.model<Skill>("Skill", SkillSchema);
 
 export default SkillModel;
