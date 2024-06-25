@@ -1,6 +1,8 @@
-import { oxanium } from "@/app/layout";
+import { Oxanium } from "next/font/google";
 
+const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 function Footer() {
+
 	return (
 		<footer
 			className={`dark:bg-grey-800 w-full bg-zinc-900/60 ${oxanium.className}`}

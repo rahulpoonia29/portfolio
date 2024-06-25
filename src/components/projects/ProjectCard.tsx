@@ -4,8 +4,9 @@ import { Project } from "@/model/projects.model";
 import { AnimatedTooltip } from "../Aceternity/animated-tooltip";
 import { BackgroundGradientAnimation } from "../Aceternity/background-gradient-animation";
 import { Meteors } from "../Aceternity/metores";
-import generateCardColors from "@/utils/generateColors";
-import { oxanium } from "@/app/page";
+import { Oxanium } from "next/font/google";
+
+const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 
 export default function ProjectCard({
 	title,
@@ -13,8 +14,6 @@ export default function ProjectCard({
 	techStack,
 	websiteLink,
 }: Project) {
-	const colors = generateCardColors();
-
 	return (
 		<div className="my-2 flex flex-col gap-3">
 			<BackgroundGradientAnimation

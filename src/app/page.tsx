@@ -10,6 +10,7 @@ import { BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 
 
+
 export default async function Home() {
 	await dbConnect();
 

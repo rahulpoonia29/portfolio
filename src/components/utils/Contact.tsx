@@ -1,4 +1,4 @@
-import { oxanium } from "@/app/layout";
+import { Oxanium } from "next/font/google";
 import Link from "next/link";
 import React from "react";
 import { SiMinutemailer } from "react-icons/si";
@@ -6,6 +6,7 @@ import { SiMinutemailer } from "react-icons/si";
 type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
 };
+const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 
 function Contact({ socialMedia }: Props) {
 	return (
