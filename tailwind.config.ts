@@ -13,7 +13,7 @@ const config: Config = {
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
-	darkMode: "class",
+	darkMode: "media",
 	theme: {
 		extend: {
 			backgroundImage: {
