@@ -1,4 +1,5 @@
 import { Oxanium } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SiMinutemailer } from "react-icons/si";
@@ -14,6 +15,13 @@ function Contact({ socialMedia }: Props) {
 			id="contact"
 			className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
 		>
+			<Image
+				className="absolute left-0 bottom-0 z-[-1] w-full"
+				src={"/footer-grid.svg"}
+				alt="Footer grid"
+				width={100}
+				height={100}
+			/>
 			<p
 				className={`lg:1/2 w-full text-5xl leading-[3.8rem] tracking-wide md:w-2/3 ${oxanium.className}`}
 			>
