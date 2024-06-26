@@ -17,8 +17,8 @@ function MyTypewriter({ words, speed, className }: Props) {
 				cursor
 				cursorColor="grey"
 				typeSpeed={speed}
-				deleteSpeed={70}
-				delaySpeed={2000}
+				deleteSpeed={100}
+				delaySpeed={1500}
 				loop
 			/>
 		</div>

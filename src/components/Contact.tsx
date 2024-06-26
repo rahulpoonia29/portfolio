@@ -35,7 +35,7 @@ function Contact({ socialMedia }: Props) {
 				<span className="whitespace-nowrap">web presence extraordinary!</span>
 			</p>
 			<Link
-				href="mailto:someone@example.com"
+				href="mailto:rahulpoonia229@gmail.com"
 				className="relative grid w-fit p-[3px]"
 			>
 				<div className="absolute inset-0 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500" />

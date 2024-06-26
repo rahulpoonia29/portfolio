@@ -13,7 +13,6 @@ type Props = {
 
 const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 
-
 function Hero({ socialMedia }: Props) {
 	return (
 		// <HeroHighlight>
@@ -114,7 +113,7 @@ function Hero({ socialMedia }: Props) {
 					<Typewriter
 						className={`inline-block text-violet-600 ${oxanium.className}`}
 						speed={100}
-						words={["Web Developer", "Web Designer", "Student"]}
+						words={["Next.JS Developer", "MERN Developer", "Student"]}
 					/>
 				</div>
 				<p className="text-sm text-zinc-400 md:text-lg">
