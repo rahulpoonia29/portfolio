@@ -37,8 +37,8 @@ function Hero({ socialMedia }: Props) {
 						y2="2.312"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stop stop-color="#2D88E2"></stop>
-						<stop offset="1" stop-color="#36EC74"></stop>
+						<stop stopColor="#2D88E2"></stop>
+						<stop offset="1" stopColor="#36EC74"></stop>
 					</linearGradient>
 				</defs>
 			</svg>
@@ -199,7 +199,7 @@ function Hero({ socialMedia }: Props) {
 					}
 					name="Git"
 					size={8}
-					className="right-16 -bottom-16 size-14"
+					className="-bottom-16 right-16 size-14"
 				/>
 			</div>
 		</div>
