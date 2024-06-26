@@ -12,7 +12,7 @@ function Contact({ socialMedia }: Props) {
 	return (
 		<div
 			id="contact"
-			className="flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
+			className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
 		>
 			<p
 				className={`lg:1/2 w-full text-5xl leading-[3.8rem] tracking-wide md:w-2/3 ${oxanium.className}`}

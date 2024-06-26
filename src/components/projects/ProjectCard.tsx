@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: Project) {
 	return (
 		<div className="my-2 flex flex-col gap-3">
-			<BackgroundGradientAnimation
+			<BackgroundGradientAnimation interactive={false} size="10%"
 				containerClassName="w-full aspect-video h-full rounded-2xl"
 				className="flex h-full w-full items-center"
 			>

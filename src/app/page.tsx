@@ -5,7 +5,7 @@ import Projects from "@/components/projects/Projects";
 import dbConnect from "@/db";
 import SkillModel, { Skill } from "@/model/skill.model";
 import ProjectModel, { Project } from "@/model/projects.model";
-import Contact from "@/components/utils/Contact";
+import Contact from "@/components/Contact";
 import { BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 
@@ -65,7 +65,7 @@ export default async function Home() {
 	];
 
 	return (
-		<div className="select-none">
+		<div className="select-none ">
 			<Hero socialMedia={socialMedia} />
 			<About />
 			<Skills categories={categories} skills={skills} />
