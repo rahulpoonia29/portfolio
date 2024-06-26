@@ -38,7 +38,7 @@ function Navigation() {
 				<Link className="group absolute left-0 text-lg" href="#home">
 					<span className="group: animate-spotlight">✦</span> Rahul
 				</Link>
-				<div className="hidden gap-10 lg:flex">
+				<div className="hidden gap-10 sm:flex">
 					{Links.map((link, key) => (
 						<Link
 							key={key}
@@ -50,7 +50,7 @@ function Navigation() {
 					))}
 				</div>
 
-				<div className="grid lg:hidden">
+				<div className="grid sm:hidden">
 					<BurgerButton onClick={handleClick} isOpen={isOpen} />
 					<div
 						className={`fixed right-0 top-16 flex h-screen w-1/2 max-w-xs flex-col gap-8 rounded-md bg-zinc-800/90 p-6 py-10 shadow-2xl backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out ${

@@ -2,10 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Typewriter from "@/components/utils/Typewriter";
 import { Spotlight } from "./Aceternity/Spotlight";
-import ScrollWrapper from "./utils/ScrollWrapper";
-import { Boxes } from "./Aceternity/background-boxes";
-import { HeroHighlight } from "./Aceternity/hero-highlight";
 import { Oxanium } from "next/font/google";
+import OrbitImage from "./OrbitImage";
 
 type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
@@ -15,10 +13,9 @@ const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 
 function Hero({ socialMedia }: Props) {
 	return (
-		// <HeroHighlight>
 		<div
 			id="home"
-			className="mb-16 flex min-h-screen w-full flex-col-reverse items-center justify-evenly gap-10 overflow-hidden md:justify-around lg:flex-row lg:gap-0"
+			className="mb-16 mt-16 flex min-h-[calc(100vh-64px)] w-full flex-col-reverse items-center justify-evenly gap-10 overflow-hidden md:justify-around lg:flex-row lg:gap-0"
 		>
 			<svg
 				className="absolute bottom-0 right-0 hidden -translate-x-6 translate-y-4 opacity-25 md:block lg:opacity-70"
@@ -166,9 +163,46 @@ function Hero({ socialMedia }: Props) {
 					className="h-full w-full rounded-full object-cover object-center"
 					src={"/profile.jpg"}
 				/>
+				<OrbitImage
+					src={
+						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+					}
+					name="NEXT JS"
+					size={14}
+					className="-left-12 -top-12 size-20"
+				/>
+				<OrbitImage
+					src={
+						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
+					}
+					name="Redux"
+					size={10}
+					className="-right-14 -top-4 size-16"
+				/>
+				<OrbitImage
+					src={"/skills/Nodejs.svg"}
+					name="Node JS"
+					size={8}
+					className="-right-24 top-36 size-14"
+				/>
+				<OrbitImage
+					src={
+						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+					}
+					name="Tailwind CSS"
+					size={8}
+					className="-right-8 bottom-0 size-12"
+				/>
+				<OrbitImage
+					src={
+						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+					}
+					name="Git"
+					size={8}
+					className="right-16 -bottom-16 size-14"
+				/>
 			</div>
 		</div>
-		// </HeroHighlight>
 	);
 }
 
