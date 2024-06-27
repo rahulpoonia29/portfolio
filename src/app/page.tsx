@@ -9,8 +9,6 @@ import Contact from "@/components/Contact";
 import { BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { LiaLinkedinIn } from "react-icons/lia";
 
-
-
 export default async function Home() {
 	await dbConnect();
 
@@ -65,12 +63,12 @@ export default async function Home() {
 	];
 
 	return (
-		<div className="select-none ">
+		<>
 			<Hero socialMedia={socialMedia} />
 			<About />
 			<Skills categories={categories} skills={skills} />
 			<Projects projects={projects} />
 			<Contact socialMedia={socialMedia} />
-		</div>
+		</>
 	);
 }

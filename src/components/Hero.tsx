@@ -9,7 +9,7 @@ type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
 };
 
-const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
+export const oxanium = Oxanium({ subsets: ["latin"], weight: "600" });
 
 function Hero({ socialMedia }: Props) {
 	return (
@@ -176,7 +176,7 @@ function Hero({ socialMedia }: Props) {
 						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
 					}
 					name="Redux"
-					size={10}
+					size={12}
 					className="-right-14 -top-4 size-16"
 				/>
 				<OrbitImage
@@ -198,8 +198,8 @@ function Hero({ socialMedia }: Props) {
 						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
 					}
 					name="Git"
-					size={6}
-					className="-bottom-12 right-20 size-10"
+					size={8}
+					className="-bottom-12 right-20 size-12"
 				/>
 			</div>
 		</div>

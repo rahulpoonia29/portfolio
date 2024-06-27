@@ -13,7 +13,7 @@ function Contact({ socialMedia }: Props) {
 	return (
 		<div
 			id="contact"
-			className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
+			className="relative flex min-h-screen w-full select-none flex-col items-center justify-center gap-4 text-center"
 		>
 			<Image
 				className="absolute bottom-0 left-1/2 z-[-1] h-full w-full -translate-x-1/2 transform object-cover lg:h-auto"

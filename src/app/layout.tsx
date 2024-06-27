@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Oxanium, Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -7,6 +7,11 @@ import { URL } from "url";
 import { Analytics } from "@vercel/analytics/react";
 
 const poppin = Poppins({ subsets: ["latin"], weight: "600" });
+const oxanium = Oxanium({
+	subsets: ["latin"],
+	weight: "600",
+	variable: "--font-oxanium",
+});
 
 export const metadata: Metadata = {
 	title: "Portfolio | Rahul Poonia - Web Developer",
@@ -60,7 +65,7 @@ export default function RootLayout({
 			<body
 				className={
 					poppin.className +
-					" absolute inset-0 h-full w-full bg-black bg[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] bg-[size:24px_24px]"
+					" bg[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] absolute inset-0 h-full w-full bg-black bg-[size:24px_24px]"
 				}
 			>
 				<Navigation />

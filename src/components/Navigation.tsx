@@ -33,7 +33,7 @@ function Navigation() {
 	};
 
 	return (
-		<header className="bg-grey-900 fixed top-0 z-50 flex h-16 w-full items-center justify-center border-b-0 border-gray-200 bg-opacity-40 px-4 backdrop-blur-lg backdrop-filter md:px-8">
+		<header className="bg-grey-900 fixed top-0 z-50 flex h-16 w-full select-none items-center justify-center border-b-0 border-gray-200 bg-opacity-40 px-4 backdrop-blur-lg backdrop-filter md:px-8">
 			<nav className="relative flex w-full items-center justify-end lg:w-11/12 2xl:w-4/5">
 				<Link className="group absolute left-0 text-lg" href="#home">
 					<span className="group: animate-spotlight">✦</span> Rahul

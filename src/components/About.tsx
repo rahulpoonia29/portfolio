@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ScrollWrapper from "@/components/utils/ScrollWrapper";
 import { BackgroundGradient } from "@/components/Aceternity/background-gradient";
 
 function About() {
 	return (
 		<div>
-			<h2 id="about" className="mb-8 mt-8 text-center text-4xl lg:mb-0 lg:mt-0">
+			<h2 id="about" className="mb-8 mt-8 text-center text-4xl lg:mb-0 lg:mt-0 font-oxanium">
 				About Me
 			</h2>
 			<div className="mx-auto mt-2 flex w-full flex-col items-center justify-between md:gap-4 lg:mt-20 lg:w-11/12 lg:flex-row 2xl:w-4/5">
