@@ -18,7 +18,7 @@ export default function OrbitImage({
 	return (
 		<div
 			className={
-				"absolute grid place-items-center rounded-full bg-zinc-800/60 shadow-white transition-shadow hover:shadow-xl " +
+				"absolute hidden place-items-center rounded-full bg-zinc-800/60 shadow-white transition-shadow hover:shadow-xl md:grid " +
 				className
 			}
 		>

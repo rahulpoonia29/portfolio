@@ -16,7 +16,7 @@ function Contact({ socialMedia }: Props) {
 			className="relative flex min-h-screen w-full flex-col items-center justify-center gap-4 text-center"
 		>
 			<Image
-				className="absolute left-0 bottom-0 z-[-1] w-full"
+				className="absolute bottom-0 left-1/2 z-[-1] h-full w-full -translate-x-1/2 transform object-cover lg:h-auto"
 				src={"/footer-grid.svg"}
 				alt="Footer grid"
 				width={100}

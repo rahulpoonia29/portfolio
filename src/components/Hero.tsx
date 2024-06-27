@@ -155,7 +155,7 @@ function Hero({ socialMedia }: Props) {
 					</div>
 				</div>
 			</div>
-			<div className="mt-8 h-56 w-56 md:h-80 md:w-80 lg:mt-0 lg:-translate-x-16">
+			<div className="relative mt-14 h-56 w-56 md:h-80 md:w-80 lg:mt-0 lg:-translate-x-16">
 				<Image
 					alt="avatar"
 					width={1000}
@@ -198,8 +198,8 @@ function Hero({ socialMedia }: Props) {
 						"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
 					}
 					name="Git"
-					size={8}
-					className="-bottom-16 right-16 size-14"
+					size={6}
+					className="-bottom-12 right-20 size-10"
 				/>
 			</div>
 		</div>
