@@ -53,7 +53,7 @@ function Navigation() {
 				<div className="grid sm:hidden">
 					<BurgerButton onClick={handleClick} isOpen={isOpen} />
 					<div
-						className={`fixed right-0 top-16 flex h-screen w-1/2 max-w-xs flex-col gap-8 rounded-md bg-zinc-800/90 p-6 py-10 shadow-2xl backdrop-blur-md backdrop-filter transition-all duration-300 ease-in-out ${
+						className={`fixed right-0 top-16 flex h-screen w-1/2 max-w-xs flex-col gap-8 rounded-md bg-zinc-950 p-6 py-10 shadow-2xl transition-all duration-300 ease-in-out ${
 							isOpen ? "-translate-x-4  md:-translate-x-8" : "translate-x-full"
 						}`}
 						aria-hidden={!isOpen}
