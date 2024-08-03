@@ -4,6 +4,7 @@ import Typewriter from "@/components/utils/Typewriter";
 import { Spotlight } from "./Aceternity/Spotlight";
 import { Oxanium } from "next/font/google";
 import OrbitImage from "./OrbitImage";
+import SocialButton from "./SocialButton";
 
 type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
@@ -117,8 +118,8 @@ function Hero({ socialMedia }: Props) {
 					Dedicated to crafting immersive digital experiences that captivate,
 					engage, and inspire users worldwide.
 				</p>
-				<div className="flex items-center space-x-6">
-					<Link
+				<div className="flex flex-wrap items-center space-x-6">
+					{/* <Link
 						className="group flex w-fit cursor-pointer items-center gap-1 rounded-md bg-violet-700 px-4 py-2 text-sm text-white transition-colors hover:bg-violet-800 md:text-base"
 						href={"#about"}
 					>
@@ -135,22 +136,10 @@ function Hero({ socialMedia }: Props) {
 						>
 							<path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
 						</svg>
-					</Link>
-					<div className="flex items-center gap-3">
-						{socialMedia.map((info, key) => (
-							<div
-								key={key}
-								className="saturate-180 bg-black-200 border-black-300 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border bg-opacity-75 backdrop-blur-lg backdrop-filter transition-all hover:border-4"
-							>
-								<Link
-									href={info.link}
-									aria-label={info.name}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{info.logo({ className: "h-5 w-5" })}
-								</Link>
-							</div>
+					</Link> */}
+					<div className="flex items-center gap-2">
+						{socialMedia.map((social, key) => (
+							<SocialButton key={key} social={social} collapse />
 						))}
 					</div>
 				</div>

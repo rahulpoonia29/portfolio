@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SiMinutemailer } from "react-icons/si";
+import SocialButton from "./SocialButton";
 
 type Props = {
 	socialMedia: { name: string; link: string; logo: any }[];
@@ -49,21 +50,9 @@ function Contact({ socialMedia }: Props) {
 			>
 				Find me on:
 			</p>
-			<div className="flex items-center gap-6 md:gap-3">
-				{socialMedia.map((info, key) => (
-					<div
-						key={key}
-						className="saturate-180 bg-black-200 border-black-300 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border bg-opacity-75 backdrop-blur-lg backdrop-filter transition-all hover:border-4"
-					>
-						<Link
-							href={info.link}
-							aria-label={info.name}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							{info.logo({ className: "h-5 w-5" })}
-						</Link>
-					</div>
+			<div className="flex items-center gap-3 md:gap-4">
+				{socialMedia.map((social, key) => (
+					<SocialButton key={key} social={social} collapse />
 				))}
 			</div>
 		</div>

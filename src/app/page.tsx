@@ -43,22 +43,22 @@ export default async function Home() {
 		{
 			name: "LinkedIn",
 			link: "https://www.linkedin.com/in/rahulpoonia",
-			logo: LiaLinkedinIn,
+			logo: <LiaLinkedinIn className="size-5" />,
 		},
 		{
 			name: "GitHub",
 			link: "https://github.com/rahulpoonia29",
-			logo: BsGithub,
+			logo: <BsGithub className="size-5" />,
 		},
 		{
 			name: "Instagram",
 			link: "https://www.instagram.com/rahulpoonia029/",
-			logo: BsInstagram,
+			logo: <BsInstagram className="size-5" />,
 		},
 		{
 			name: "Twitter",
 			link: "https://twitter.com/rahulpoonia229",
-			logo: BsTwitter,
+			logo: <BsTwitter className="size-5" />,
 		},
 	];
 
