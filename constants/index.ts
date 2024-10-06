@@ -228,5 +228,5 @@ export const project: {
 		"Zustand",
 		"NextAuth",
 	],
-	href: "https://www.bulletvisa.com/",
+	href: "https://applic.rahulpoonia.co",
 };

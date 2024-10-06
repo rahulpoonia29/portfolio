@@ -10,7 +10,12 @@ export const Projects = () => {
 	return (
 		<div id="projects" className="flex flex-col gap-4">
 			<div className="flex justify-between items-center">
-				<h2 className={cn("text-lg font-semibold", bricolageGrotesque)}>
+				<h2
+					className={cn(
+						"text-lg font-semibold text-zinc-200",
+						bricolageGrotesque
+					)}
+				>
 					Latest Project
 				</h2>
 				<div className="-translate-x-0 hover:translate-x-2 px-2 pl-6 cursor-pointer transition-transform py-0.5">
