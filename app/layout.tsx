@@ -1,5 +1,6 @@
 import { NavigationBar } from "@/components/navigation-bar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -56,15 +57,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="!scroll-smooth">
-			<body className={inter.className}>
+		<html lang="en">
+			<body
+				className={cn(
+					inter.className + "bg-[#121114] text-white min-h-screen"
+				)}
+			>
+				<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-900 to-transparent"></div>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
 					enableSystem
 					disableTransitionOnChange
 				>
-					{children}
+					<main className="min-h-full w-full md:max-w-2xl mx-auto px-5 py-20">
+						{children}
+					</main>
 					<NavigationBar />
 					<Analytics />
 					<Toaster />

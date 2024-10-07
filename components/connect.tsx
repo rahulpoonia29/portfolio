@@ -13,9 +13,9 @@ export const Connect = () => {
 				Connect
 			</h5>
 			<p className="font-medium text-sm bg-[#1A191B] leading-6 tracking-wide p-6 text-zinc-400 rounded-lg">
-				Have a great idea or looking to collaborate? Let&apos;s connect and
-				bring it to life! Just send a quick hi, and we can start
-				exploring exciting possibilities together!
+				Got a great idea or want to collaborate? <br /> Just say hi, and
+				let&apos;s turn it into something awesome! <br /> Let&apos;s
+				make magic happen! ✨
 			</p>
 		</div>
 	);
