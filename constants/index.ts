@@ -31,7 +31,7 @@ import {
 	SiVercel,
 } from "react-icons/si";
 
-export const LINKS: {
+export const NAV_LINKS: {
 	name: string;
 	href: string;
 }[] = [
@@ -45,33 +45,54 @@ export const LINKS: {
 	},
 ];
 
-export const MINIMAP_LINKS: {
-	label: string;
-	href: string;
+export const TECH_STACK_MINI: {
+	name: string;
+	icon: IconType;
 }[] = [
+	// Frontend Technologies
 	{
-		label: "About",
-		href: "#about",
+		name: "React",
+		icon: SiReact,
 	},
 	{
-		label: "Tech Stack",
-		href: "#tech-stack",
+		name: "Next JS",
+		icon: SiNextdotjs,
 	},
 	{
-		label: "Projects",
-		href: "#projects",
+		name: "TypeScript",
+		icon: SiTypescript,
 	},
 	{
-		label: "Contact",
-		href: "#contact",
+		name: "Tailwind CSS",
+		icon: SiTailwindcss,
+	},
+
+	// Backend Technologies
+	{
+		name: "Node.js",
+		icon: FaNodeJs,
 	},
 	{
-		label: "Connect",
-		href: "#connect",
+		name: "MongoDB",
+		icon: SiMongodb,
+	},
+	{
+		name: "Postgresql",
+		icon: SiPostgresql,
+	},
+
+	// Tools & Version Control
+	{
+		name: "Git",
+		icon: FaGitAlt,
+	},
+	{
+		name: "GitHub",
+		icon: SiGithub,
 	},
 ];
 
-export const techStack: {
+export const TECH_STACK: {
 	name: string;
 	icon: IconType;
 }[] = [
@@ -176,7 +197,7 @@ export const techStack: {
 	},
 ];
 
-export const contactLinks: {
+export const CONTACT_DETAILS: {
 	icon: IconType;
 	link: string;
 	text: string;
@@ -205,7 +226,7 @@ export const contactLinks: {
 
 export const project: {
 	coverImage: string;
-	logo?: IconType;
+	logo: String;
 	title: string;
 	description: string;
 	techStack: string[];
@@ -213,7 +234,7 @@ export const project: {
 } = {
 	coverImage:
 		"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1x2.png",
-	logo: LuListChecks,
+	logo: "https://simpleicons.org/icons/hono.svg",
 	title: "Applic",
 	description:
 		"A sleek job application tracker with intuitive document management, interview scheduling, and smart notifications. Organize your job hunt effortlessly!",
@@ -230,3 +251,9 @@ export const project: {
 	],
 	href: "https://applic.rahulpoonia.co",
 };
+
+export const ABOUT_ME_DETAILS: string[] = [
+	"All about crafting cool digital stuff that works like a charm.",
+	"I specialize in Next.js, React, Typescript, and Tailwind CSS.",
+	"Currently pursuing BTech from IIT Kharagpur.",
+];

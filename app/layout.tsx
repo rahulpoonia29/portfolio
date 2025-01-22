@@ -1,5 +1,4 @@
 import { NavigationBar } from "@/components/navigation-bar";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -64,19 +63,12 @@ export default function RootLayout({
 				)}
 			>
 				<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-900 to-transparent"></div>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					<main className="min-h-full w-full md:max-w-2xl mx-auto px-5 py-20">
-						{children}
-					</main>
-					<NavigationBar />
-					<Analytics />
-					<Toaster />
-				</ThemeProvider>
+				<main className="min-h-full w-full md:max-w-2xl mx-auto px-5 py-20">
+					{children}
+				</main>
+				<NavigationBar />
+				<Analytics />
+				<Toaster />
 			</body>
 		</html>
 	);

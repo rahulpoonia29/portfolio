@@ -1,5 +1,4 @@
-import { ModeToggle } from "@/components/theme/mode-toggle";
-import { LINKS } from "@/constants";
+import { NAV_LINKS } from "@/constants";
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -11,12 +10,11 @@ export const NavigationBar = () => {
 				<h1 className={cn(bricolageGrotesque, "font-bold")}>Rahul</h1>
 			</Link>
 			<div className="flex items-center gap-4">
-				{LINKS.map((link, i) => (
+				{NAV_LINKS.map((link, i) => (
 					<Link key={i} href={link.href} className="text-sm">
 						{link.name}
 					</Link>
 				))}
-				<ModeToggle  />
 			</div>
 		</div>
 	);

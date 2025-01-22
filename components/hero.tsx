@@ -1,17 +1,12 @@
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 import { CodeXml } from "lucide-react";
-import { motion } from "framer-motion";
 
-export const Hero = () => {
+export default function Hero() {
 	return (
-		<motion.div
-			id="about"
-			className="flex flex-col gap-2"
-	
-		>
+		<div id="about" className="flex flex-col gap-2">
 			<div className="flex items-center gap-2">
-				<CodeXml size={20} />
+				<CodeXml size={24} />
 				<h1
 					className={cn(
 						bricolageGrotesque,
@@ -21,10 +16,10 @@ export const Hero = () => {
 					Rahul Poonia
 				</h1>
 			</div>
-			<h2 className="text-sm text-zinc-400 w-full">
+			<h2 className="text-base font-medium text-zinc-400 w-full">
 				Fullstack Developer, Open Source Contributor, and Tech
 				Enthusiast
 			</h2>
-		</motion.div>
+		</div>
 	);
-};
+}

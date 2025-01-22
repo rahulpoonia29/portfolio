@@ -1,4 +1,4 @@
-import { contactLinks } from "@/constants";
+import { CONTACT_DETAILS } from "@/constants";
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -22,18 +22,18 @@ export const Contact = () => {
 				</p>
 			</div>
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				{contactLinks.map((contactItem, key) => (
+				{CONTACT_DETAILS.map((contactItem, key) => (
 					<Link
 						key={key}
 						href={contactItem.link}
 						target="_blank"
 						prefetch={false}
 						rel="noopener noreferrer"
-						className="text-sm opacity-80 hover:opacity-100 transition-all duration-300 text-zinc-300"
+						className="text-base opacity-80 hover:opacity-100 transition-all duration-300 text-zinc-300"
 					>
 						<div className="border border-foreground/15 px-4 py-2 flex items-center gap-2 rounded-sm bg-[#1A191B]">
 							{createElement(contactItem.icon, {
-								size: 16,
+								size: 20,
 
 								className: "font-medium text-zinc-300",
 							})}

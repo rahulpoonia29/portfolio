@@ -1,9 +1,9 @@
-import { techStack } from "@/constants";
+import { TECH_STACK_MINI } from "@/constants";
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 import { createElement } from "react";
 
-export const TechStack = () => {
+export default function TechStack() {
 	return (
 		<div id="skills" className="flex flex-col gap-4">
 			<h5
@@ -16,7 +16,7 @@ export const TechStack = () => {
 			</h5>
 
 			<div className="flex flex-wrap gap-3">
-				{techStack.map((skill, i) => (
+				{TECH_STACK_MINI.map((skill, i) => (
 					<div
 						key={i}
 						className="flex items-center gap-2 bg-[#1A191B] px-4 py-2 rounded-md text-zinc-100 tracking-normal"
@@ -33,4 +33,4 @@ export const TechStack = () => {
 			</div>
 		</div>
 	);
-};
+}

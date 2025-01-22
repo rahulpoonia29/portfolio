@@ -1,3 +1,4 @@
+import { ABOUT_ME_DETAILS } from "@/constants/index";
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 
@@ -13,17 +14,11 @@ export default function About() {
 				About Me
 			</h2>
 			<ul className="space-y-1.5 list-disc pl-5">
-				<li className="text-zinc-400 text-sm">
-					All about crafting cool digital stuff that works like a
-					charm.
-				</li>
-				<li className="text-zinc-400 text-sm">
-					I specialize in Next.js, React, Typescript, and Tailwind
-					CSS.
-				</li>
-				<li className="text-zinc-400 text-sm">
-					Currently pursuing BTech from IIT Kharagpur.
-				</li>
+				{ABOUT_ME_DETAILS.map((detail, index) => (
+					<li key={index} className="text-zinc-400 text-base">
+						{detail}
+					</li>
+				))}
 			</ul>
 		</div>
 	);
