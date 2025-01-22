@@ -1,7 +1,7 @@
 import { bricolageGrotesque } from "@/fonts";
 import { cn } from "@/lib/utils";
 
-export const Connect = () => {
+export default function Connect() {
 	return (
 		<div id="socials" className="flex flex-col gap-4 ">
 			<h5 className={cn(bricolageGrotesque, "text-xl font-semibold")}>
@@ -16,4 +16,4 @@ export const Connect = () => {
 			</div>
 		</div>
 	);
-};
+}

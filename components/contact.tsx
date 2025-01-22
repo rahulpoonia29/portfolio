@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { createElement } from "react";
 
-export const Contact = () => {
+export default function Contact() {
 	return (
 		<div id="contact" className="flex flex-col gap-4">
 			<div className="space-y-1">
@@ -44,4 +44,4 @@ export const Contact = () => {
 			</div>
 		</div>
 	);
-};
+}

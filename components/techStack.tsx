@@ -21,10 +21,11 @@ export default function TechStack() {
 						key={i}
 						className="flex items-center gap-2 bg-[#1A191B] px-4 py-2 rounded-md text-zinc-100 tracking-normal"
 					>
-						{createElement(skill.icon, {
-							size: 18,
-							className: "opacity-80",
-						})}
+						{skill.icon &&
+							createElement(skill.icon, {
+								size: 18,
+								className: "opacity-80",
+							})}
 						<span className="text-xs opacity-90 font-medium">
 							{skill.name}
 						</span>

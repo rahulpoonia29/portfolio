@@ -5,7 +5,7 @@ import { ArrowRight, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Projects = () => {
+export default function Projects() {
 	return (
 		<div id="projects" className="flex flex-col gap-4">
 			<div className="flex flex-col gap-4">
@@ -21,8 +21,11 @@ export const Projects = () => {
 					>
 						Latest Projects
 					</h2>
-					<div className="-translate-x-0 group-hover:translate-x-2 px-2 pl-6 cursor-pointer transition-transform py-0.5">
-						<ArrowRight size={20} />
+					<div className="flex items-center text-base font-mono">
+						See all
+						<div className="-translate-x-0 group-hover:translate-x-2 px-2 cursor-pointer transition-transform duration-75 py-0.5">
+							<ArrowRight size={20} />
+						</div>
 					</div>
 				</Link>
 				<div className="w-full rounded-lg overflow-hidden">
@@ -79,4 +82,4 @@ export const Projects = () => {
 			</div>
 		</div>
 	);
-};
+}

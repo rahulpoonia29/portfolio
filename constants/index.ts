@@ -11,20 +11,24 @@ import {
 } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LuListChecks, LuMail } from "react-icons/lu";
+import { LuMail } from "react-icons/lu";
 import {
 	SiAppwrite,
 	SiDaisyui,
+	SiDrizzle,
 	SiExpress,
 	SiGithub,
+	SiHono,
 	SiMarkdown,
 	SiMongodb,
 	SiNetlify,
 	SiNextdotjs,
 	SiPostgresql,
+	SiPrisma,
 	SiReact,
 	SiRecoil,
 	SiRedux,
+	SiRemix,
 	SiShadcnui,
 	SiTailwindcss,
 	SiTypescript,
@@ -47,16 +51,16 @@ export const NAV_LINKS: {
 
 export const TECH_STACK_MINI: {
 	name: string;
-	icon: IconType;
+	icon: IconType | null;
 }[] = [
 	// Frontend Technologies
 	{
-		name: "React",
-		icon: SiReact,
-	},
-	{
 		name: "Next JS",
 		icon: SiNextdotjs,
+	},
+	{
+		name: "Remix",
+		icon: SiRemix,
 	},
 	{
 		name: "TypeScript",
@@ -69,16 +73,25 @@ export const TECH_STACK_MINI: {
 
 	// Backend Technologies
 	{
-		name: "Node.js",
-		icon: FaNodeJs,
+		name: "Hono Js",
+		icon: SiHono,
+	},
+	{ name: "Express JS", icon: SiExpress },
+	{
+		name: "Postgresql",
+		icon: SiPostgresql,
 	},
 	{
 		name: "MongoDB",
 		icon: SiMongodb,
 	},
 	{
-		name: "Postgresql",
-		icon: SiPostgresql,
+		name: "Prisma ORM",
+		icon: SiPrisma,
+	},
+	{
+		name: "Drizzle",
+		icon: SiDrizzle,
 	},
 
 	// Tools & Version Control
@@ -87,8 +100,8 @@ export const TECH_STACK_MINI: {
 		icon: FaGitAlt,
 	},
 	{
-		name: "GitHub",
-		icon: SiGithub,
+		name: "Husky",
+		icon: null,
 	},
 ];
 

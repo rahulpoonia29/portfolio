@@ -66,7 +66,7 @@ export default function RootLayout({
 				<main className="min-h-full w-full md:max-w-2xl mx-auto px-5 py-20">
 					{children}
 				</main>
-				<NavigationBar />
+				{/* <NavigationBar /> */}
 				<Analytics />
 				<Toaster />
 			</body>

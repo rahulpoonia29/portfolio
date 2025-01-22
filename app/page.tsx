@@ -1,9 +1,9 @@
-import Hero from "@/components/hero";
 import About from "@/components/about";
+import Connect from "@/components/connect";
+import Contact from "@/components/contact";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
 import TechStack from "@/components/techStack";
-import { Connect } from "@/components/connect";
-import { Contact } from "@/components/contact";
-import { Projects } from "@/components/projects";
 
 export default function Home() {
 	return (
