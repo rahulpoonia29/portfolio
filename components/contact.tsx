@@ -1,6 +1,4 @@
 import { CONTACT_DETAILS } from "@/constants";
-import { bricolageGrotesque } from "@/fonts";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { createElement } from "react";
 
@@ -8,14 +6,7 @@ export default function Contact() {
 	return (
 		<div id="contact" className="flex flex-col gap-4">
 			<div className="space-y-1">
-				<h5
-					className={cn(
-						bricolageGrotesque,
-						"text-xl font-semibold text-zinc-200"
-					)}
-				>
-					Contact
-				</h5>
+				<h5 className="text-xl font-semibold text-zinc-200">Contact</h5>
 				<p className="text-sm text-zinc-400">
 					Feel free to reach out to me for any queries,
 					collaborations, or just to say hi!

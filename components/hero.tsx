@@ -1,5 +1,3 @@
-import { bricolageGrotesque } from "@/fonts";
-import { cn } from "@/lib/utils";
 import { CodeXml } from "lucide-react";
 
 export default function Hero() {
@@ -7,12 +5,7 @@ export default function Hero() {
 		<div id="about" className="flex flex-col gap-2">
 			<div className="flex items-center gap-2">
 				<CodeXml size={24} />
-				<h1
-					className={cn(
-						bricolageGrotesque,
-						"text-3xl font-bold uppercase text-zinc-200"
-					)}
-				>
+				<h1 className="text-3xl font-bold uppercase text-zinc-200">
 					Rahul Poonia
 				</h1>
 			</div>

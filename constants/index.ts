@@ -1,9 +1,7 @@
 import {
-	FaBootstrap,
-	FaCss3Alt,
+	FaAws,
 	FaGitAlt,
 	FaGithub,
-	FaHtml5,
 	FaInstagram,
 	FaLinkedin,
 	FaNodeJs,
@@ -14,19 +12,17 @@ import { IconType } from "react-icons/lib";
 import { LuMail } from "react-icons/lu";
 import {
 	SiAppwrite,
-	SiDaisyui,
+	SiDocker,
 	SiDrizzle,
 	SiExpress,
-	SiGithub,
+	SiFramer,
+	SiGithubactions,
 	SiHono,
-	SiMarkdown,
 	SiMongodb,
-	SiNetlify,
 	SiNextdotjs,
 	SiPostgresql,
 	SiPrisma,
 	SiReact,
-	SiRecoil,
 	SiRedux,
 	SiRemix,
 	SiShadcnui,
@@ -35,178 +31,137 @@ import {
 	SiVercel,
 } from "react-icons/si";
 
-export const NAV_LINKS: {
-	name: string;
-	href: string;
-}[] = [
-	{
-		name: "Projects",
-		href: "/projects",
-	},
-	{
-		name: "Blogs",
-		href: "/blogs",
-	},
-];
-
-export const TECH_STACK_MINI: {
+export const TECH_STACK: {
 	name: string;
 	icon: IconType | null;
+	category: "Frontend" | "Backend" | "Tools" | "Languages";
 }[] = [
+	// Languages
+	{
+		name: "TypeScript",
+		icon: SiTypescript,
+		category: "Languages",
+	},
+	{
+		name: "Python",
+		icon: FaPython,
+		category: "Languages",
+	},
+
 	// Frontend Technologies
 	{
-		name: "Next JS",
+		name: "React",
+		icon: SiReact,
+		category: "Frontend",
+	},
+	{
+		name: "Next.js",
 		icon: SiNextdotjs,
+		category: "Frontend",
 	},
 	{
 		name: "Remix",
 		icon: SiRemix,
-	},
-	{
-		name: "TypeScript",
-		icon: SiTypescript,
-	},
-	{
-		name: "Tailwind CSS",
-		icon: SiTailwindcss,
-	},
-
-	// Backend Technologies
-	{
-		name: "Hono Js",
-		icon: SiHono,
-	},
-	{ name: "Express JS", icon: SiExpress },
-	{
-		name: "Postgresql",
-		icon: SiPostgresql,
-	},
-	{
-		name: "MongoDB",
-		icon: SiMongodb,
-	},
-	{
-		name: "Prisma ORM",
-		icon: SiPrisma,
-	},
-	{
-		name: "Drizzle",
-		icon: SiDrizzle,
-	},
-
-	// Tools & Version Control
-	{
-		name: "Git",
-		icon: FaGitAlt,
-	},
-	{
-		name: "Husky",
-		icon: null,
-	},
-];
-
-export const TECH_STACK: {
-	name: string;
-	icon: IconType;
-}[] = [
-	// Frontend Technologies
-	{
-		name: "HTML",
-		icon: FaHtml5,
-	},
-	{
-		name: "CSS",
-		icon: FaCss3Alt,
-	},
-	{
-		name: "JavaScript",
-		icon: IoLogoJavascript,
-	},
-	{
-		name: "TypeScript",
-		icon: SiTypescript,
-	},
-	{
-		name: "React",
-		icon: SiReact,
-	},
-	{
-		name: "Next JS",
-		icon: SiNextdotjs,
+		category: "Frontend",
 	},
 	{
 		name: "Redux",
 		icon: SiRedux,
+		category: "Frontend",
 	},
 	{
-		name: "Recoil",
-		icon: SiRecoil,
+		name: "Zustand",
+		icon: null,
+		category: "Frontend",
 	},
 	{
 		name: "Tailwind CSS",
 		icon: SiTailwindcss,
+		category: "Frontend",
 	},
 	{
-		name: "Bootstrap",
-		icon: FaBootstrap,
-	},
-	{
-		name: "Daisy UI",
-		icon: SiDaisyui,
-	},
-	{
-		name: "ShadcnUI",
+		name: "Shadcn UI",
 		icon: SiShadcnui,
+		category: "Frontend",
+	},
+	{
+		name: "Framer Motion",
+		icon: SiFramer,
+		category: "Frontend",
 	},
 
 	// Backend Technologies
 	{
 		name: "Node.js",
 		icon: FaNodeJs,
+		category: "Backend",
 	},
 	{
-		name: "Express JS",
+		name: "Express.js",
 		icon: SiExpress,
+		category: "Backend",
 	},
 	{
-		name: "AppWrite",
-		icon: SiAppwrite,
+		name: "Hono",
+		icon: SiHono,
+		category: "Backend",
+	},
+	{
+		name: "PostgreSQL",
+		icon: SiPostgresql,
+		category: "Backend",
 	},
 	{
 		name: "MongoDB",
 		icon: SiMongodb,
+		category: "Backend",
 	},
 	{
-		name: "Postgresql",
-		icon: SiPostgresql,
+		name: "Prisma",
+		icon: SiPrisma,
+		category: "Backend",
 	},
 	{
-		name: "Python",
-		icon: FaPython,
+		name: "Drizzle",
+		icon: SiDrizzle,
+		category: "Backend",
+	},
+	{
+		name: "Appwrite",
+		icon: SiAppwrite,
+		category: "Backend",
 	},
 
 	// Tools & Platforms
 	{
-		name: "Netlify",
-		icon: SiNetlify,
+		name: "Git",
+		icon: FaGitAlt,
+		category: "Tools",
+	},
+	{
+		name: "Docker",
+		icon: SiDocker,
+		category: "Tools",
 	},
 	{
 		name: "Vercel",
 		icon: SiVercel,
-	},
-
-	// Version Control & Other Technologies
-	{
-		name: "Git",
-		icon: FaGitAlt,
+		category: "Tools",
 	},
 	{
-		name: "GitHub",
-		icon: SiGithub,
+		name: "AWS",
+		icon: FaAws,
+		category: "Tools",
 	},
 	{
-		name: "Markdown",
-		icon: SiMarkdown,
+		name: "GitHub Actions",
+		icon: SiGithubactions,
+		category: "Tools",
+	},
+	{
+		name: "Husky",
+		icon: null,
+		category: "Tools",
 	},
 ];
 
@@ -237,7 +192,7 @@ export const CONTACT_DETAILS: {
 	},
 ];
 
-export const project: {
+export const HERO_PROJECT: {
 	coverImage: string;
 	logo: String;
 	title: string;
@@ -267,6 +222,6 @@ export const project: {
 
 export const ABOUT_ME_DETAILS: string[] = [
 	"All about crafting cool digital stuff that works like a charm.",
-	"I specialize in Next.js, React, Typescript, and Tailwind CSS.",
+	"Full-stack developer passionate about building efficient solutions.",
 	"Currently pursuing BTech from IIT Kharagpur.",
 ];

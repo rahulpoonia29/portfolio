@@ -1,6 +1,4 @@
-import { project } from "@/constants";
-import { bricolageGrotesque } from "@/fonts";
-import { cn } from "@/lib/utils";
+import { HERO_PROJECT } from "@/constants";
 import { ArrowRight, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,12 +11,7 @@ export default function Projects() {
 					href={"/projects"}
 					className="flex justify-between items-center group cursor-pointer"
 				>
-					<h2
-						className={cn(
-							"text-lg font-semibold text-zinc-200",
-							bricolageGrotesque
-						)}
-					>
+					<h2 className="text-lg font-semibold text-zinc-200">
 						Latest Projects
 					</h2>
 					<div className="flex items-center text-base font-mono">
@@ -29,10 +22,10 @@ export default function Projects() {
 					</div>
 				</Link>
 				<div className="w-full rounded-lg overflow-hidden">
-					<Link href={project.href}>
+					<Link href={HERO_PROJECT.href}>
 						<Image
-							alt={project.title}
-							src={project.coverImage}
+							alt={HERO_PROJECT.title}
+							src={HERO_PROJECT.coverImage}
 							loading="lazy"
 							width={1280}
 							height={780}
@@ -44,8 +37,8 @@ export default function Projects() {
 							<div className="flex gap-2 items-center">
 								<div className="size-7 rounded-lg bg-white flex items-center justify-center overflow-hidden">
 									<Image
-										alt={project.title}
-										src={project.logo as string}
+										alt={HERO_PROJECT.title}
+										src={HERO_PROJECT.logo as string}
 										loading="lazy"
 										width={256}
 										height={256}
@@ -54,10 +47,10 @@ export default function Projects() {
 									/>
 								</div>
 								<span className="font-medium text-lg">
-									{project.title}
+									{HERO_PROJECT.title}
 								</span>
 							</div>
-							<a target="_blank" href={project.href}>
+							<a target="_blank" href={HERO_PROJECT.href}>
 								<button className="flex gap-1.5 items-center text-black bg-white rounded px-2 py-1 text-sm font-medium">
 									<Globe size={16} />
 									Website
@@ -65,10 +58,10 @@ export default function Projects() {
 							</a>
 						</div>
 						<span className="text-zinc-400">
-							{project.description}
+							{HERO_PROJECT.description}
 						</span>
 						<div className="flex flex-wrap gap-2">
-							{project.techStack.map((tech) => (
+							{HERO_PROJECT.techStack.map((tech) => (
 								<label
 									key={tech}
 									className="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 rounded-md bg-zinc-200 text-black px-2 py-1 text-xs"
