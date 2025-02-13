@@ -1,14 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
-  prefix: "",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -19,39 +18,27 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        border: "var(--border)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        
+        // Light mode colors
+        'light-bg': '#FAFAFA',
+        'light-card': '#FFFFFF',
+        'light-primary': '#FF3E41',
+        'light-secondary': '#2B59C3',
+        'light-accent': '#FFD23F',
+        'light-text': '#0F0F0F',
+        'light-border': '#1A1A1A',
+        
+        // Dark mode colors
+        'dark-bg': '#0F0F0F',
+        'dark-card': '#1A1A1A',
+        'dark-primary': '#FF6B6D',
+        'dark-secondary': '#4776E6',
+        'dark-accent': '#FFE071',
+        'dark-text': '#FAFAFA',
+        'dark-border': '#FAFAFA',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -67,14 +54,32 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        'slide-up': {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'rotate-in': {
+          '0%': { transform: 'rotate(-10deg)', opacity: '0' },
+          '100%': { transform: 'rotate(0)', opacity: '1' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'slide-up': 'slide-up 0.3s ease-out',
+        'rotate-in': 'rotate-in 0.3s ease-out',
       },
+      boxShadow: {
+        'neo-light': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'neo-dark': '4px 4px 0px 0px rgba(244,244,245,1)',
+        'neo-sm-light': '2px 2px 0px 0px rgba(0,0,0,1)',
+        'neo-sm-dark': '2px 2px 0px 0px rgba(244,244,245,1)',
+        'neo-lg-light': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'neo-lg-dark': '8px 8px 0px 0px rgba(244,244,245,1)',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+};
 
-export default config
+export default config;

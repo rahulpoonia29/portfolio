@@ -4,35 +4,51 @@ import { createElement } from "react";
 
 export default function Contact() {
 	return (
-		<div id="contact" className="flex flex-col gap-4">
-			<div className="space-y-1">
-				<h5 className="text-xl font-semibold text-zinc-200">Contact</h5>
-				<p className="text-sm text-zinc-400">
+		<section
+			id="contact"
+			className="flex flex-col gap-4"
+			aria-label="Contact Information"
+		>
+      <h2 className="text-xl font-semibold text-zinc-200 w-fit border-b-4 border-zinc-200 pb-1">
+        Contact
+      </h2>
+
+			<div className="border-2 border-zinc-200 bg-zinc-900 rounded-lg p-6 shadow-[4px_4px_0px_0px_rgba(244,244,245)]">
+				<p className="text-zinc-300 mb-6">
 					Feel free to reach out to me for any queries,
 					collaborations, or just to say hi!
 				</p>
-			</div>
-			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				{CONTACT_DETAILS.map((contactItem, key) => (
-					<Link
-						key={key}
-						href={contactItem.link}
-						target="_blank"
-						prefetch={false}
-						rel="noopener noreferrer"
-						className="text-base opacity-80 hover:opacity-100 transition-all duration-300 text-zinc-300"
-					>
-						<div className="border border-foreground/15 px-4 py-2 flex items-center gap-2 rounded-sm bg-[#1A191B]">
-							{createElement(contactItem.icon, {
-								size: 20,
 
-								className: "font-medium text-zinc-300",
-							})}
-							{contactItem.text}
-						</div>
-					</Link>
-				))}
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+					{CONTACT_DETAILS.map((contactItem) => (
+						<Link
+							key={contactItem.text}
+							href={contactItem.link}
+							target="_blank"
+							prefetch={false}
+							rel="noopener noreferrer"
+							className="group"
+						>
+							<div
+								className="border-2 border-zinc-200 bg-zinc-900 px-4 py-3 flex items-center gap-3 rounded-md 
+                shadow-[2px_2px_0px_0px_rgba(244,244,245)]
+                hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none
+                transition-all duration-200"
+							>
+								{createElement(contactItem.icon, {
+									size: 18,
+									className:
+										"text-zinc-300 group-hover:text-zinc-100 transition-colors",
+									"aria-hidden": "true",
+								})}
+								<span className="text-sm font-medium text-zinc-300 group-hover:text-zinc-100">
+									{contactItem.text}
+								</span>
+							</div>
+						</Link>
+					))}
+				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

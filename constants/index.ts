@@ -172,8 +172,8 @@ export const CONTACT_DETAILS: {
 }[] = [
 	{
 		icon: LuMail,
-		link: "mailto:rahulpoonia229@gmail.com",
-		text: "rahulpoonia229@gmail.com",
+		link: "mailto:contact@rahulpoonia.co",
+		text: "contact@rahulpoonia.co",
 	},
 	{
 		icon: FaInstagram,

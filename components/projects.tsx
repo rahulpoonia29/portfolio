@@ -5,74 +5,105 @@ import Link from "next/link";
 
 export default function Projects() {
 	return (
-		<div id="projects" className="flex flex-col gap-4">
+		<section
+			id="projects"
+			className="flex flex-col gap-4"
+			aria-label="Projects"
+		>
 			<div className="flex flex-col gap-4">
-				<Link
-					href={"/projects"}
-					className="flex justify-between items-center group cursor-pointer"
-				>
-					<h2 className="text-lg font-semibold text-zinc-200">
+				<div className="flex justify-between items-center">
+					<h2 className="text-xl font-semibold text-zinc-200 border-b-4 border-zinc-200 pb-1 inline-block">
 						Latest Projects
 					</h2>
-					<div className="flex items-center text-base font-mono">
-						See all
-						<div className="-translate-x-0 group-hover:translate-x-2 px-2 cursor-pointer transition-transform duration-75 py-0.5">
-							<ArrowRight size={20} />
-						</div>
-					</div>
-				</Link>
-				<div className="w-full rounded-lg overflow-hidden">
-					<Link href={HERO_PROJECT.href}>
-						<Image
-							alt={HERO_PROJECT.title}
-							src={HERO_PROJECT.coverImage}
-							loading="lazy"
-							width={1280}
-							height={780}
-							decoding="async"
+					<Link
+						href="/projects"
+						className="group flex items-center gap-2 px-3 py-1.5 text-sm font-mono
+						border-2 border-zinc-200 rounded-md bg-zinc-900 text-zinc-300
+						shadow-[2px_2px_0px_0px_rgba(244,244,245)]
+						hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none
+						transition-all duration-200"
+						aria-label="View all projects"
+					>
+						View All
+						<ArrowRight
+							size={14}
+							className="group-hover:translate-x-1 transition-transform duration-200"
+							aria-hidden="true"
 						/>
 					</Link>
-					<div className="bg-[#1A191B] p-5 md:p-8 md:py-6 xl:px-10 xl:py-8 flex flex-col gap-5">
-						<div className="w-full flex justify-between items-center">
-							<div className="flex gap-2 items-center">
-								<div className="size-7 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+				</div>
+
+				<article className="border-2 border-zinc-200 bg-zinc-900 rounded-lg overflow-hidden shadow-[4px_4px_0px_0px_rgba(244,244,245)]">
+					<Link
+						href={HERO_PROJECT.href}
+						className="block overflow-hidden"
+					>
+						<div className="relative aspect-video m-1 rounded-xl bg-red-400">
+							<Image
+								alt={`Screenshot of ${HERO_PROJECT.title}`}
+								src={HERO_PROJECT.coverImage}
+								priority
+								quality={95}
+								fill
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+								className="object-cover rounded-sm"
+							/>
+						</div>
+					</Link>
+
+					<div className="p-6 flex flex-col gap-5">
+						<div className="flex justify-between items-center">
+							<div className="flex items-center gap-3">
+								<div className="size-10 rounded-lg bg-zinc-200 border-2 border-zinc-200 p-2">
 									<Image
-										alt={HERO_PROJECT.title}
+										alt={`${HERO_PROJECT.title} logo`}
 										src={HERO_PROJECT.logo as string}
-										loading="lazy"
-										width={256}
-										height={256}
-										decoding="async"
-										className="size-5"
+										width={24}
+										height={24}
+										className="size-full object-contain"
 									/>
 								</div>
-								<span className="font-medium text-lg">
+								<h3 className="font-medium text-lg text-zinc-200">
 									{HERO_PROJECT.title}
-								</span>
+								</h3>
 							</div>
-							<a target="_blank" href={HERO_PROJECT.href}>
-								<button className="flex gap-1.5 items-center text-black bg-white rounded px-2 py-1 text-sm font-medium">
-									<Globe size={16} />
-									Website
+
+							<Link
+								href={HERO_PROJECT.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label={`Visit ${HERO_PROJECT.title} website`}
+							>
+								<button
+									className="flex items-center gap-2 px-4 py-2 text-sm font-medium
+                  border-2 border-zinc-200 rounded-md bg-zinc-900 text-zinc-200
+                  shadow-[2px_2px_0px_0px_rgba(244,244,245)]
+                  hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none
+                  transition-all duration-200"
+								>
+									<Globe size={18} />
+									Visit Site
 								</button>
-							</a>
+							</Link>
 						</div>
-						<span className="text-zinc-400">
+
+						<p className="text-zinc-300 leading-relaxed text-[15px]">
 							{HERO_PROJECT.description}
-						</span>
-						<div className="flex flex-wrap gap-2">
+						</p>
+
+						<div className="flex flex-wrap gap-3">
 							{HERO_PROJECT.techStack.map((tech) => (
-								<label
+								<span
 									key={tech}
-									className="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 rounded-md bg-zinc-200 text-black px-2 py-1 text-xs"
+									className="px-2.5 py-1 text-xs font-medium rounded-md border-2 border-zinc-200 bg-zinc-900 text-zinc-300 shadow-[2px_2px_0px_0px_rgba(244,244,245)]"
 								>
 									{tech}
-								</label>
+								</span>
 							))}
 						</div>
 					</div>
-				</div>
+				</article>
 			</div>
-		</div>
+		</section>
 	);
 }
