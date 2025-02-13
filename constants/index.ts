@@ -172,13 +172,13 @@ export const CONTACT_DETAILS: {
 }[] = [
 	{
 		icon: LuMail,
-		link: "mailto:rahulpoonia229@gmail.com",
-		text: "rahulpoonia229@gmail.com",
+		link: "mailto:contact@rahulpoonia.co",
+		text: "contact@rahulpoonia.co",
 	},
 	{
-		icon: FaInstagram,
-		link: "https://www.instagram.com/rahulpoonia029",
-		text: "rahulpoonia029",
+		icon: FaGithub,
+		link: "https://github.com/rahulpoonia29",
+		text: "rahulpoonia29",
 	},
 	{
 		icon: FaLinkedin,
@@ -186,9 +186,9 @@ export const CONTACT_DETAILS: {
 		text: "rahulpoonia",
 	},
 	{
-		icon: FaGithub,
-		link: "https://github.com/rahulpoonia29",
-		text: "rahulpoonia29",
+		icon: FaInstagram,
+		link: "https://www.instagram.com/rahulpoonia029",
+		text: "rahulpoonia029",
 	},
 ];
 

@@ -1,5 +1,4 @@
 import { TECH_STACK } from "@/constants";
-
 import { createElement } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -17,28 +16,38 @@ export default function TechStack() {
 	const categorizedSkills = groupByCategory(TECH_STACK);
 
 	return (
-		<div id="skills" className="flex flex-col gap-5">
-			<h5 className="font-semibold text-lg text-zinc-200">Tech Stack</h5>
+		<section
+			id="skills"
+			className="flex flex-col gap-4"
+			aria-labelledby="tech-stack-heading"
+		>
+			<h2
+				id="tech-stack-heading"
+				className="text-lg font-semibold text-zinc-900 dark:text-zinc-200"
+			>
+				Tech Stack
+			</h2>
 
-			<div className="flex flex-col gap-5">
+			<div className="flex flex-col gap-6">
 				{Object.entries(categorizedSkills).map(([category, skills]) => (
-					<div key={category} className="space-y-2 cursor-default">
-						<span className="text-xs text-zinc-400 uppercase tracking-wider font-medium font-mono flex items-center gap-1.5">
-							<FaArrowRight size={12} />
+					<div key={category} className="space-y-3">
+						<span className="text-sm text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-medium font-mono flex items-center gap-1.5">
+							<FaArrowRight size={14} />
 							{category}
 						</span>
-						<div className="flex flex-wrap gap-3">
+						<div className="flex flex-wrap gap-2">
 							{skills.map((skill, i) => (
 								<div
 									key={i}
-									className="flex items-center gap-2 bg-[#1A191B] font-medium px-4 py-2 rounded-md  text-zinc-100 tracking-normal hover:bg-[#242326] transition-colors duration-200"
+									className="flex text-sm items-center gap-2 bg-zinc-100 dark:bg-zinc-900 px-3 cursor-pointer py-2 rounded-lg text-zinc-900 dark:text-zinc-300 shadow-sm border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors duration-200"
 								>
 									{skill.icon &&
 										createElement(skill.icon, {
 											size: 18,
-											className: "opacity-80",
+											className:
+												"text-zinc-900 dark:text-zinc-300",
 										})}
-									<span className="text-xs opacity-90 font-medium">
+									<span className="text-sm font-normal">
 										{skill.name}
 									</span>
 								</div>
@@ -47,6 +56,6 @@ export default function TechStack() {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }

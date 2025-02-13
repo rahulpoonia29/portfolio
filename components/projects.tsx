@@ -1,78 +1,110 @@
 import { HERO_PROJECT } from "@/constants";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
 	return (
-		<div id="projects" className="flex flex-col gap-4">
-			<div className="flex flex-col gap-4">
-				<Link
-					href={"/projects"}
-					className="flex justify-between items-center group cursor-pointer"
+		<section
+			id="projects"
+			className="flex flex-col gap-4"
+			aria-labelledby="projects-heading"
+		>
+			<div className="flex flex-col gap-6">
+				<h2
+					id="projects-heading"
+					className="text-lg font-semibold text-zinc-900 dark:text-zinc-200"
 				>
-					<h2 className="text-lg font-semibold text-zinc-200">
-						Latest Projects
-					</h2>
-					<div className="flex items-center text-base font-mono">
-						See all
-						<div className="-translate-x-0 group-hover:translate-x-2 px-2 cursor-pointer transition-transform duration-75 py-0.5">
-							<ArrowRight size={20} />
-						</div>
-					</div>
-				</Link>
-				<div className="w-full rounded-lg overflow-hidden">
-					<Link href={HERO_PROJECT.href}>
+					Latest Project
+				</h2>
+
+				<article className="group relative w-full overflow-hidden rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+					<Link
+						href={HERO_PROJECT.href}
+						className="block aspect-[16/9] overflow-hidden"
+					>
 						<Image
 							alt={HERO_PROJECT.title}
 							src={HERO_PROJECT.coverImage}
-							loading="lazy"
 							width={1280}
 							height={780}
-							decoding="async"
+							className="object-cover transition duration-300 group-hover:scale-105"
+							loading="eager"
+							priority
 						/>
 					</Link>
-					<div className="bg-[#1A191B] p-5 md:p-8 md:py-6 xl:px-10 xl:py-8 flex flex-col gap-5">
-						<div className="w-full flex justify-between items-center">
-							<div className="flex gap-2 items-center">
-								<div className="size-7 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+
+					<div className="p-5 md:p-6 flex flex-col gap-4">
+						<header className="flex justify-between items-center">
+							<div className="flex items-center gap-3">
+								<div className="size-8 rounded-lg bg-white dark:bg-zinc-800 p-1.5 ring-1 ring-zinc-200 dark:ring-zinc-700">
 									<Image
-										alt={HERO_PROJECT.title}
+										alt=""
 										src={HERO_PROJECT.logo as string}
-										loading="lazy"
 										width={256}
 										height={256}
-										decoding="async"
-										className="size-5"
+										className="size-full object-contain"
 									/>
 								</div>
-								<span className="font-medium text-lg">
+								<h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
 									{HERO_PROJECT.title}
-								</span>
+								</h3>
 							</div>
-							<a target="_blank" href={HERO_PROJECT.href}>
-								<button className="flex gap-1.5 items-center text-black bg-white rounded px-2 py-1 text-sm font-medium">
-									<Globe size={16} />
-									Website
-								</button>
-							</a>
-						</div>
-						<span className="text-zinc-400">
+
+							<Link
+								target="_blank"
+								href={HERO_PROJECT.href}
+								className="inline-flex items-center gap-2 text-sm dark:bg-zinc-100 bg-zinc-900 px-3 cursor-pointer py-1.5 rounded-lg dark:text-zinc-900 text-zinc-300 shadow-sm border dark:border-zinc-200 border-zinc-800 dark:hover:bg-zinc-200 hover:bg-zinc-800 transition-colors duration-200"
+								rel="noopener noreferrer"
+							>
+								Visit
+								<ExternalLink
+									size={14}
+									className="opacity-80"
+									stroke="currentColor"
+								/>
+							</Link>
+						</header>
+
+						<p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed tracking-wide font-semibold">
 							{HERO_PROJECT.description}
-						</span>
-						<div className="flex flex-wrap gap-2">
+						</p>
+
+						<footer className="flex flex-wrap gap-2 mt-4">
 							{HERO_PROJECT.techStack.map((tech) => (
-								<label
+								<span
 									key={tech}
-									className="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 rounded-md bg-zinc-200 text-black px-2 py-1 text-xs"
+									className="inline-flex text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 px-2.5 py-1 rounded-md"
 								>
 									{tech}
-								</label>
+								</span>
 							))}
-						</div>
+						</footer>
 					</div>
-				</div>
+				</article>
 			</div>
-		</div>
+
+			<div className="mt-4">
+				<Link
+					href="/projects"
+					className="group mx-auto flex w-fit items-center gap-2 dark:bg-zinc-100 bg-zinc-900 px-3 cursor-pointer py-1.5 rounded-lg dark:text-zinc-900 text-zinc-300 shadow-sm border dark:border-zinc-200 border-zinc-800 dark:hover:bg-zinc-200 hover:bg-zinc-800 transition-colors duration-200"
+				>
+					View All Projects
+					<svg
+						className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={2}
+							d="M13 7l5 5m0 0l-5 5m5-5H6"
+						/>
+					</svg>
+				</Link>
+			</div>
+		</section>
 	);
 }
