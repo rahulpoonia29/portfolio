@@ -38,6 +38,11 @@ export const TECH_STACK: {
 }[] = [
 	// Languages
 	{
+		name: "JavaScript",
+		icon: IoLogoJavascript,
+		category: "Languages",
+	},
+	{
 		name: "TypeScript",
 		icon: SiTypescript,
 		category: "Languages",
@@ -201,7 +206,7 @@ export const HERO_PROJECT: {
 	href: string;
 } = {
 	coverImage:
-		"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1x2.png",
+		"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1.png",
 	logo: "https://simpleicons.org/icons/hono.svg",
 	title: "Applic",
 	description:

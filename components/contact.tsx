@@ -36,14 +36,15 @@ export default function Contact() {
 								target="_blank"
 								rel="noopener noreferrer"
 								className="group flex items-center justify-between bg-white dark:bg-zinc-800/80 px-4 py-3 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-700/50 transition-all duration-200"
+								aria-label={`Contact via ${contact.text}`}
 							>
-								<div className="flex items-center gap-3">
+								<div className="flex items-center gap-3 min-w-0">
 									{createElement(contact.icon, {
 										size: 18,
 										className:
-											"text-zinc-500 dark:text-zinc-400",
+											"text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-zinc-300 transition-colors flex-shrink-0",
 									})}
-									<span className="text-sm font-medium text-zinc-900 dark:text-zinc-200">
+									<span className="text-sm font-medium text-zinc-900 dark:text-zinc-200 truncate">
 										{contact.text}
 									</span>
 								</div>

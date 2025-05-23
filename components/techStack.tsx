@@ -3,13 +3,16 @@ import { createElement } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
 const groupByCategory = (items: typeof TECH_STACK) => {
-	return items.reduce((acc, item) => {
-		const category = item.category || "Other";
-		return {
-			...acc,
-			[category]: [...(acc[category] || []), item],
-		};
-	}, {} as Record<string, typeof TECH_STACK>);
+	return items.reduce(
+		(acc, item) => {
+			const category = item.category || "Other";
+			return {
+				...acc,
+				[category]: [...(acc[category] || []), item],
+			};
+		},
+		{} as Record<string, typeof TECH_STACK>,
+	);
 };
 
 export default function TechStack() {

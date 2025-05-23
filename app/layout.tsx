@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -58,17 +57,15 @@ export default function RootLayout({
 		<html lang="en" className="dark">
 			<body
 				className={cn(
-					inter.className +
-						"bg-zinc-50 dark:bg-[#121114]  text-white min-h-screen"
+					inter.className,
+					"bg-zinc-50 dark:bg-[#121114] text-white min-h-screen",
 				)}
 			>
-				<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-200 dark:from-zinc-900 to-transparent" />
-				<main className="min-h-full w-full md:max-w-2xl mx-auto px-5 py-20">
+				<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-200 dark:from-zinc-900 to-transparent pointer-events-none" />
+				<main className="flex items-center justify-center mx-auto px-5 py-20">
 					{children}
 				</main>
-				{/* <NavigationBar /> */}
 				<Analytics />
-				<Toaster />
 			</body>
 		</html>
 	);

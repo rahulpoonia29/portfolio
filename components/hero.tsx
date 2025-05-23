@@ -3,7 +3,7 @@ import { CodeXml } from "lucide-react";
 export default function Hero() {
 	return (
 		<section
-			id="about"
+			id="hero"
 			className="flex flex-col gap-4"
 			aria-labelledby="hero-heading"
 		>
@@ -22,7 +22,10 @@ export default function Hero() {
 			</div>
 			<p className="text-base text-zinc-700 dark:text-zinc-400 max-w-[600px] leading-relaxed">
 				Fullstack Developer, Open Source Contributor, and Tech
-				Enthusiast
+				Enthusiast based in{" "}
+				<span className="font-medium text-zinc-600 dark:text-zinc-300">
+					IIT Kharagpur
+				</span>
 			</p>
 		</section>
 	);
