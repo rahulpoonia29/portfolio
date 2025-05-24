@@ -2,11 +2,7 @@ import { CodeXml } from "lucide-react";
 
 export default function Hero() {
 	return (
-		<section
-			id="hero"
-			className="flex flex-col gap-4"
-			aria-labelledby="hero-heading"
-		>
+		<section className="flex flex-col gap-4 w-full" aria-labelledby="hero-heading">
 			<div className="flex items-center gap-3">
 				<CodeXml
 					size={28}
@@ -20,12 +16,13 @@ export default function Hero() {
 					Rahul Poonia
 				</h1>
 			</div>
-			<p className="text-base text-zinc-700 dark:text-zinc-400 max-w-[600px] leading-relaxed">
+			<p className="text-base text-zinc-700 dark:text-zinc-400  leading-relaxed">
 				Fullstack Developer, Open Source Contributor, and Tech
-				Enthusiast based in{" "}
-				<span className="font-medium text-zinc-600 dark:text-zinc-300">
+				Enthusiast
+				 {/* based in{" "} */}
+				{/* <span className="font-medium text-zinc-600 dark:text-zinc-300">
 					IIT Kharagpur
-				</span>
+				</span> */}
 			</p>
 		</section>
 	);

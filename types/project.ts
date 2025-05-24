@@ -1,9 +1,8 @@
 export interface Project {
-	coverImage: string;
-	logo: string | null;
+	logo: string[];
 	title: string;
-	description: string;
+	description: string[];
 	techStack: string[];
-	href: string;
-	github?: string | null;
+	href?: string;
+	github?: string;
 }

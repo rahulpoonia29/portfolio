@@ -8,7 +8,7 @@ import TechStack from "@/components/techStack";
 
 export default function Home() {
 	return (
-		<div className="w-full h-full md:max-w-2xl space-y-12 mb-12 font-mono">
+		<div className="w-full h-full md:max-w-3xl space-y-12 mb-12 font-mono">
 			<Hero />
 			<About />
 			<Experience />

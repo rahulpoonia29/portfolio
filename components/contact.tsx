@@ -5,14 +5,10 @@ import { createElement } from "react";
 export default function Contact() {
 	return (
 		<section
-			id="contact"
 			className="flex flex-col gap-4"
 			aria-labelledby="contact-heading"
 		>
-			<h2
-				id="contact-heading"
-				className="text-lg font-semibold text-zinc-900 dark:text-zinc-200"
-			>
+			<h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-200">
 				Let&apos;s Connect
 			</h2>
 
@@ -35,7 +31,7 @@ export default function Contact() {
 								href={contact.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="group flex items-center justify-between bg-white dark:bg-zinc-800/80 px-4 py-3 rounded-md hover:bg-zinc-50 dark:hover:bg-zinc-700/50 transition-all duration-200"
+								className="group flex items-center justify-between bg-white dark:bg-zinc-800/80 px-4 py-3 rounded-md hover:ring-2 hover:ring-zinc-300 dark:hover:ring-zinc-600 transition-all duration-200"
 								aria-label={`Contact via ${contact.text}`}
 							>
 								<div className="flex items-center gap-3 min-w-0">

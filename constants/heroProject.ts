@@ -4,7 +4,8 @@ export const HERO_PROJECT: {
 	title: string;
 	description: string;
 	techStack: string[];
-	href: string;
+	github?: string;
+	href?: string;
 } = {
 	coverImage:
 		"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1.png",
@@ -23,5 +24,6 @@ export const HERO_PROJECT: {
 		"Zustand",
 		"NextAuth",
 	],
+	github:"github.com/rahulpoonia229",
 	href: "https://applic.rahulpoonia.co",
 };

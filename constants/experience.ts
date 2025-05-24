@@ -4,7 +4,7 @@ export const EXPERIENCE = [
 		company: "Jobfynder",
 		duration: "Nov 2024 - Mar 2025",
 		description: [
-			"Developed initial versions of features including a job board, role-based authentication using RBAC (Role-Based Access Control) based on JWT tokens.",
+			"Developed job board, role-based authentication using RBAC based on JWT tokens.",
 			"Implemented a generic email delivery system using AWS SES and SQS.",
 			"Built custom CI/CD pipeline with GitHub Actions and AWS EC2.",
 			"Learnt domain setup, SSL, and process management using PM2.",
@@ -15,8 +15,8 @@ export const EXPERIENCE = [
 		company: "Inter IIT Tech Team",
 		duration: "Nov 2024 - Dec 2024",
 		description: [
-			"Developed a real-time dynamic dashboard for robotic problem statement with integrated drone control systems.",
-			"Implemented live telemetry monitoring and autonomous vehicle command interfaces.",
+			"Developed a real-time dynamic dashboard with integrated drone control systems.",
+			"Implemented live telemetry and autonomous vehicle command interfaces.",
 		],
 	},
 ];
