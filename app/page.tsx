@@ -1,7 +1,9 @@
 import About from "@/components/about";
 import Contact from "@/components/contact";
+import Experience from "@/components/experience";
+import FeaturedProject from "@/components/featuredProject";
 import Hero from "@/components/hero";
-import Projects from "@/components/projects";
+
 import TechStack from "@/components/techStack";
 
 export default function Home() {
@@ -9,8 +11,9 @@ export default function Home() {
 		<div className="w-full h-full md:max-w-2xl space-y-12 mb-12 font-mono">
 			<Hero />
 			<About />
+			<Experience />
+			<FeaturedProject />
 			<TechStack />
-			<Projects />
 			<Contact />
 		</div>
 	);

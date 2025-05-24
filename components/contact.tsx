@@ -1,4 +1,4 @@
-import { CONTACT_DETAILS } from "@/constants";
+import { CONTACT_DETAILS } from "@/constants/contactDetails";
 import Link from "next/link";
 import { createElement } from "react";
 

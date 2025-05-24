@@ -1,4 +1,4 @@
-import { TECH_STACK } from "@/constants";
+import { TECH_STACK } from "@/constants/techStack";
 import { createElement } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 

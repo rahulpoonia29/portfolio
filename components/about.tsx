@@ -1,4 +1,4 @@
-import { ABOUT_ME_DETAILS } from "@/constants/index";
+import { ABOUT_ME_DETAILS } from "@/constants/aboutMeDetails";
 
 export default function About() {
 	return (

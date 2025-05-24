@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -65,7 +64,6 @@ export default function RootLayout({
 				<main className="flex items-center justify-center mx-auto px-5 py-20">
 					{children}
 				</main>
-				<Analytics />
 			</body>
 		</html>
 	);

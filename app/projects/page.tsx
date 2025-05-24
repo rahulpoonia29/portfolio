@@ -1,41 +1,7 @@
 import ProjectMini from "@/components/projectMini";
-import { Project } from "@/types/project";
+import { PROJECTS } from "@/constants/projects";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-
-const projects: Array<Project> = [
-	{
-		coverImage:
-			"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1.png",
-		logo: "https://picsum.photos/200",
-		title: "Applic",
-		description:
-			"A sleek job application tracker with intuitive document management, interview scheduling, and smart notifications. Organize your job hunt effortlessly!",
-		techStack: [
-			"NextJS",
-			"React",
-			"TailwindCSS",
-			"ShadcnUI",
-			"PostgreSQL",
-			"Prisma",
-			"Vercel",
-			"Zustand",
-			"NextAuth",
-		],
-		href: "https://rahulpoonia.co",
-		github: "https://something.com",
-	},
-	{
-		coverImage:
-			"https://utfs.io/f/1bb820d3-18ff-47b1-a50f-e38e6d7cab40-nbw1x2.png",
-		logo: "https://fastly.picsum.photos/id/788/536/354.jpg?hmac=pWCWRU4--wcKE8GkSjjg59auqMrOYPiVabNRMU6fwYw",
-		title: "Project 3",
-		description: "This is a project description",
-		techStack: ["React", "Next.js", "Tailwind CSS"],
-		href: "https://rahulpoonia.co",
-		// github: "https://something.com",
-	},
-];
 
 export default function Projects() {
 	return (
@@ -62,13 +28,13 @@ export default function Projects() {
 				className="flex flex-col gap-6"
 				aria-labelledby="projects-heading"
 			>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-					{projects.map((project, index) => (
+				<div className="grid grid-cols-1 gap-4 w-full">
+					{PROJECTS.map((project, index) => (
 						<ProjectMini project={project} key={index} />
 					))}
 				</div>
 
-				{projects.length === 0 && (
+				{PROJECTS.length === 0 && (
 					<div className="text-center py-12">
 						<p className="text-zinc-500 dark:text-zinc-400">
 							No projects to display yet.
