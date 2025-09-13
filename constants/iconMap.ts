@@ -1,4 +1,4 @@
-import { FaAws, FaGitAlt, FaNodeJs, FaPython } from "react-icons/fa6";
+import { FaAws, FaGitAlt, FaNodeJs, FaPython,FaGolang } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
 import {
@@ -26,6 +26,7 @@ export const ICON_MAP: { [key: string]: IconType } = {
 	javascript: IoLogoJavascript,
 	typescript: SiTypescript,
 	python: FaPython,
+	golang:FaGolang,
 	react: SiReact,
 	nextdotjs: SiNextdotjs,
 	remix: SiRemix,

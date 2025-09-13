@@ -1,63 +1,77 @@
 import { TECH_STACK } from "@/constants/techStack";
 import { createElement } from "react";
-import { FaArrowRight } from "react-icons/fa6";
-
-const groupByCategory = (items: typeof TECH_STACK) => {
-	return items.reduce(
-		(acc, item) => {
-			const category = item.category || "Other";
-			return {
-				...acc,
-				[category]: [...(acc[category] || []), item],
-			};
-		},
-		{} as Record<string, typeof TECH_STACK>,
-	);
-};
 
 export default function TechStack() {
-	const categorizedSkills = groupByCategory(TECH_STACK);
+	const groups = TECH_STACK.filter(Boolean);
+
+	// A small reusable chip renderer so chips look consistent
+	const renderChip = (item: { name: string; icon?: any }) => (
+		<span
+			key={item.name}
+			title={item.name}
+			className="inline-flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1 text-sm font-medium border border-border bg-card hover:shadow-sm transition"
+			aria-label={item.name}
+		>
+			{item.icon && (
+				<span className="opacity-80 -ml-0.5">
+					{createElement(item.icon, { size: 14 })}
+				</span>
+			)}
+			{item.name}
+		</span>
+	);
 
 	return (
 		<section
 			id="skills"
-			className="flex flex-col gap-4"
+			className="section"
 			aria-labelledby="tech-stack-heading"
 		>
-			<h2
-				id="tech-stack-heading"
-				className="text-lg font-semibold text-zinc-900 dark:text-zinc-200"
-			>
-				Tech Stack
+			<h2 id="tech-stack-heading" className="section-heading">
+				Tools & Stack
 			</h2>
 
-			<div className="flex flex-col gap-6">
-				{Object.entries(categorizedSkills).map(([category, skills]) => (
-					<div key={category} className="space-y-3">
-						<span className="text-sm text-zinc-600 dark:text-zinc-400 uppercase tracking-wider font-medium font-mono flex items-center gap-1.5">
-							<FaArrowRight size={14} />
-							{category}
-						</span>
-						<div className="flex flex-wrap gap-2">
-							{skills.map((skill, i) => (
-								<div
-									key={i}
-									className="flex text-sm items-center gap-2 bg-zinc-100 dark:bg-zinc-900 px-3 cursor-pointer py-2 rounded-lg text-zinc-900 dark:text-zinc-300 shadow-sm border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors duration-200"
-								>
-									{skill.icon &&
-										createElement(skill.icon, {
-											size: 18,
-											className:
-												"text-zinc-900 dark:text-zinc-300",
-										})}
-									<span className="text-sm font-normal">
-										{skill.name}
-									</span>
-								</div>
-							))}
-						</div>
-					</div>
-				))}
+			<div className="rounded-md border border-border overflow-hidden bg-card">
+				<ul className="divide-y divide-border/70">
+					{groups.map((g) => (
+						<li
+							key={g.category}
+							className="grid grid-cols-[80px_minmax(0,1fr)] md:grid-cols-[130px_minmax(0,1fr)] px-4 py-4 gap-4 items-start"
+						>
+							{/* Left category label */}
+							<div className="pt-1">
+								<span className="text-sm font-semibold tracking-wide uppercase text-muted-foreground/90">
+									{g.category}
+								</span>
+							</div>
+
+							{/* Right: clusters */}
+							<div className="flex flex-col gap-3">
+								{g.clusters.map((cluster) => (
+									// Each cluster is its own two-column row: small fixed label + chips
+									<div
+										key={cluster.label}
+										className="grid grid-cols-[90px_minmax(0,1fr)] gap-3 items-start"
+									>
+										{/* Cluster label — small, muted, top-aligned */}
+										<div className="pt-0.5">
+											<span className="inline-flex items-center justify-center px-2 py-1 rounded-md text-xs font-semibold uppercase tracking-wide text-muted-foreground/80 select-none border border-border bg-transparent">
+												{cluster.label}
+											</span>
+										</div>
+
+										{/* Chips area — wraps consistently */}
+										<div className="flex flex-wrap gap-2 items-start">
+											{cluster.items.map((item) =>
+												item ? renderChip(item) : null,
+											)}
+										</div>
+									</div>
+								))}
+							</div>
+						</li>
+					))}
+				</ul>
 			</div>
 		</section>
 	);

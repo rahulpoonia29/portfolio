@@ -1,14 +1,16 @@
 export default function Connect() {
 	return (
-		<div id="socials" className="flex flex-col gap-4 ">
-			<h5 className="text-xl font-semibold">Connect</h5>
-			<div className="rounded-lg bg-[#1A191B] p-5 md:p-8 md:py-6 xl:px-10 xl:py-8 flex flex-col gap-5">
-				<span className="text-md text-zinc-300 tracking-wide">
-					Got a great idea or want to collaborate? <br /> Just say hi,
-					and let&apos;s turn it into something awesome! <br />{" "}
-					Let&apos;s make magic happen! ✨
-				</span>
+		<section id="socials" className="section pt-4">
+			<h2 className="text-sm md:text-base font-semibold tracking-tight text-foreground">
+				Connect
+			</h2>
+			<div className="surface p-5 md:p-6 flex flex-col gap-3">
+				<p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-prose">
+					Open to conversations about shipping products, tooling, and
+					quietly sharp collaborations. Drop a note—happy to explore
+					if there&apos;s a fit.
+				</p>
 			</div>
-		</div>
+		</section>
 	);
 }

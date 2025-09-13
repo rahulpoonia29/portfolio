@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+---
+
+## Project Docs
+
+Internal documentation:
+
+- `docs/PROJECT_INDEX.md` – structural overview & conventions.
+- `docs/BRAND_GUIDELINES.md` – brand, spacing, motion, copy & component philosophy.
+
+Keep these updated as you introduce new sections (speaking, writing, advisory, experiments, etc.) so additions stay consistent.

@@ -1,22 +1,22 @@
 export const EXPERIENCE = [
 	{
-		title: "Full Stack Development • Internship",
+		title: "Full Stack Developer (Intern)",
 		company: "Jobfynder",
-		duration: "Nov 2024 - Mar 2025",
+		duration: "Nov 2024 – Mar 2025",
 		description: [
-			"Developed job board, role-based authentication using RBAC based on JWT tokens.",
-			"Implemented a generic email delivery system using AWS SES and SQS.",
-			"Built custom CI/CD pipeline with GitHub Actions and AWS EC2.",
-			"Learnt domain setup, SSL, and process management using PM2.",
+			"Shipped core job board & RBAC auth (JWT, scoped roles).",
+			"Abstracted email pipeline (AWS SES + SQS) for queued delivery.",
+			"Provisioned CI/CD (GitHub Actions → EC2) with zero‑downtime deploys.",
+			"Handled domain, TLS and process orchestration (PM2).",
 		],
 	},
 	{
-		title: "Tech Team Member",
+		title: "Tech Team Engineer",
 		company: "Inter IIT Tech Team",
-		duration: "Nov 2024 - Dec 2024",
+		duration: "Nov 2024 – Dec 2024",
 		description: [
-			"Developed a real-time dynamic dashboard with integrated drone control systems.",
-			"Implemented live telemetry and autonomous vehicle command interfaces.",
+			"Built real‑time ops dashboard integrating drone control feeds.",
+			"Implemented telemetry streaming + autonomous command interface.",
 		],
 	},
 ];

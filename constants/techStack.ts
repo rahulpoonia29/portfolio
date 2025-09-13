@@ -1,174 +1,129 @@
 import { IconType } from "react-icons";
 import { ICON_MAP } from "./iconMap";
 
+/**
+ * New shape: categories -> clusters -> items
+ * Each item includes name and optional icon key from ICON_MAP
+ */
 export const TECH_STACK: {
-	name: string;
-	icon: IconType | null;
-	category: "Frontend" | "Backend" | "Tools" | "Languages";
+	category: string;
+	clusters: {
+		label: string;
+		items: { name: string; icon?: IconType | null }[];
+	}[];
 }[] = [
 	{
-		name: "JavaScript",
-		icon: ICON_MAP["javascript"] || null,
 		category: "Languages",
+		clusters: [
+			{
+				label: "Primary",
+				items: [
+					{
+						name: "TypeScript",
+						icon: ICON_MAP["typescript"] || null,
+					},
+					{
+						name: "JavaScript",
+						icon: ICON_MAP["javascript"] || null,
+					},
+					{ name: "Python", icon: ICON_MAP["python"] || null },
+					{ name: "Go", icon: ICON_MAP["golang"] || null },
+				],
+			},
+		],
 	},
 	{
-		name: "TypeScript",
-		icon: ICON_MAP["typescript"] || null,
-		category: "Languages",
-	},
-	{
-		name: "Python",
-		icon: ICON_MAP["python"] || null,
-		category: "Languages",
-	},
-	{
-		name: "Go",
-		icon: null,
-		category: "Languages",
-	},
-	{
-		name: "React",
-		icon: ICON_MAP["react"] || null,
 		category: "Frontend",
+		clusters: [
+			{
+				label: "Core",
+				items: [
+					{ name: "React", icon: ICON_MAP["react"] || null },
+					{ name: "Next.js", icon: ICON_MAP["nextdotjs"] || null },
+					{ name: "Redux", icon: ICON_MAP["redux"] || null },
+					{ name: "Zustand", icon: null },
+				],
+			},
+			{
+				label: "Styling",
+				items: [
+					{
+						name: "Tailwind CSS",
+						icon: ICON_MAP["tailwindcss"] || null,
+					},
+					{ name: "Shadcn UI", icon: ICON_MAP["shadcnui"] || null },
+					{ name: "CSS", icon: null },
+					{ name: "HTML", icon: null },
+				],
+			},
+			{
+				label: "Motion",
+				items: [
+					{
+						name: "Framer Motion",
+						icon: ICON_MAP["framermotion"] || null,
+					},
+				],
+			},
+		],
 	},
 	{
-		name: "Next.js",
-		icon: ICON_MAP["nextdotjs"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "Remix",
-		icon: ICON_MAP["remix"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "Redux",
-		icon: ICON_MAP["redux"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "Zustand",
-		icon: null,
-		category: "Frontend",
-	},
-	{
-		name: "Tailwind CSS",
-		icon: ICON_MAP["tailwindcss"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "Shadcn UI",
-		icon: ICON_MAP["shadcnui"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "Framer Motion",
-		icon: ICON_MAP["framermotion"] || null,
-		category: "Frontend",
-	},
-	{
-		name: "HTML",
-		icon: null,
-		category: "Frontend",
-	},
-	{
-		name: "CSS",
-		icon: null,
-		category: "Frontend",
-	},
-	{
-		name: "Bootstrap",
-		icon: null,
-		category: "Frontend",
-	},
-	{
-		name: "Node.js",
-		icon: ICON_MAP["nodedotjs"] || null,
 		category: "Backend",
+		clusters: [
+			{
+				label: "Runtime",
+				items: [
+					{ name: "Node.js", icon: ICON_MAP["nodedotjs"] || null },
+					{ name: "Express.js", icon: ICON_MAP["express"] || null },
+					{ name: "Hono", icon: ICON_MAP["hono"] || null },
+				],
+			},
+			{
+				label: "Data",
+				items: [
+					{
+						name: "PostgreSQL",
+						icon: ICON_MAP["postgresql"] || null,
+					},
+					{ name: "MongoDB", icon: ICON_MAP["mongodb"] || null },
+				],
+			},
+			{
+				label: "ORM & SDKs",
+				items: [
+					{ name: "Prisma", icon: ICON_MAP["prisma"] || null },
+					{ name: "Drizzle", icon: ICON_MAP["drizzle"] || null },
+					{ name: "Appwrite", icon: ICON_MAP["appwrite"] || null },
+				],
+			},
+		],
 	},
 	{
-		name: "Express.js",
-		icon: ICON_MAP["express"] || null,
-		category: "Backend",
-	},
-	{
-		name: "Hono",
-		icon: ICON_MAP["hono"] || null,
-		category: "Backend",
-	},
-	{
-		name: "PostgreSQL",
-		icon: ICON_MAP["postgresql"] || null,
-		category: "Backend",
-	},
-	{
-		name: "MongoDB",
-		icon: ICON_MAP["mongodb"] || null,
-		category: "Backend",
-	},
-	{
-		name: "Prisma",
-		icon: ICON_MAP["prisma"] || null,
-		category: "Backend",
-	},
-	{
-		name: "Drizzle",
-		icon: ICON_MAP["drizzle"] || null,
-		category: "Backend",
-	},
-	{
-		name: "Appwrite",
-		icon: ICON_MAP["appwrite"] || null,
-		category: "Backend",
-	},
-	{
-		name: "Git",
-		icon: ICON_MAP["git"] || null,
 		category: "Tools",
-	},
-	{
-		name: "GitHub",
-		icon: ICON_MAP["github"],
-		category: "Tools",
-	},
-	{
-		name: "Docker",
-		icon: ICON_MAP["docker"] || null,
-		category: "Tools",
-	},
-	{
-		name: "Vercel",
-		icon: ICON_MAP["vercel"] || null,
-		category: "Tools",
-	},
-	{
-		name: "AWS",
-		icon: ICON_MAP["aws"] || null,
-		category: "Tools",
-	},
-	{
-		name: "Amazon EC2",
-		icon: null,
-		category: "Tools",
-	},
-	{
-		name: "Amazon S3",
-		icon: null,
-		category: "Tools",
-	},
-	{
-		name: "Amazon SQS",
-		icon: null,
-		category: "Tools",
-	},
-	{
-		name: "GitHub Actions",
-		icon: ICON_MAP["githubactions"] || null,
-		category: "Tools",
-	},
-	{
-		name: "Husky",
-		icon: null,
-		category: "Tools",
+		clusters: [
+			{
+				label: "VCS & CI",
+				items: [
+					{ name: "Git", icon: ICON_MAP["git"] || null },
+					{ name: "GitHub", icon: ICON_MAP["github"] || null },
+					{
+						name: "GitHub Actions",
+						icon: ICON_MAP["githubactions"] || null,
+					},
+					{ name: "Husky", icon: null },
+				],
+			},
+			{
+				label: "Infra",
+				items: [
+					{ name: "Docker", icon: ICON_MAP["docker"] || null },
+					{ name: "Vercel", icon: ICON_MAP["vercel"] || null },
+					{ name: "AWS", icon: ICON_MAP["aws"] || null },
+					{ name: "Amazon S3", icon: null },
+					{ name: "Amazon EC2", icon: null },
+					{ name: "Amazon SQS", icon: null },
+				],
+			},
+		],
 	},
 ];

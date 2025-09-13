@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import ThemeToggle from "@/components/theme-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,23 +49,35 @@ export const metadata: Metadata = {
 		"rahul poonia, portfolio, rahul, full stack dev, nextjs portfolio, portfolio design, portfolio website, personal portfolio",
 };
 
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="dark">
+		<html lang="en" suppressHydrationWarning>
+			<head>
+				{/* Inline script to avoid flash of wrong theme */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(() => {try {const t = localStorage.getItem('theme'); if(t === 'light' || (!t && window.matchMedia('(prefers-color-scheme: light)').matches)) { document.documentElement.classList.remove('dark'); } else { document.documentElement.classList.add('dark'); } document.documentElement.style.colorScheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'; } catch(_) {}})();`,
+					}}
+				/>
+			</head>
 			<body
 				className={cn(
 					inter.className,
-					"bg-zinc-50 dark:bg-[#121114] text-white min-h-screen",
+					"bg-[#faf9f6] relative dark:bg-[#0d0d10] text-foreground dark:text-foreground min-h-screen antialiased transition-colors duration-300",
 				)}
 			>
-				<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-200 dark:from-zinc-900 to-transparent pointer-events-none" />
-				<main className="flex items-center justify-center mx-auto px-5 py-20">
-					{children}
-				</main>
+				<ThemeProvider>
+					<ThemeToggle />
+					<div className="w-full h-12 fixed top-0 z-10 bg-gradient-to-b from-zinc-200/80 dark:from-zinc-900/70 to-transparent pointer-events-none" />
+					<main className="flex items-center justify-center mx-auto px-5 py-20">
+						{children}
+					</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
