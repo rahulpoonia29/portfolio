@@ -2,7 +2,7 @@ import About from "@/components/about";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Hero from "@/components/hero";
-import ProjectsSection from "@/components/projectsSection";
+import Projects from "@/components/projectss";
 import TechStack from "@/components/techStack";
 
 export default function Home() {
@@ -11,8 +11,7 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Experience />
-			{/* <FeaturedProject /> */}
-			<ProjectsSection />
+			<Projects />
 			<TechStack />
 			<Contact />
 		</div>

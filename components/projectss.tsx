@@ -14,7 +14,7 @@ interface ProjectItemProps {
 	index: number;
 }
 
-export default function Projectss() {
+export default function Projects() {
 	return (
 		<section
 			id="projects"
