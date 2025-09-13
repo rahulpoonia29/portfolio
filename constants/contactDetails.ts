@@ -9,8 +9,8 @@ export const CONTACT_DETAILS: {
 }[] = [
 	{
 		icon: LuMail,
-		link: "mailto:contact@rahulpoonia.co",
-		text: "contact@rahulpoonia.co",
+		link: "mailto:contact@rahulpoonia229@gmail.com",
+		text: "rahulpoonia229@gmail.com",
 	},
 	{
 		icon: FaGithub,

@@ -36,7 +36,7 @@ export default function TechStack() {
 					{groups.map((g) => (
 						<li
 							key={g.category}
-							className="grid grid-cols-[80px_minmax(0,1fr)] md:grid-cols-[130px_minmax(0,1fr)] px-4 py-4 gap-4 items-start"
+							className="grid grid-cols-[90px_minmax(0,1fr)] md:grid-cols-[130px_minmax(0,1fr)] px-4 py-4 gap-4 items-start"
 						>
 							{/* Left category label */}
 							<div className="pt-1">
@@ -51,7 +51,7 @@ export default function TechStack() {
 									// Each cluster is its own two-column row: small fixed label + chips
 									<div
 										key={cluster.label}
-										className="grid grid-cols-[90px_minmax(0,1fr)] gap-3 items-start"
+										className="grid grid-cols-[100px_minmax(0,1fr)] gap-3 items-start"
 									>
 										{/* Cluster label — small, muted, top-aligned */}
 										<div className="pt-0.5">
