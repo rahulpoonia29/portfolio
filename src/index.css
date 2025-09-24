@@ -140,13 +140,6 @@
   body {
     @apply text-foreground bg-background box-border min-h-screen w-full font-mono antialiased;
   }
-
-  * {
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease,
-      border-color 0.3s ease;
-  }
 }
 
 @layer components {
@@ -159,20 +152,17 @@
   .chip {
     @apply rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 font-mono text-xs text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400;
   }
-  .meta {
-    @apply text-muted-foreground font-mono text-xs leading-none;
-  }
-  .surface {
-    @apply border-border bg-card rounded-md border;
-  }
-  .interactive {
-    @apply focus-visible:ring-ring focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none;
-  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {

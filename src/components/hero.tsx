@@ -1,22 +1,23 @@
+import { CONTACT_DETAILS } from '@/constants/contactDetails';
 import { IconCode } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
-import { Timer } from './timer';
-import { CONTACT_DETAILS } from '@/constants/contactDetails';
 import { InlinePopover } from './inline-popover';
+import { Timer } from './timer';
+import { ClientOnly } from 'vite-react-ssg/single-page';
+import ThemeToggle from './theme-toggle';
 
 function useLocalTime() {
-  const [time, setTime] = useState<string>('00:00:00 PM');
+  const [time, setTime] = useState<string>('00:00 PM');
   useEffect(() => {
     const update = () =>
       setTime(
         new Date().toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
-          second: '2-digit',
         }),
       );
     update();
-    const id = setInterval(update, 600);
+    const id = setInterval(update, 30000);
     return () => clearInterval(id);
   }, []);
   return time;
@@ -27,16 +28,19 @@ export default function Hero() {
 
   return (
     <section id="home" className="flex scroll-mt-20 flex-col gap-4" aria-labelledby="hero-heading">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+      <div className="grid grid-cols-[auto_1fr_auto_auto] items-center gap-3">
         <IconCode
           size={28}
           className="text-foreground cursor-pointer transition-transform duration-300 hover:-rotate-12"
           aria-hidden="true"
         />
-        <h1 id="hero-heading" className="text-2xl font-semibold text-primary">
+        <h1 id="hero-heading" className="text-primary text-2xl font-semibold">
           Rahul Poonia
         </h1>
-        <Timer value={time} />
+        <ClientOnly>
+          {() => <ThemeToggle className="chip cursor-pointer" iconClassName="size-5" />}
+        </ClientOnly>
+        <ClientOnly>{() => <Timer value={time} />}</ClientOnly>
       </div>
       <div className="space-y-3">
         <p className="text-muted-foreground max-w text-base leading-relaxed text-pretty">

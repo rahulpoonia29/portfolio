@@ -6,7 +6,7 @@ const padding = 4;
 const height = fontSize + padding;
 
 export function Timer({ value }: { value: string }) {
-  const [time, meridiem] = value.split(' '); // "hh:mm:ss" and "AM/PM"
+  const [time, meridiem] = value.split(' '); // "hh:mm" and "AM/PM"
 
   return (
     <div style={{ fontSize }} className="flex items-center overflow-hidden chip justify-self-end">
@@ -15,7 +15,7 @@ export function Timer({ value }: { value: string }) {
           {unit.split('').map((digit, j) => (
             <Digit key={`${i}-${j}`} value={+digit} />
           ))}
-          {i < 2 && <span>:</span>}
+          {i < 1 && <span>:</span>}
         </div>
       ))}
       <span className='ms-2'>{meridiem}</span>
