@@ -166,13 +166,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-100 dark:bg-zinc-900;
+  @apply bg-zinc-50 dark:bg-zinc-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-zinc-300 dark:bg-zinc-700;
+  @apply rounded-md bg-zinc-400 dark:bg-zinc-600;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-400 dark:bg-zinc-600;
+  @apply bg-zinc-500 dark:bg-zinc-500;
 }

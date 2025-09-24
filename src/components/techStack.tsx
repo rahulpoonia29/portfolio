@@ -28,7 +28,7 @@ export default function TechStack() {
           {groups.map((g) => (
             <li
               key={g.category}
-              className="grid grid-cols-[2fr_2fr_7fr] items-start gap-4 px-4 py-4"
+              className="grid grid-cols-[1fr_3fr] md:grid-cols-[2fr_2fr_7fr] items-start gap-4 px-4 py-4"
               style={{ gridTemplateRows: `repeat(${g.clusters.length}, auto)` }}
             >
               <span
@@ -41,7 +41,7 @@ export default function TechStack() {
 
               {g.clusters.map((cluster) => (
                 <Fragment key={cluster.label}>
-                  <span className="text-muted-foreground/80 border-border col-start-2 w-fit rounded-md border bg-transparent px-2 py-1 text-xs font-semibold tracking-wide uppercase select-none">
+                  <span className="text-muted-foreground/80 border-border col-start-2 hidden md:block w-fit rounded-md border bg-transparent px-2 py-1 text-xs font-semibold tracking-wide uppercase select-none">
                     {cluster.label}
                   </span>
 

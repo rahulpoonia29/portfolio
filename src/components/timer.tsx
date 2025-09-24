@@ -7,18 +7,20 @@ const height = fontSize + padding;
 
 export function Timer({ value }: { value: string }) {
   const [time, meridiem] = value.split(' '); // "hh:mm" and "AM/PM"
+  const units = time.split(':');
+  const unitCount = units.length;
 
   return (
-    <div style={{ fontSize }} className="flex items-center overflow-hidden chip justify-self-end">
-      {time.split(':').map((unit, i) => (
+    <div style={{ fontSize }} className="chip flex items-center justify-self-end overflow-hidden">
+      {units.map((unit, i) => (
         <div key={i} className="flex text-sm">
           {unit.split('').map((digit, j) => (
             <Digit key={`${i}-${j}`} value={+digit} />
           ))}
-          {i < 1 && <span>:</span>}
+          {i < unitCount - 1 && <span>:</span>}
         </div>
       ))}
-      <span className='ms-2'>{meridiem}</span>
+      <span className="ms-2">{meridiem}</span>
     </div>
   );
 }

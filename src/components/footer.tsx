@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer role="contentinfo" className="relative mt-2">
       <div className="mx-auto w-full max-w-3xl px-4 py-6">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="flex flex-col-reverse items-center justify-between gap-4 md:flex-row">
           <div className="text-muted-foreground flex items-center gap-3 text-sm">
             <span>© {year} Rahul Poonia</span>
             <span className="bg-ring/80 hidden h-1 w-1 rounded-full md:inline-block" />

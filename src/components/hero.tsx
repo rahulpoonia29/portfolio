@@ -14,10 +14,11 @@ function useLocalTime() {
         new Date().toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
+          second: '2-digit',
         }),
       );
     update();
-    const id = setInterval(update, 30000);
+    const id = setInterval(update, 600);
     return () => clearInterval(id);
   }, []);
   return time;
