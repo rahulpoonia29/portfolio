@@ -11,9 +11,9 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     id: 'api-gateway',
-    name: 'API Gateway',
+    name: 'API‑Gateway — Microservice Router',
     blurb:
-      'Lightweight Go API gateway with hot-reload configs, radix-tree routing & adaptive balancing.',
+      'Config‑driven Go gateway with radix routing, hot‑reload and reverse proxy; round‑robin/least‑connections balancing.',
     details: [
       'Config-driven API gateway built in Go with Radix Tree routing.',
       'Supports hot-reload configs, reverse proxying, and load balancing (round-robin, least-connections).',
@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'applic',
-    name: 'Applic – Job Tracker',
+    name: 'Applic — Job Application Tracker',
     blurb:
       'Unified job hunt workspace—track roles, statuses, interviews, notes & files in one calm surface.',
     details: [
@@ -55,9 +55,8 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'devmetrics',
-    name: 'Devmetrics Extension',
-    blurb:
-      'Local-only VS Code extension turning Git diffs into focus & activity insights (no telemetry).',
+    name: 'Devmetrics — VS Code Extension',
+    blurb: 'Local‑only coding metrics from Git diffs; privacy by design (LokiJS, no telemetry).',
     details: [
       'TypeScript VS Code extension that tracks coding metrics via Git diff analysis.',
       'Local persistence with LokiJS ensuring privacy (no external telemetry).',
@@ -70,8 +69,8 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'form-builder',
-    name: 'Form Builder',
-    blurb: 'Visual composer that emits clean React Hook Form components + matching Zod schema.',
+    name: 'Form‑Builder — Visual → Code',
+    blurb: 'Drag‑drop form builder that generates RHF components and matching Zod schemas.',
     details: [
       'Drag-and-drop interface for building forms with Framer Motion.',
       'Generates React Hook Form JSX and Zod schemas from design.',
@@ -84,9 +83,8 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'shad-ui',
-    name: 'Shad-UI Builder',
-    blurb:
-      'Drag-and-drop canvas for composing Tailwind + shadcn/ui blocks with production-ready export.',
+    name: 'Shad‑UI Builder',
+    blurb: 'Compose Tailwind + shadcn/ui blocks on a canvas; export clean, reusable JSX.',
     details: [
       'Craft.js powered canvas with live prop controls.',
       'Exports uncluttered, reusable JSX blocks.',

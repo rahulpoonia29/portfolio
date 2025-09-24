@@ -1,56 +1,74 @@
-'use client';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-import { createContext, useCallback, useContext, useEffect, useState } from 'react';
+type Theme = 'dark' | 'light' | 'system';
 
-type Theme = 'light' | 'dark';
-interface ThemeContextValue {
+type ThemeProviderProps = {
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
+};
+
+type ThemeProviderState = {
   theme: Theme;
-  toggle: () => void;
-  setTheme: (t: Theme) => void;
-}
+  setTheme: (theme: Theme) => void;
+};
 
-const ThemeContext = createContext<ThemeContextValue | null>(null);
+const initialState: ThemeProviderState = {
+  theme: 'system',
+  setTheme: () => null,
+};
 
-function getPreferredTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark'; // default SSR fallback
-  const stored = window.localStorage.getItem('theme') as Theme | null;
-  if (stored === 'light' || stored === 'dark') return stored;
-  const mq = window.matchMedia('(prefers-color-scheme: light)').matches;
-  return mq ? 'light' : 'dark';
-}
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(getPreferredTheme);
-
-  const applyTheme = useCallback((t: Theme) => {
-    const root = document.documentElement;
-    if (t === 'dark') root.classList.add('dark');
-    else root.classList.remove('dark');
-    root.style.setProperty('color-scheme', t);
-  }, []);
+export function ThemeProvider({
+  children,
+  defaultTheme = 'system',
+  storageKey = 'vite-ui-theme',
+  ...props
+}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(
+    () => {  if (typeof window === 'undefined') {
+      return defaultTheme;
+    }
+    return (localStorage.getItem(storageKey) as Theme) || defaultTheme;}
+  );
 
   useEffect(() => {
-    applyTheme(theme);
-  }, [theme, applyTheme]);
+    const root = window.document.documentElement;
 
-  const setTheme = useCallback((t: Theme) => {
-    setThemeState(t);
-    try {
-      window.localStorage.setItem('theme', t);
-    } catch {}
-  }, []);
+    root.classList.remove('light', 'dark');
 
-  const toggle = useCallback(() => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  }, [theme, setTheme]);
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+
+      root.classList.add(systemTheme);
+      return;
+    }
+
+    root.classList.add(theme);
+  }, [theme]);
+
+  const value = {
+    theme,
+    setTheme: (theme: Theme) => {
+      localStorage.setItem(storageKey, theme);
+      setTheme(theme);
+    },
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggle, setTheme }}>{children}</ThemeContext.Provider>
+    <ThemeProviderContext.Provider {...props} value={value}>
+      {children}
+    </ThemeProviderContext.Provider>
   );
 }
 
-export function useTheme() {
-  const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error('useTheme must be used inside ThemeProvider');
-  return ctx;
-}
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext);
+
+  if (context === undefined) throw new Error('useTheme must be used within a ThemeProvider');
+
+  return context;
+};

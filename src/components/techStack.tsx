@@ -1,20 +1,18 @@
 import { TECH_STACK } from '@/constants/techStack';
-import { createElement } from 'react';
+import { Fragment } from 'react/jsx-runtime';
 
 export default function TechStack() {
   const groups = TECH_STACK.filter(Boolean);
 
-  // A small reusable chip renderer so chips look consistent
-  const renderChip = (item: { name: string; icon?: any }) => (
+  const renderChip = (item: { name: string; iconUrl?: string }) => (
     <span
       key={item.name}
       title={item.name}
-      className="border-border bg-card inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium whitespace-nowrap transition hover:shadow-sm"
+      className="border-border bg-card inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-sm font-medium whitespace-nowrap transition hover:shadow-sm"
       aria-label={item.name}
     >
-      {item.icon && (
-        <span className="-ml-0.5 opacity-80">{createElement(item.icon, { size: 14 })}</span>
-      )}
+      {item.iconUrl && <img src={item.iconUrl} alt={item.name} className="-ml-0.5 size-4" />}
+      {/* {item.icon && <item.icon className="-ml-0.5 size-5 opacity-80" strokeWidth={1.5} />} */}
       {item.name}
     </span>
   );
@@ -30,37 +28,28 @@ export default function TechStack() {
           {groups.map((g) => (
             <li
               key={g.category}
-              className="grid grid-cols-[90px_minmax(0,1fr)] items-start gap-4 px-4 py-4 md:grid-cols-[130px_minmax(0,1fr)]"
+              className="grid grid-cols-[2fr_2fr_7fr] items-start gap-4 px-4 py-4"
+              style={{ gridTemplateRows: `repeat(${g.clusters.length}, auto)` }}
             >
-              {/* Left category label */}
-              <div className="pt-1">
-                <span className="text-muted-foreground/90 text-sm font-semibold tracking-wide uppercase">
-                  {g.category}
-                </span>
-              </div>
+              <span
+                className={
+                  'text-muted-foreground/90 col-span-1 row-span-full self-center text-sm font-semibold tracking-wide uppercase'
+                }
+              >
+                {g.category}
+              </span>
 
-              {/* Right: clusters */}
-              <div className="flex flex-col gap-3">
-                {g.clusters.map((cluster) => (
-                  // Each cluster is its own two-column row: small fixed label + chips
-                  <div
-                    key={cluster.label}
-                    className="grid grid-cols-[100px_minmax(0,1fr)] items-start gap-3"
-                  >
-                    {/* Cluster label — small, muted, top-aligned */}
-                    <div className="pt-0.5">
-                      <span className="text-muted-foreground/80 border-border inline-flex items-center justify-center rounded-md border bg-transparent px-2 py-1 text-xs font-semibold tracking-wide uppercase select-none">
-                        {cluster.label}
-                      </span>
-                    </div>
+              {g.clusters.map((cluster) => (
+                <Fragment key={cluster.label}>
+                  <span className="text-muted-foreground/80 border-border col-start-2 w-fit rounded-md border bg-transparent px-2 py-1 text-xs font-semibold tracking-wide uppercase select-none">
+                    {cluster.label}
+                  </span>
 
-                    {/* Chips area — wraps consistently */}
-                    <div className="flex flex-wrap items-start gap-2">
-                      {cluster.items.map((item) => (item ? renderChip(item) : null))}
-                    </div>
+                  <div className="flex flex-wrap items-start gap-2">
+                    {cluster.items.map((item) => (item ? renderChip(item) : null))}
                   </div>
-                ))}
-              </div>
+                </Fragment>
+              ))}
             </li>
           ))}
         </ul>

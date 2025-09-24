@@ -14,7 +14,7 @@ export const CONTACT_DETAILS: {
 }[] = [
   {
     icon: IconMail,
-    link: 'mailto:contact@rahulpoonia229@gmail.com',
+    link: 'mailto:rahulpoonia229@gmail.com',
     text: 'rahulpoonia229@gmail.com',
     cta: 'Email me',
   },

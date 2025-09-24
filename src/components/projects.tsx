@@ -50,15 +50,19 @@ function ProjectLinkButton({
   );
 }
 
-function ProjectItem({ project }: ProjectItemProps) {
+function ProjectItem({ project, index }: ProjectItemProps) {
   const [open, setOpen] = useState(false);
   const [aspect, setAspect] = useState<number | null>(null);
+  const panelId = `project-panel-${index}`;
+  const buttonId = `project-trigger-${index}`;
 
   return (
     <li className="list-none">
       <button
         onClick={() => setOpen((o) => !o)}
+        id={buttonId}
         aria-expanded={open}
+        aria-controls={panelId}
         className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-2 text-left"
       >
         <h3 className="text-foreground max-w-1/2 truncate text-base font-semibold">
@@ -95,6 +99,9 @@ function ProjectItem({ project }: ProjectItemProps) {
       </button>
 
       <motion.div
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
         style={{ overflow: 'hidden' }}
@@ -111,6 +118,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               <img
                 src={project.image}
                 alt={project.name}
+                loading="lazy"
                 onLoad={(e) => {
                   const { naturalWidth, naturalHeight } = e.currentTarget;
                   if (naturalWidth && naturalHeight) {

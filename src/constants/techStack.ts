@@ -1,99 +1,61 @@
-import {
-  IconBrandTypescript,
-  IconBrandJavascript,
-  IconBrandPython,
-  IconBrandGolang,
-  IconBrandReact,
-  IconBrandNextjs,
-  IconBrandTailwind,
-  //   IconBrandShadcnui,
-  IconBrandFramer,
-  //   IconBrandNodedotjs,
-  //   IconBrandExpress,
-  //   IconBrandPostgresql,
-  IconBrandMongodb,
-  IconBrandPrisma,
-  IconBrandGit,
-  IconBrandGithub,
-  //   IconBrandGithubActions,
-  IconBrandVercel,
-  IconBrandAws,
-  type Icon,
-} from '@tabler/icons-react';
-
 export const TECH_STACK: {
   category: string;
   clusters: {
     label: string;
-    items: { name: string; icon?: Icon }[];
+    items: { iconUrl?: string; name: string }[];
   }[];
 }[] = [
   {
     category: 'Languages',
     clusters: [
       {
-        label: 'Primary',
+        label: 'Languages',
         items: [
           {
             name: 'TypeScript',
-            icon: IconBrandTypescript,
+            iconUrl: 'https://svgl.app/library/typescript.svg',
           },
-          {
-            name: 'JavaScript',
-            icon: IconBrandJavascript,
-          },
-          { name: 'Python', icon: IconBrandPython },
-          { name: 'Go', icon: IconBrandGolang },
+          { name: 'Python', iconUrl: 'https://svgl.app/library/python.svg' },
+          { name: 'Go', iconUrl: 'https://svgl.app/library/golang.svg' },
         ],
       },
     ],
   },
   {
-    category: 'Frontend',
-    clusters: [
-      {
-        label: 'Core',
-        items: [
-          { name: 'React', icon: IconBrandReact },
-          { name: 'Next.js', icon: IconBrandNextjs },
-          { name: 'Zustand' },
-        ],
-      },
-      {
-        label: 'Styling',
-        items: [
-          {
-            name: 'Tailwind CSS',
-            icon: IconBrandTailwind,
-          },
-          {
-            name: 'Shadcn UI',
-            //  icon: IconBrandShadcnui
-          },
-          {
-            name: 'Framer Motion',
-            icon: IconBrandFramer,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    category: 'Backend',
+    category: 'Frontend Development',
     clusters: [
       {
         label: 'Frameworks',
         items: [
+          { name: 'React', iconUrl: 'https://svgl.app/library/react_light.svg' },
+          { name: 'Next.js', iconUrl: 'https://svgl.app/library/nextjs_icon_dark.svg' },
+        ],
+      },
+      {
+        label: 'State & Styling',
+        items: [
+          { name: 'Zustand' },
           {
-            name: 'Node.js',
-            // icon: IconBrandNodedotjs
+            name: 'Tailwind CSS',
+            iconUrl: 'https://svgl.app/library/tailwindcss.svg',
           },
+          { name: 'Shadcn UI', iconUrl: 'https://svgl.app/library/shadcn-ui.svg' },
           {
-            name: 'Express.js',
-            //  icon: IconBrandExpress
+            name: 'Motion',
+            iconUrl: 'https://svgl.app/library/motion.svg',
           },
-          { name: 'Hono' },
-          { name: 'FastAPI' },
+        ],
+      },
+    ],
+  },
+  {
+    category: 'Backend Development',
+    clusters: [
+      {
+        label: 'Frameworks',
+        items: [
+          { name: 'Express.js', iconUrl: 'https://svgl.app/library/expressjs.svg' },
+          { name: 'Hono', iconUrl: 'https://svgl.app/library/hono.svg' },
         ],
       },
       {
@@ -101,51 +63,52 @@ export const TECH_STACK: {
         items: [
           {
             name: 'PostgreSQL',
-            // icon: IconBrandPostgresql,
+            iconUrl: 'https://svgl.app/library/postgresql.svg',
           },
-          { name: 'MongoDB', icon: IconBrandMongodb },
-          { name: 'SQLite' },
+          { name: 'MongoDB', iconUrl: 'https://svgl.app/library/mongodb.svg' },
+          { name: 'SQLite', iconUrl: 'https://svgl.app/library/sqlite.svg' },
         ],
       },
       {
-        label: 'ORM & Query',
+        label: 'ORM',
         items: [
-          { name: 'Prisma', icon: IconBrandPrisma },
-          { name: 'Drizzle ORM' },
+          { name: 'Drizzle', iconUrl: 'https://svgl.app/library/drizzle-orm_light.svg' },
+          { name: 'Prisma', iconUrl: 'https://svgl.app/library/prisma.svg' },
           { name: 'Mongoose' },
         ],
       },
     ],
   },
   {
-    category: 'AI / Data',
+    category: 'LLM',
     clusters: [
       {
-        label: 'NLP & RAG',
-        items: [{ name: 'LangChain' }, { name: 'Embeddings / Vector Search' }],
+        label: 'AI Tools',
+        items: [
+          { name: 'LangChain' },
+          { name: 'Vector Search' },
+          { name: 'OpenAI API', iconUrl: 'https://svgl.app/library/openai.svg' },
+        ],
       },
     ],
   },
   {
-    category: 'Tools & Infra',
+    category: 'DevOps & Deployment',
     clusters: [
       {
-        label: 'CI/CD',
+        label: 'Version Control',
         items: [
-          { name: 'Git', icon: IconBrandGit },
-          { name: 'GitHub', icon: IconBrandGithub },
-          {
-            name: 'GitHub Actions',
-            // icon: IconBrandGithubActions,
-          },
+          { name: 'Git', iconUrl: 'https://svgl.app/library/git.svg' },
+          { name: 'GitHub', iconUrl: 'https://svgl.app/library/github_light.svg' },
+          { name: 'GitHub Actions' },
         ],
       },
       {
-        label: 'Infra',
+        label: 'Cloud & Hosting',
         items: [
+          { name: 'Vercel', iconUrl: 'https://svgl.app/library/vercel.svg' },
+          { name: 'AWS', iconUrl: 'https://svgl.app/library/aws_light.svg' },
           { name: 'Nginx' },
-          { name: 'Vercel', icon: IconBrandVercel },
-          { name: 'AWS', icon: IconBrandAws },
         ],
       },
     ],

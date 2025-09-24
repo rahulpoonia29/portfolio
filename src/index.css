@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #faf9f6;
@@ -151,7 +151,7 @@
 
 @layer components {
   .section {
-    @apply border-border flex scroll-mt-20 flex-col gap-4 border-t pt-8;
+    @apply border-border flex scroll-mt-20 flex-col gap-4 pt-8;
   }
   .section-heading {
     @apply text-foreground text-xl font-semibold;

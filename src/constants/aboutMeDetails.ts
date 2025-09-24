@@ -1,5 +1,5 @@
 export const ABOUT_ME_DETAILS: string[] = [
-  'All about crafting cool digital stuff that works like a charm.',
-  'Full-stack developer passionate about building efficient solutions.',
-  'Currently pursuing BTech from IIT Kharagpur.',
+  'Full‑stack developer focused on shipping reliable, performant products.',
+  'I enjoy turning fuzzy problems into clear systems—across frontend, backend and infra.',
+  'B.Tech. (Hons.) — IIT Kharagpur; I like learning by building and iterating fast.',
 ];
