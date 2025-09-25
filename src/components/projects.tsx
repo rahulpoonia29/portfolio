@@ -104,7 +104,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         aria-labelledby={buttonId}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.3, ease: 'easeOut' }}
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: 'hidden', height: 0, opacity: 0 }} // Ensure initial state is hidden
       >
         <div className="flex flex-col gap-4 px-4 pt-1 pb-4 md:flex-row">
           {project.image ? (
