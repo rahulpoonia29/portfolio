@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['Go', 'Radix Tree', 'Concurrency', 'HTTP'],
     tags: ['Infra', 'Gateway'],
-    links: {},
+    links: { code: 'https://github.com/rahulpoonia29/api-gateway' },
   },
   {
     id: 'applic',
@@ -49,8 +49,8 @@ export const PROJECTS: Project[] = [
     ],
     tags: ['SaaS', 'Product'],
     links: {
-      live: 'https://applic.rahulpoonia.co',
-      code: 'https://something.com',
+      live: 'https://applic.vercel.app',
+      code: 'https://github.com/rahulpoonia29/applic',
     },
   },
   {
@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['VS Code API', 'TypeScript', 'Git', 'LokiJS'],
     tags: ['Extension', 'Analytics'],
-    links: {},
+    links: { code: 'https://github.com/rahulpoonia29/devmetrics' },
   },
   {
     id: 'form-builder',
@@ -79,7 +79,10 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['React', 'React Hook Form', 'Zod', 'Shiki', 'Framer Motion', 'Zustand'],
     tags: ['Builder'],
-    links: {},
+    links: {
+      live: 'https://form-builder-bj3.pages.dev',
+      code: 'https://github.com/rahulpoonia29/form-builder',
+    },
   },
   {
     id: 'shad-ui',
@@ -92,6 +95,9 @@ export const PROJECTS: Project[] = [
     ],
     stack: ['React', 'Craft.js', 'Tailwind', 'ShadcnUI'],
     tags: ['UI', 'Drag&Drop'],
-    links: {},
+    links: {
+      code: 'https://github.com/rahulpoonia29/Shad-UI',
+      live: 'https://shad-ui.vercel.app/editor',
+    },
   },
 ];

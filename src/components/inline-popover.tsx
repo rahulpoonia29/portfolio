@@ -27,15 +27,6 @@ export function InlinePopover({
   const hoverTimeout = useRef<number | null>(null);
   const [coords, setCoords] = useState<Coords | null>(null);
 
-  // Close on Esc
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
-    };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, []);
-
   // Close on outside click
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
@@ -117,7 +108,7 @@ export function InlinePopover({
         type="button"
         aria-expanded={open}
         aria-controls={id}
-        className="focus-visible:ring-ring/60 rounded underline decoration-dotted underline-offset-4 focus:outline-none focus-visible:ring-2"
+        className="focus-visible:ring-ring/60 rounded underline decoration-wavy decoration-accent-foreground/40 underline-offset-4 focus:outline-none focus-visible:ring-2"
         onClick={() => setOpen((o) => !o)}
       >
         {label}
@@ -139,24 +130,12 @@ export function InlinePopover({
               top: coords?.top ?? -9999,
               left: coords?.left ?? -9999,
             }}
-            className={`z-50 ${origin} bg-popover/95 text-popover-foreground supports-[backdrop-filter]:bg-popover/75 max-w-[min(92vw,420px)] min-w-[260px] rounded-xl border border-black/5 shadow-lg ring-1 shadow-black/5 ring-black/5 backdrop-blur`}
+            className={`z-50 ${origin} bg-popover text-popover-foreground supports-[backdrop-filter]:bg-popover/75 max-w-[min(92vw,420px)] min-w-[260px] rounded-xl border border-black/5 shadow-lg ring-1 shadow-black/5 ring-black/5 backdrop-blur`}
             onMouseEnter={() => {
               if (hoverTimeout.current) window.clearTimeout(hoverTimeout.current);
             }}
             onMouseLeave={() => setOpen(false)}
           >
-            {/* Arrow */}
-            <span
-              className={`bg-popover absolute h-3 w-3 rotate-45 rounded-[2px] shadow-md ring-1 ring-black/5 ${
-                (coords?.side ?? side) === 'top' ? 'top-[calc(100%-6px)]' : '-top-1.5'
-              }`}
-              style={{
-                left: coords ? `${coords.arrowLeft}px` : '50%',
-                transform: 'translateX(-50%) rotate(45deg)',
-              }}
-              aria-hidden="true"
-            />
-
             <div className="p-3.5">
               <div className="text-foreground/90 text-sm/6">{children}</div>
             </div>

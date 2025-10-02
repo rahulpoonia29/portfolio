@@ -109,22 +109,20 @@ export default function Hero() {
           .
         </p>
 
-        <div className="flex flex-wrap gap-2 text-sm font-medium">
+        <div className="flex flex-wrap gap-2 text-sm font-medium mt-6">
           {CONTACT_DETAILS.map((c) => {
-            const isExternal = /^https?:/i.test(c.link);
-            const isEmail = /^mailto:/i.test(c.link);
-            const label = isEmail ? `Email ${c.text}` : `${c.text} (opens in new tab)`;
             return (
               <a
                 href={c.link}
-                className="border-border hover:border-ring focus-visible:ring-ring/60 inline-flex cursor-pointer items-center overflow-hidden rounded-md border p-1 transition-colors focus:outline-none focus-visible:ring-2"
+                className="border-border hover:border-ring gap-2 focus-visible:ring-ring/60 inline-flex cursor-pointer items-center overflow-hidden rounded-md border p-1 transition-colors focus:outline-none focus-visible:ring-2"
                 key={c.link}
-                aria-label={label}
+                aria-label={c.text}
                 title={c.text}
-                target={isExternal ? '_blank' : undefined}
-                rel={isExternal ? 'noopener noreferrer' : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <c.icon className="text-foreground/80 size-5" stroke={1.5} />
+                <span className="hidden sm:block">{c.text}</span>
               </a>
             );
           })}
