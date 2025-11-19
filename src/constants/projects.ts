@@ -2,7 +2,6 @@ export type Project = {
   id: string;
   name: string;
   blurb: string;
-  details: string[];
   stack: string[];
   tags: string[];
   links: { live?: string; code?: string };
@@ -10,33 +9,33 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    id: 'extractous',
+    name: 'Extractous Go — Document Extraction Library',
+    blurb:
+      'High-performance document extraction library with Rust-powered Apache Tika backend. Supports 60+ formats (PDF, DOCX, XLSX, PPTX) with OCR via Tesseract. Cross-platform Go bindings using CGO and FFI—no JVM required.',
+    stack: ['Go', 'Rust', 'CGO', 'FFI', 'Apache Tika', 'Tesseract', 'JNI', 'GitHub Actions'],
+    tags: ['Library', 'Systems', 'Cross-Platform'],
+    links: {
+      code: 'https://github.com/rahulpoonia29/extractous-go',
+    },
+  },
+  {
     id: 'api-gateway',
     name: 'API‑Gateway — Microservice Router',
     blurb:
-      'Config‑driven Go gateway with radix routing, hot‑reload and reverse proxy; round‑robin/least‑connections balancing.',
-    details: [
-      'Config-driven API gateway built in Go with Radix Tree routing.',
-      'Supports hot-reload configs, reverse proxying, and load balancing (round-robin, least-connections).',
-      'Stateless design with external JSON configs, managed via Cobra CLI.',
-      'Low-allocation routing with deterministic radix-tree matcher.',
-    ],
-    stack: ['Go', 'Radix Tree', 'Concurrency', 'HTTP'],
-    tags: ['Infra', 'Gateway'],
+      'Config-driven Go API gateway with radix-tree routing, hot-reload capabilities, and reverse proxy support. Features round-robin and least-connections load balancing with stateless architecture managed via Cobra CLI.',
+    stack: ['Go', 'Radix Tree', 'Concurrency', 'HTTP', 'Cobra'],
+    tags: ['Infrastructure', 'Gateway'],
     links: { code: 'https://github.com/rahulpoonia29/api-gateway' },
   },
   {
     id: 'applic',
     name: 'Applic — Job Application Tracker',
     blurb:
-      'Unified job hunt workspace—track roles, statuses, interviews, notes & files in one calm surface.',
-    details: [
-      'Next.js & TypeScript full-stack job tracker with status updates and interview scheduling.',
-      'Rich editor (Novel) with attachment uploads (UploadThing).',
-      'Optimistic updates via Zustand cache over Postgres/Prisma.',
-      'Role-aware authentication with guarded mutations and email updates via Resend.',
-    ],
+      'Full-stack job application management platform with status tracking, interview scheduling, and document management. Features rich text editing, optimistic UI updates, and role-based authentication with email notifications.',
     stack: [
       'Next.js',
+      'TypeScript',
       'React',
       'Tailwind',
       'ShadcnUI',
@@ -44,10 +43,8 @@ export const PROJECTS: Project[] = [
       'Prisma',
       'Zustand',
       'NextAuth',
-      'UploadThing',
-      'Novel',
     ],
-    tags: ['SaaS', 'Product'],
+    tags: ['SaaS', 'Full-Stack'],
     links: {
       live: 'https://applic.vercel.app',
       code: 'https://github.com/rahulpoonia29/applic',
@@ -56,29 +53,19 @@ export const PROJECTS: Project[] = [
   {
     id: 'devmetrics',
     name: 'Devmetrics — VS Code Extension',
-    blurb: 'Local‑only coding metrics from Git diffs; privacy by design (LokiJS, no telemetry).',
-    details: [
-      'TypeScript VS Code extension that tracks coding metrics via Git diff analysis.',
-      'Local persistence with LokiJS ensuring privacy (no external telemetry).',
-      'Per-project timeline, file focus distribution, and customisable analysis intervals.',
-      'Integrated TreeView, StatusBar, and Command Palette for intuitive UX.',
-    ],
-    stack: ['VS Code API', 'TypeScript', 'Git', 'LokiJS'],
+    blurb:
+      'Privacy-first coding analytics extension for VS Code. Tracks development metrics through Git diff analysis with local-only persistence using LokiJS. Features per-project timelines, file focus distribution, and customizable analysis intervals.',
+    stack: ['TypeScript', 'VS Code API', 'Git', 'LokiJS'],
     tags: ['Extension', 'Analytics'],
     links: { code: 'https://github.com/rahulpoonia29/devmetrics' },
   },
   {
     id: 'form-builder',
-    name: 'Form‑Builder — Visual → Code',
-    blurb: 'Drag‑drop form builder that generates RHF components and matching Zod schemas.',
-    details: [
-      'Drag-and-drop interface for building forms with Framer Motion.',
-      'Generates React Hook Form JSX and Zod schemas from design.',
-      'Syntax-highlighted previews using ShikiJS.',
-      'Managed complex form states with Zustand for smooth editing.',
-    ],
-    stack: ['React', 'React Hook Form', 'Zod', 'Shiki', 'Framer Motion', 'Zustand'],
-    tags: ['Builder'],
+    name: 'Form‑Builder — Visual Form Designer',
+    blurb:
+      'Drag-and-drop form builder that generates production-ready React Hook Form components with type-safe Zod validation schemas. Features syntax-highlighted code previews and real-time form state management.',
+    stack: ['React', 'TypeScript', 'React Hook Form', 'Zod', 'Shiki', 'Framer Motion', 'Zustand'],
+    tags: ['Developer Tools', 'Code Generation'],
     links: {
       live: 'https://form-builder-bj3.pages.dev',
       code: 'https://github.com/rahulpoonia29/form-builder',
@@ -87,14 +74,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'shad-ui',
     name: 'Shad‑UI Builder',
-    blurb: 'Compose Tailwind + shadcn/ui blocks on a canvas; export clean, reusable JSX.',
-    details: [
-      'Craft.js powered canvas with live prop controls.',
-      'Exports uncluttered, reusable JSX blocks.',
-      'Focuses on composability and developer experience over heavy theming.',
-    ],
-    stack: ['React', 'Craft.js', 'Tailwind', 'ShadcnUI'],
-    tags: ['UI', 'Drag&Drop'],
+    blurb:
+      'Visual UI component builder powered by Craft.js for composing shadcn/ui and Tailwind blocks. Features live property controls and exports clean, reusable JSX with focus on developer experience and composability.',
+    stack: ['React', 'TypeScript', 'Craft.js', 'Tailwind', 'ShadcnUI'],
+    tags: ['UI Builder', 'Design Tools'],
     links: {
       code: 'https://github.com/rahulpoonia29/Shad-UI',
       live: 'https://shad-ui.vercel.app/editor',

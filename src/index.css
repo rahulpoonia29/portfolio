@@ -131,6 +131,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+
+    text-rendering: optimizeLegibility;
   }
 
   * {
@@ -144,19 +146,39 @@
 
 @layer components {
   .section {
-    @apply border-border flex scroll-mt-20 flex-col gap-4 pt-8;
+    @apply border-border flex scroll-mt-24 flex-col gap-5 pt-10;
   }
   .section-heading {
-    @apply text-foreground text-xl font-semibold;
+    @apply text-foreground text-xl font-semibold tracking-tight md:text-2xl;
   }
+
   .chip {
-    @apply rounded-md border border-zinc-200 bg-zinc-100 px-2 py-1 font-mono text-xs text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400;
+    @apply inline-flex items-center gap-1.5 rounded-md border bg-white/70 px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-[0_1px_0_0_rgba(0,0,0,0.04)] ring-1 ring-black/5 transition hover:bg-white hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:bg-zinc-900/90;
+  }
+  .btn {
+    @apply focus-visible:ring-ring/60 inline-flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium shadow-[0_1px_0_0_rgba(0,0,0,0.04)] ring-1 ring-black/5 transition focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:brightness-110;
+  }
+  .btn-outline {
+    @apply border-border hover:bg-muted/60 border bg-transparent;
+  }
+  .interactive {
+    @apply focus-visible:ring-ring/60 focus-visible:ring-2 focus-visible:outline-none;
+  }
+  .card {
+    @apply bg-card text-card-foreground rounded-lg border border-black/5 shadow-sm;
+  }
+  .container {
+    @apply mx-auto w-full max-w-3xl px-4;
   }
 }
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
+
   mix-blend-mode: normal;
 }
 
@@ -171,10 +193,21 @@
 
 ::-webkit-scrollbar-thumb {
   @apply rounded-md bg-zinc-400 dark:bg-zinc-600;
+
   border: 2px solid transparent;
+
   background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-zinc-500 dark:bg-zinc-500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -109,12 +109,12 @@ export default function Hero() {
           .
         </p>
 
-        <div className="flex flex-wrap gap-2 text-sm font-medium mt-6">
+        <div className="mt-6 flex flex-wrap gap-2 text-sm font-medium">
           {CONTACT_DETAILS.map((c) => {
             return (
               <a
                 href={c.link}
-                className="border-border hover:border-ring gap-2 focus-visible:ring-ring/60 inline-flex cursor-pointer items-center overflow-hidden rounded-md border p-1 transition-colors focus:outline-none focus-visible:ring-2"
+                className="border-border hover:border-ring focus-visible:ring-ring/60 inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-md border p-1 transition-colors focus:outline-none focus-visible:ring-2"
                 key={c.link}
                 aria-label={c.text}
                 title={c.text}

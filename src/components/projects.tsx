@@ -16,11 +16,14 @@ export default function Projects() {
       <h2 id="projects-section-heading" className="section-heading">
         Projects
       </h2>
-      <ol className="divide-y-border divide-y-1">
-        {PROJECTS.map((project, i) => (
-          <ProjectItem key={project.id} project={project} index={i} />
-        ))}
-      </ol>
+
+      <div className="card overflow-hidden">
+        <ol className="divide-border/70 divide-y">
+          {PROJECTS.map((project, i) => (
+            <ProjectItem key={project.id} project={project} index={i} />
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
@@ -65,11 +68,11 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         aria-controls={panelId}
         className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-2 text-left"
       >
-        <h3 className="text-foreground max-w-1/2 truncate text-base font-semibold">
+        <h3 className="text-foreground max-w-2/3 truncate text-base font-semibold">
           {project.name}
         </h3>
 
-        <div className="flex min-w-0 items-center gap-2">
+        <div className="ms-2 flex min-w-0 shrink-0 items-center gap-2">
           {project.links && (
             <ol className="flex items-center gap-1.5">
               {project.links.live && (
