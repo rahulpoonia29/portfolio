@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -110,7 +110,7 @@
   /* --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
   --font-serif: var(--font-serif); */
-  --font-roboto: 'Roboto', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --font-doto: 'Doto', sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -140,7 +140,10 @@
   }
 
   body {
-    @apply text-foreground bg-background box-border min-h-screen w-full font-mono antialiased;
+    @apply text-foreground bg-background box-border min-h-screen w-full font-mono leading-relaxed antialiased;
+    background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
   }
 }
 
@@ -148,30 +151,54 @@
   .section {
     @apply border-border flex scroll-mt-24 flex-col gap-5 pt-10;
   }
+
   .section-heading {
     @apply text-foreground text-xl font-semibold tracking-tight md:text-2xl;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-md border bg-white/70 px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-[0_1px_0_0_rgba(0,0,0,0.04)] ring-1 ring-black/5 transition hover:bg-white hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:bg-zinc-900/90;
+    @apply inline-flex items-center gap-1.5 rounded-md border bg-white/70 px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-[0_1px_0_0_rgba(0, 0, 0, 0.04)] ring-1 ring-black/5 transition hover:bg-white hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:bg-zinc-900/90;
   }
+
   .btn {
-    @apply focus-visible:ring-ring/60 inline-flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium shadow-[0_1px_0_0_rgba(0,0,0,0.04)] ring-1 ring-black/5 transition focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60;
+    @apply focus-visible:ring-ring/60 inline-flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium shadow-[0_1px_0_0_rgba(0, 0, 0, 0.04)] ring-1 ring-black/5 transition focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60;
   }
+
   .btn-primary {
     @apply bg-primary text-primary-foreground hover:brightness-110;
   }
+
   .btn-outline {
     @apply border-border hover:bg-muted/60 border bg-transparent;
   }
+
   .interactive {
     @apply focus-visible:ring-ring/60 focus-visible:ring-2 focus-visible:outline-none;
   }
+
   .card {
     @apply bg-card text-card-foreground rounded-lg border border-black/5 shadow-sm;
   }
+
   .container {
     @apply mx-auto w-full max-w-3xl px-4;
+  }
+
+  /* Blinking cursor animation */
+  @keyframes blink {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
   }
 }
 

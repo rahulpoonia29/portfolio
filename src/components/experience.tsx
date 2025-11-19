@@ -1,5 +1,4 @@
 import { EXPERIENCE } from '@/constants/experience';
-import { cn } from '@/utils/cn';
 
 export default function Experience() {
   return (
@@ -8,32 +7,33 @@ export default function Experience() {
         Experience
       </h2>
 
-      <ol
-        className={cn(
-          'before:bg-border before:absolute before:top-1.5 before:bottom-1.5 before:w-px',
-          'relative ml-1 space-y-5 ps-2',
-        )}
-        aria-label="Work experience timeline"
-      >
+      <div className="flex flex-col gap-8">
         {EXPERIENCE.map((exp, i) => {
           return (
-            <li key={i} className="relative pl-4">
-              <span className="bg-ring/80 absolute top-1.5 left-0 size-2 -translate-x-1/2 rounded-full" />
-              <div className="grid grid-cols-1 gap-3 md:gap-1.5">
-                <div className="grid grid-cols-1 items-baseline gap-1 md:grid-cols-[1fr_auto] md:items-center md:gap-2">
-                  <h3 className="text-foreground truncate text-base font-semibold">
-                    {exp.title + ' | ' + exp.company}
+            <div key={i} className="group relative pl-6 sm:pl-8 font-mono">
+              {/* Terminal-style marker */}
+              <div className="text-muted-foreground absolute top-0 left-0 flex size-6 items-center justify-center text-xs font-bold">
+                &gt;
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 className="text-foreground text-base font-bold">
+                    {exp.title} <span className="text-muted-foreground font-normal">@</span>{' '}
+                    {exp.company}
                   </h3>
-                  <time className="text-muted-foreground text-sm font-normal whitespace-nowrap">
+                  <time className="text-muted-foreground text-xs tabular-nums">
                     {exp.duration}
                   </time>
                 </div>
-                <p className="text-muted-foreground text-base tracking-tight">{exp.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
+                  {exp.description}
+                </p>
               </div>
-            </li>
+            </div>
           );
         })}
-      </ol>
+      </div>
     </section>
   );
 }

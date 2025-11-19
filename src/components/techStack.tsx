@@ -1,21 +1,7 @@
 import { TECH_STACK } from '@/constants/techStack';
-import { Fragment } from 'react/jsx-runtime';
 
 export default function TechStack() {
   const groups = TECH_STACK.filter(Boolean);
-
-  const renderChip = (item: { name: string; iconUrl?: string }) => (
-    <span
-      key={item.name}
-      title={item.name}
-      className="border-border bg-card inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-sm font-medium whitespace-nowrap transition hover:shadow-sm"
-      aria-label={item.name}
-    >
-      {item.iconUrl && <img src={item.iconUrl} alt={item.name} className="-ml-0.5 size-4" />}
-      {/* {item.icon && <item.icon className="-ml-0.5 size-5 opacity-80" strokeWidth={1.5} />} */}
-      {item.name}
-    </span>
-  );
 
   return (
     <section id="skills" className="section" aria-labelledby="tech-stack-heading">
@@ -23,36 +9,51 @@ export default function TechStack() {
         Tools & Stack
       </h2>
 
-      <div className="border-border bg-card overflow-hidden rounded-md border">
-        <ul className="divide-border/70 divide-y">
-          {groups.map((g) => (
-            <li
-              key={g.category}
-              className="grid grid-cols-[1fr] items-start gap-2 px-4 py-4 md:grid-cols-[2fr_2fr_7fr] md:gap-4"
-              style={{ gridTemplateRows: `repeat(${g.clusters.length}, auto)` }}
-            >
-              <span
-                className={
-                  'text-muted-foreground/90 col-span-1 row-span-full self-center text-sm font-semibold tracking-wide uppercase'
-                }
-              >
-                {g.category}
-              </span>
+      <div className="bg-card text-card-foreground border-border flex flex-col overflow-hidden rounded-xl border font-mono text-sm">
+        {groups.map((g, i) => (
+          <div
+            key={g.category}
+            className="border-border flex flex-col gap-3 border-b p-4 last:border-b-0 md:flex-row md:gap-6"
+          >
+            <h3 className="text-muted-foreground shrink-0 font-bold tracking-wider uppercase md:w-48">
+              {g.category}
+            </h3>
 
+            <div className="flex w-full flex-col gap-3">
               {g.clusters.map((cluster) => (
-                <Fragment key={cluster.label}>
-                  <span className="text-muted-foreground/80 border-border col-start-2 hidden w-fit rounded-md border bg-transparent px-2 py-1 text-xs font-semibold tracking-wide uppercase select-none md:block">
-                    {cluster.label}
-                  </span>
-
-                  <div className="flex flex-wrap items-start gap-2">
-                    {cluster.items.map((item) => (item ? renderChip(item) : null))}
+                <div
+                  key={cluster.label}
+                  className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-4"
+                >
+                  <div className="shrink-0 md:w-28">
+                    <span className="border-border text-muted-foreground inline-block rounded border px-1.5 py-0.5 text-center text-[10px] font-medium uppercase">
+                      {cluster.label}
+                    </span>
                   </div>
-                </Fragment>
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {cluster.items.map((item) =>
+                      item ? (
+                        <span
+                          key={item.name}
+                          className="border-border bg-muted/20 text-muted-foreground hover:text-foreground hover:border-foreground/30 inline-flex items-center gap-1.5 rounded border px-2 py-0.5 text-xs font-medium transition-colors"
+                        >
+                          {item.iconUrl && (
+                            <img
+                              src={item.iconUrl}
+                              alt={item.name}
+                              className="size-3 opacity-70 grayscale"
+                            />
+                          )}
+                          {item.name}
+                        </span>
+                      ) : null,
+                    )}
+                  </div>
+                </div>
               ))}
-            </li>
-          ))}
-        </ul>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

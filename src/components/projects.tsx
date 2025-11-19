@@ -1,7 +1,7 @@
 import { PROJECTS } from '@/constants/projects';
 import type { Project } from '@/types/project';
 import { cn } from '@/utils/cn';
-import { IconArrowUpRight, IconBrandGithub, IconChevronDown } from '@tabler/icons-react';
+import { IconChevronDown } from '@tabler/icons-react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
 
@@ -12,17 +12,15 @@ interface ProjectItemProps {
 
 export default function Projects() {
   return (
-    <section id="projects" className="section" aria-labelledby="projects-section-heading">
+    <section id="projects" className="section font-mono" aria-labelledby="projects-section-heading">
       <h2 id="projects-section-heading" className="section-heading">
         Projects
       </h2>
 
-      <div className="card overflow-hidden">
-        <ol className="divide-border/70 divide-y">
-          {PROJECTS.map((project, i) => (
-            <ProjectItem key={project.id} project={project} index={i} />
-          ))}
-        </ol>
+      <div className="flex flex-col gap-1">
+        {PROJECTS.map((project, i) => (
+          <ProjectItem key={project.id} project={project} index={i} />
+        ))}
       </div>
     </section>
   );
@@ -30,11 +28,9 @@ export default function Projects() {
 
 function ProjectLinkButton({
   href,
-  icon,
   label,
 }: {
   href: string;
-  icon?: React.ReactNode;
   label: string;
 }) {
   return (
@@ -43,11 +39,10 @@ function ProjectLinkButton({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="border-border bg-muted text-foreground inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-sm font-medium transition-colors hover:border-black"
+        className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
         onClick={(e) => e.stopPropagation()}
       >
-        {icon}
-        <span>{label}</span>
+        [{label}]
       </a>
     </li>
   );
@@ -66,26 +61,25 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         id={buttonId}
         aria-expanded={open}
         aria-controls={panelId}
-        className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-2 text-left"
+        className="hover:bg-muted/40 flex w-full cursor-pointer items-center justify-between gap-3 rounded px-2 py-2 text-left transition-colors"
       >
-        <h3 className="text-foreground max-w-2/3 truncate text-base font-semibold">
-          {project.name}
+        <h3 className="text-foreground max-w-2/3 truncate text-base font-medium">
+          <span className="text-muted-foreground mr-2">&gt;</span>
+          ./projects/{project.id}
         </h3>
 
-        <div className="ms-2 flex min-w-0 shrink-0 items-center gap-2">
+        <div className="ms-2 flex min-w-0 shrink-0 items-center gap-4">
           {project.links && (
-            <ol className="flex items-center gap-1.5">
+            <ol className="flex items-center gap-3">
               {project.links.live && (
                 <ProjectLinkButton
                   href={project.links.live}
-                  icon={<IconArrowUpRight size={12} />}
                   label="live"
                 />
               )}
               {project.links.code && (
                 <ProjectLinkButton
                   href={project.links.code}
-                  icon={<IconBrandGithub size={12} />}
                   label="code"
                 />
               )}
@@ -109,7 +103,9 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         transition={{ duration: 0.3, ease: 'easeOut' }}
         style={{ overflow: 'hidden', height: 0, opacity: 0 }} // Ensure initial state is hidden
       >
-        <div className="flex flex-col gap-4 px-4 pt-1 pb-4 md:flex-row">
+        <div
+          className={cn('flex flex-col gap-4 px-4 pt-2 pb-4 md:flex-row', open && 'bg-muted/40')}
+        >
           {project.image ? (
             <div
               className={cn(

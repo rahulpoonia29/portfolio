@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     id: 'extractous',
     name: 'Extractous Go — Document Extraction Library',
     blurb:
-      'High-performance document extraction library with Rust-powered Apache Tika backend. Supports 60+ formats (PDF, DOCX, XLSX, PPTX) with OCR via Tesseract. Cross-platform Go bindings using CGO and FFI—no JVM required.',
+      'Fast, multi-format document extraction library for Go. Includes streaming API for large files and OCR for scanned documents via Tesseract. Built on Rust for maximum throughput.',
     stack: ['Go', 'Rust', 'CGO', 'FFI', 'Apache Tika', 'Tesseract', 'JNI', 'GitHub Actions'],
     tags: ['Library', 'Systems', 'Cross-Platform'],
     links: {

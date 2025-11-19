@@ -9,23 +9,23 @@ export default function Footer() {
   });
 
   return (
-    <footer role="contentinfo" className="relative mt-2">
+    <footer role="contentinfo" className="relative mt-2 font-mono">
       <div className="mx-auto w-full max-w-3xl px-4 py-6">
         <div className="flex flex-col-reverse items-center justify-between gap-4 md:flex-row">
           <div className="text-muted-foreground flex items-center gap-3 text-sm">
-            <span>© {year} Rahul Poonia</span>
-            <span className="bg-ring/80 hidden h-1 w-1 rounded-full md:inline-block" />
-            <span className="whitespace-nowrap">Updated {updated}</span>
+            <span>// &copy; {year} Rahul Poonia</span>
+            <span className="hidden md:inline-block">|</span>
+            <span className="whitespace-nowrap">git status: clean</span>
           </div>
 
           {email ? (
             <a
               href={email.link}
-              className="interactive border-border bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium hover:brightness-110"
+              className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
               aria-label={`Email ${email.text}`}
               title={email.text}
             >
-              <span>Let’s build something</span>
+              <span>$ ./contact.sh</span>
             </a>
           ) : null}
         </div>

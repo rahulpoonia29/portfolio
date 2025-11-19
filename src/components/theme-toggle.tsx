@@ -1,14 +1,12 @@
 import { cn } from '@/utils/cn';
-import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 
 type Props = {
   className?: string;
-  iconClassName?: string;
 };
 
-export default function ThemeToggle({ className, iconClassName }: Props) {
+export default function ThemeToggle({ className }: Props) {
   const [isDark, setIsDark] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -61,12 +59,15 @@ export default function ThemeToggle({ className, iconClassName }: Props) {
   }, [isDark]);
 
   return (
-    <button ref={buttonRef} onClick={toggleTheme} className={cn(className)}>
-      {isDark ? (
-        <IconSunFilled className={cn('text-amber-300', iconClassName)} />
-      ) : (
-        <IconMoonFilled className={cn('fill-zinc-450', iconClassName)} />
+    <button
+      ref={buttonRef}
+      onClick={toggleTheme}
+      className={cn(
+        'text-muted-foreground hover:text-foreground font-mono text-xs font-medium transition-colors',
+        className,
       )}
+    >
+      [{isDark ? ' light ' : ' dark '}]
     </button>
   );
 }

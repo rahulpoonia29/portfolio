@@ -1,128 +1,66 @@
 import { CONTACT_DETAILS } from '@/constants/contactDetails';
-import { IconCode } from '@tabler/icons-react';
-import { useEffect, useState } from 'react';
-import { InlinePopover } from './inline-popover';
-import { Timer } from './timer';
-import { ClientOnly } from 'vite-react-ssg/single-page';
-import ThemeToggle from './theme-toggle';
-
-function useLocalTime() {
-  const [time, setTime] = useState<string>('00:00 PM');
-  useEffect(() => {
-    const update = () =>
-      setTime(
-        new Date().toLocaleTimeString([], {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-        }),
-      );
-    update();
-    const id = setInterval(update, 600);
-    return () => clearInterval(id);
-  }, []);
-  return time;
-}
 
 export default function Hero() {
-  const time = useLocalTime();
-
   return (
-    <section id="home" className="flex scroll-mt-20 flex-col gap-4" aria-labelledby="hero-heading">
-      <div className="grid grid-cols-[auto_1fr_auto_auto] items-center gap-3">
-        <IconCode
-          size={28}
-          className="text-foreground cursor-pointer transition-transform duration-300 hover:-rotate-12"
-          aria-hidden="true"
-        />
-        <h1 id="hero-heading" className="text-primary text-2xl font-semibold">
-          Rahul Poonia
+    <section id="home" className="flex scroll-mt-20 flex-col gap-6 font-mono" aria-labelledby="hero-heading">
+      <div className="flex items-center gap-2">
+        <h1 id="hero-heading" className="text-primary text-2xl font-bold tracking-tight">
+          &gt; Rahul Poonia<span className="animate-blink ml-1 inline-block h-6 w-2.5 bg-current align-middle"></span>
         </h1>
-        <ClientOnly>
-          {() => <ThemeToggle className="chip cursor-pointer" iconClassName="size-5" />}
-        </ClientOnly>
-        <ClientOnly>{() => <Timer value={time} />}</ClientOnly>
       </div>
-      <div className="space-y-3">
-        <p className="text-muted-foreground max-w text-base leading-relaxed text-pretty">
-          Hey, I’m a B.Tech. student at IIT Kharagpur and a full-stack developer. I like taking raw
-          ideas and shaping them into working products. Currently working on a local RAG desktop app
-          that makes your documents searchable.
-        </p>
-        <p className="text-muted-foreground max-w text-base leading-relaxed text-pretty">
-          I usually build with{' '}
-          <InlinePopover label={<span className="text-foreground">Technologies</span>}>
-            <div className="space-y-2">
-              <div className="text-muted-foreground text-xs tracking-wider uppercase">
-                Web & Backend
-              </div>
-              <ol className="flex flex-wrap gap-1.5">
-                {[
-                  'React',
-                  'Next.js',
-                  'TypeScript',
-                  'Go',
-                  'Python',
-                  'Node.js',
-                  'Express',
-                  'Hono',
-                  'Postgres',
-                  'MongoDB',
-                  'SQLite',
-                  'Prisma',
-                  'Drizzle',
-                ].map((t) => (
-                  <li key={t} className="chip">
-                    {t}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </InlinePopover>{' '}
-          and my daily toolkit includes{' '}
-          <InlinePopover label={<span className="text-foreground">Dev Tools & Infra</span>}>
-            <div className="space-y-2">
-              <div className="text-muted-foreground text-xs tracking-wider uppercase">
-                Dev Tools & Infra
-              </div>
-              <ol className="flex flex-wrap gap-1.5">
-                {[
-                  'VS Code',
-                  'Neovim',
-                  'GitHub',
-                  'Docker',
-                  'Nginx',
-                  'AWS EC2',
-                  'AWS SES',
-                  'AWS SQS',
-                  'Vercel',
-                  'PM2',
-                  'GitHub Actions',
-                ].map((t) => (
-                  <li key={t} className="chip">
-                    {t}
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </InlinePopover>
-          .
+
+      <div className="space-y-4 text-sm md:text-base">
+        <p className="text-muted-foreground leading-relaxed">
+          <span className="text-primary font-bold">#</span> B.Tech. student at IIT Kharagpur & Full-stack developer.
+          <br />
+          <span className="text-primary font-bold">#</span> Turning raw ideas into working products.
+          <br />
+          <span className="text-primary font-bold">#</span> Currently building a local RAG desktop app.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2 text-sm font-medium">
+        <div className="space-y-2">
+          <p className="text-muted-foreground">
+            <span className="text-foreground font-bold">$ stack</span> --web --backend
+          </p>
+          <div className="text-muted-foreground/80 flex flex-wrap gap-x-3 gap-y-1 pl-4">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>TypeScript</span>
+            <span>Go</span>
+            <span>Python</span>
+            <span>Node.js</span>
+            <span>Hono</span>
+            <span>Postgres</span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <p className="text-muted-foreground">
+            <span className="text-foreground font-bold">$ stack</span> --tools --infra
+          </p>
+          <div className="text-muted-foreground/80 flex flex-wrap gap-x-3 gap-y-1 pl-4">
+            <span>VS Code</span>
+            <span>Neovim</span>
+            <span>Docker</span>
+            <span>AWS</span>
+            <span>Vercel</span>
+            <span>GitHub Actions</span>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-3 text-sm font-medium">
           {CONTACT_DETAILS.map((c) => {
             return (
               <a
                 href={c.link}
-                className="border-border hover:border-ring focus-visible:ring-ring/60 inline-flex cursor-pointer items-center gap-2 overflow-hidden rounded-md border p-1 transition-colors focus:outline-none focus-visible:ring-2"
+                className="text-muted-foreground hover:text-foreground inline-flex cursor-pointer items-center gap-2 transition-colors"
                 key={c.link}
                 aria-label={c.text}
                 title={c.text}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <c.icon className="text-foreground/80 size-5" stroke={1.5} />
-                <span className="hidden sm:block">{c.text}</span>
+                [{c.text}]
               </a>
             );
           })}
