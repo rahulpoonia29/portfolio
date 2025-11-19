@@ -2,7 +2,7 @@ export interface ExperienceItem {
   title: string;
   company: string;
   duration: string;
-  description: string; // one-liner summary
+  description: string;
 }
 
 export const EXPERIENCE: ExperienceItem[] = [

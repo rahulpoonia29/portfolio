@@ -60,6 +60,7 @@ export default function ThemeToggle({ className }: Props) {
 
   return (
     <button
+      id="theme-toggle"
       ref={buttonRef}
       onClick={toggleTheme}
       className={cn(

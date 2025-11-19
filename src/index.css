@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Doto:wght@100..900&display=swap');
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -6,7 +6,7 @@
 :root {
   --background: #faf9f6;
   --foreground: oklch(0.145 0 0);
-  --radius: 0.65rem;
+  --radius: 0rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -28,7 +28,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 0rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -107,9 +107,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif); */
   --font-mono: 'JetBrains Mono', monospace;
   --font-doto: 'Doto', sans-serif;
 
@@ -117,21 +114,11 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
-  --shadow-2xs: var(--shadow-2xs);
-  --shadow-xs: var(--shadow-xs);
-  --shadow-sm: var(--shadow-sm);
-  --shadow: var(--shadow);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-  --shadow-xl: var(--shadow-xl);
-  --shadow-2xl: var(--shadow-2xl);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-
     text-rendering: optimizeLegibility;
   }
 
@@ -145,39 +132,19 @@
     background-size: 24px 24px;
     background-attachment: fixed;
   }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
 }
 
 @layer components {
   .section {
-    @apply border-border flex scroll-mt-24 flex-col gap-5 pt-10;
+    @apply border-border flex scroll-mt-24 flex-col gap-5 pt-2;
   }
 
   .section-heading {
     @apply text-foreground text-xl font-semibold tracking-tight md:text-2xl;
-  }
-
-  .chip {
-    @apply inline-flex items-center gap-1.5 rounded-md border bg-white/70 px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-[0_1px_0_0_rgba(0, 0, 0, 0.04)] ring-1 ring-black/5 transition hover:bg-white hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70 dark:text-zinc-300 dark:hover:bg-zinc-900/90;
-  }
-
-  .btn {
-    @apply focus-visible:ring-ring/60 inline-flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium shadow-[0_1px_0_0_rgba(0, 0, 0, 0.04)] ring-1 ring-black/5 transition focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-60;
-  }
-
-  .btn-primary {
-    @apply bg-primary text-primary-foreground hover:brightness-110;
-  }
-
-  .btn-outline {
-    @apply border-border hover:bg-muted/60 border bg-transparent;
-  }
-
-  .interactive {
-    @apply focus-visible:ring-ring/60 focus-visible:ring-2 focus-visible:outline-none;
-  }
-
-  .card {
-    @apply bg-card text-card-foreground rounded-lg border border-black/5 shadow-sm;
   }
 
   .container {
@@ -186,7 +153,6 @@
 
   /* Blinking cursor animation */
   @keyframes blink {
-
     0%,
     100% {
       opacity: 1;
@@ -205,29 +171,26 @@
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
-
   mix-blend-mode: normal;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-50 dark:bg-zinc-900;
+  @apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-md bg-zinc-400 dark:bg-zinc-600;
-
-  border: 2px solid transparent;
-
-  background-clip: padding-box;
+  @apply bg-muted-foreground/40 hover:bg-muted-foreground/60;
+  border: 2px solid var(--background);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-zinc-500 dark:bg-zinc-500;
+::-webkit-scrollbar-corner {
+  @apply bg-background;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,29 +1,18 @@
+import { motion } from 'motion/react';
 import Experience from './components/experience';
 import Footer from './components/footer';
 import Hero from './components/hero';
 import Projects from './components/projects';
 import TechStack from './components/techStack';
 import './index.css';
-import { motion } from 'motion/react';
-import { ClientOnly } from 'vite-react-ssg/single-page';
-import ThemeToggle from './components/theme-toggle';
+
+import CommandMenu from './components/command-menu';
 
 function App() {
   return (
     <>
-      {/* Subtle top gradient for depth */}
-      {/* Gradient removed for terminal vibe */}
-
-      <div className="fixed top-6 right-6 z-50">
-        <ClientOnly>
-          {() => (
-            <ThemeToggle
-              className="border-border hover:bg-muted/80 flex size-9 cursor-pointer items-center justify-center rounded-md border bg-transparent transition-colors"
-              iconClassName="size-4"
-            />
-          )}
-        </ClientOnly>
-      </div>
+      <CommandMenu />
+      <div className="fixed top-6 right-6 z-50"></div>
 
       <motion.main
         role="main"

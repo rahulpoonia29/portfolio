@@ -10,7 +10,7 @@ export default function Experience() {
       <div className="flex flex-col gap-8">
         {EXPERIENCE.map((exp, i) => {
           return (
-            <div key={i} className="group relative pl-6 sm:pl-8 font-mono">
+            <div key={i} className="group relative pl-6 font-mono sm:pl-8">
               {/* Terminal-style marker */}
               <div className="text-muted-foreground absolute top-0 left-0 flex size-6 items-center justify-center text-xs font-bold">
                 &gt;
@@ -22,9 +22,7 @@ export default function Experience() {
                     {exp.title} <span className="text-muted-foreground font-normal">@</span>{' '}
                     {exp.company}
                   </h3>
-                  <time className="text-muted-foreground text-xs tabular-nums">
-                    {exp.duration}
-                  </time>
+                  <time className="text-muted-foreground text-xs tabular-nums">{exp.duration}</time>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
                   {exp.description}
