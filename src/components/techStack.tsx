@@ -10,7 +10,7 @@ export default function TechStack() {
       </h2>
 
       <div className="flex flex-col gap-6 font-mono text-sm">
-        {groups.map((g, i) => (
+        {groups.map((g) => (
           <div key={g.category} className="flex flex-col gap-3 md:flex-row md:gap-6">
             <h3 className="text-muted-foreground shrink-0 font-bold tracking-wider uppercase md:w-48">
               {g.category}

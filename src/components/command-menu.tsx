@@ -66,7 +66,7 @@ export default function CommandMenu() {
             <CommandItem keyKey="l" label="Visit LinkedIn" />
             <CommandItem keyKey="i" label="Visit Instagram" />
             <CommandItem keyKey="e" label="Send Email" />
-            <CommandItem keyKey="Ctrl+K | ?" label="Toggle Menu" />
+            <CommandItem keyKey="Ctrl+K" label="Toggle Menu" />
             <CommandItem keyKey="Esc" label="Close" />
           </div>
         </div>
