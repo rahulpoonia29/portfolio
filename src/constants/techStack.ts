@@ -86,7 +86,7 @@ export const TECH_STACK: {
         label: 'AI Tools',
         items: [
           { name: 'LangChain', iconUrl: 'https://svgl.app/library/langchain.svg' },
-          { name: 'Vector Search', name: 'Vector Search' },
+          { name: 'Vector Search',iconUrl:"https://svgl.app/library/vector.svg" },
           { name: 'OpenAI API', iconUrl: 'https://svgl.app/library/openai.svg' },
         ],
       },
