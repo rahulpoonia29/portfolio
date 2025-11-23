@@ -30,6 +30,9 @@ export default function TechStack() {
                           src={item.iconUrl}
                           alt={item.name}
                           className="size-3 opacity-70 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
                         />
                       )}
                       {item.name}

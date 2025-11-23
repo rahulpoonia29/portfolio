@@ -73,7 +73,7 @@ export default function Hero() {
           })}
         </div>
 
-        <p className="text-muted-foreground/50 mt-2 text-xs">
+        <p className="text-muted-foreground/50 mt-2 hidden text-xs md:block">
           // Press <span className="font-bold">Ctrl+K</span> to open commands
         </p>
       </div>

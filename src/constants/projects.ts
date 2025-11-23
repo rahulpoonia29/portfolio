@@ -22,6 +22,18 @@ export const PROJECTS: Project[] = [
     links: { code: 'https://github.com/rahulpoonia29/api-gateway' },
   },
   {
+    id: 'iitkgp-erp-login',
+    name: 'IITKGP-ERP-LOGIN — ERP Login Package',
+    blurb:
+      'Easily log in to IIT Kharagpur ERP from Node.js, with both CLI and programmatic APIs. Handles OTP, security questions, and session management.',
+    stack: ['Node.js', 'TypeScript', 'Puppeteer', 'CLI'],
+    tags: ['Library', 'Utility', 'Automation'],
+    links: {
+      live: 'https://www.npmjs.com/package/iitkgp-erp-login',
+      code: 'https://github.com/rahulpoonia29/IITKGP-ERP-LOGIN',
+    },
+  },
+  {
     id: 'applic',
     name: 'Applic — Job Application Tracker',
     blurb:

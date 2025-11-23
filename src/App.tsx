@@ -12,11 +12,10 @@ function App() {
   return (
     <>
       <CommandMenu />
-      <div className="fixed top-6 right-6 z-50"></div>
 
       <motion.main
         role="main"
-        className="container space-y-10 pt-24 pb-20 md:max-w-3xl md:space-y-12"
+        className="container space-y-8 pt-12 pb-20 md:max-w-3xl md:space-y-12 md:pt-24"
         initial="hidden"
         animate="visible"
         variants={{

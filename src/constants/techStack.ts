@@ -65,8 +65,8 @@ export const TECH_STACK: {
             name: 'PostgreSQL',
             iconUrl: 'https://svgl.app/library/postgresql.svg',
           },
-          { name: 'MongoDB', iconUrl: 'https://svgl.app/library/mongodb.svg' },
-          { name: 'SQLite', iconUrl: 'https://svgl.app/library/sqlite.svg' },
+          { name: 'SQLite', iconUrl: 'https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg' },
+          { name: 'MongoDB', iconUrl: 'https://svgl.app/library/mongodb-icon-dark.svg' },
         ],
       },
       {
@@ -85,9 +85,10 @@ export const TECH_STACK: {
       {
         label: 'AI Tools',
         items: [
+          { name: 'llama.cpp', iconUrl: 'https://svgl.app/library/ollama.svg' },
+          { name: 'Hugging Face', iconUrl: 'https://svgl.app/library/hugging_face.svg' },
           { name: 'LangChain', iconUrl: 'https://svgl.app/library/langchain.svg' },
-          { name: 'Vector Search',iconUrl:"https://svgl.app/library/vector.svg" },
-          { name: 'OpenAI API', iconUrl: 'https://svgl.app/library/openai.svg' },
+          { name: 'Vector Search' },
         ],
       },
     ],
@@ -102,6 +103,10 @@ export const TECH_STACK: {
           { name: 'GitHub', iconUrl: 'https://svgl.app/library/github_light.svg' },
           { name: 'GitHub Actions', iconUrl: 'https://svgl.app/library/github-actions.svg' },
         ],
+      },
+      {
+        label: 'Containerization',
+        items: [{ name: 'Docker', iconUrl: 'https://svgl.app/library/docker.svg' }],
       },
       {
         label: 'Cloud & Hosting',
