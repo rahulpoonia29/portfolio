@@ -4,15 +4,10 @@ import { ClientOnly } from 'vite-react-ssg/single-page';
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="flex scroll-mt-20 flex-col gap-6 font-mono"
-      aria-labelledby="hero-heading"
-    >
+    <section id="home" className="flex flex-col gap-6 font-mono" aria-labelledby="hero-heading">
       <div className="flex items-center gap-2">
         <h1 id="hero-heading" className="text-primary text-2xl font-bold tracking-tight">
           &gt; Rahul Poonia
-          <span className="animate-blink ml-1.5 inline-block h-6 w-2 -translate-y-0.5 bg-current align-middle"></span>
         </h1>
         <ClientOnly>
           {() => (
@@ -22,10 +17,13 @@ export default function Hero() {
       </div>
 
       <div className="space-y-4 text-sm md:text-base">
-        <p className="text-muted-foreground max-w-2xl leading-relaxed">
-          B.Tech. student at IIT Kharagpur & Full-stack developer. I like taking raw ideas and
-          shaping them into working products. Currently building a local RAG desktop app that makes
-          your documents searchable.
+        <p className="text-muted-foreground max-w-full leading-relaxed">
+          B.Tech student at <span className="text-foreground font-medium">IIT Kharagpur</span>{' '}
+          interested in software development and backend systems. I enjoy exploring new ideas and
+          turning some of them into working projects, from web apps and React Native applications to
+          building a Go library like{' '}
+          <span className="text-foreground font-medium">Extractous-Go</span>. Currently
+          experimenting on tracking real-time train data through web scraping.
         </p>
 
         <div className="space-y-2">
@@ -35,7 +33,6 @@ export default function Hero() {
               'TypeScript',
               'Go',
               'Python',
-              'Rust',
               'React',
               'Next.js',
               'Node.js',
@@ -73,8 +70,8 @@ export default function Hero() {
           })}
         </div>
 
-        <p className="text-muted-foreground/50 mt-2 hidden text-xs md:block">
-          // Press <span className="font-bold">Ctrl+K</span> to open commands
+        <p className="text-muted-foreground/50 mt-2 hidden items-center gap-1.5 text-xs md:flex">
+          // Press <kbd className="kbd">Ctrl</kbd> + <kbd className="kbd">K</kbd> to open commands
         </p>
       </div>
     </section>

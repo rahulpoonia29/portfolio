@@ -34,7 +34,10 @@ export const TECH_STACK: {
       {
         label: 'State & Styling',
         items: [
-          { name: 'Zustand', iconUrl: 'https://svgl.app/library/zustand.svg' },
+          {
+            name: 'Zustand',
+            // iconUrl: 'https://svgl.app/library/zustand.svg'
+          },
           {
             name: 'Tailwind CSS',
             iconUrl: 'https://svgl.app/library/tailwindcss.svg',
@@ -74,7 +77,10 @@ export const TECH_STACK: {
         items: [
           { name: 'Drizzle', iconUrl: 'https://svgl.app/library/drizzle-orm_light.svg' },
           { name: 'Prisma', iconUrl: 'https://svgl.app/library/prisma.svg' },
-          { name: 'Mongoose', iconUrl: 'https://svgl.app/library/mongoose.svg' },
+          {
+            name: 'Mongoose',
+            // iconUrl: 'https://svgl.app/library/mongoose.svg'
+          },
         ],
       },
     ],
@@ -85,9 +91,15 @@ export const TECH_STACK: {
       {
         label: 'AI Tools',
         items: [
-          { name: 'llama.cpp', iconUrl: 'https://svgl.app/library/ollama.svg' },
+          {
+            name: 'llama.cpp',
+            // iconUrl: 'https://svgl.app/library/ollama.svg'
+          },
           { name: 'Hugging Face', iconUrl: 'https://svgl.app/library/hugging_face.svg' },
-          { name: 'LangChain', iconUrl: 'https://svgl.app/library/langchain.svg' },
+          {
+            name: 'LangChain',
+            // iconUrl: 'https://svgl.app/library/langchain.svg'
+          },
           { name: 'Vector Search' },
         ],
       },
@@ -101,7 +113,10 @@ export const TECH_STACK: {
         items: [
           { name: 'Git', iconUrl: 'https://svgl.app/library/git.svg' },
           { name: 'GitHub', iconUrl: 'https://svgl.app/library/github_light.svg' },
-          { name: 'GitHub Actions', iconUrl: 'https://svgl.app/library/github-actions.svg' },
+          {
+            name: 'GitHub Actions',
+            // iconUrl: 'https://svgl.app/library/github-actions.svg',
+          },
         ],
       },
       {

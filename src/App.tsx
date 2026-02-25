@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import Experience from './components/experience';
 import Footer from './components/footer';
 import Hero from './components/hero';
@@ -13,34 +12,15 @@ function App() {
     <>
       <CommandMenu />
 
-      <motion.main
+      <main
         role="main"
         className="container space-y-8 pt-12 pb-20 md:max-w-3xl md:space-y-12 md:pt-24"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
-        }}
       >
-        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-          <Hero />
-        </motion.div>
-        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-          <Projects />
-        </motion.div>
-        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-          <Experience />
-        </motion.div>
-        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-          <TechStack />
-        </motion.div>
-      </motion.main>
+        <Hero />
+        <Projects />
+        <Experience />
+        <TechStack />
+      </main>
 
       <Footer />
     </>

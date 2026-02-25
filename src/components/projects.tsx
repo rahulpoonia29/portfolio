@@ -2,7 +2,6 @@ import { PROJECTS } from '@/constants/projects';
 import type { Project } from '@/types/project';
 import { cn } from '@/utils/cn';
 import { IconChevronDown } from '@tabler/icons-react';
-import { motion } from 'motion/react';
 import { useState } from 'react';
 
 interface ProjectItemProps {
@@ -33,7 +32,7 @@ function ProjectLinkButton({ href, label }: { href: string; label: string }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
+        className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors hover:underline hover:underline-offset-4"
         onClick={(e) => e.stopPropagation()}
       >
         [{label}]
@@ -47,6 +46,8 @@ function ProjectItem({ project, index }: ProjectItemProps) {
   const panelId = `project-panel-${index}`;
   const buttonId = `project-trigger-${index}`;
 
+  const [title, subtitle] = project.name.split(' — ');
+
   return (
     <li className="border-border list-none border-b last:border-0">
       <button
@@ -54,13 +55,18 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         id={buttonId}
         aria-expanded={open}
         aria-controls={panelId}
-        className="group hover:bg-muted/50 flex w-full cursor-pointer items-center justify-between gap-3 px-2 py-3 text-left transition-colors"
+        className="group hover:bg-muted flex w-full cursor-pointer items-center justify-between gap-3 py-3 pe-2 text-left transition-colors"
       >
         <h3 className="text-foreground max-w-[75%] truncate text-base font-bold md:max-w-[66%]">
           <span className="text-muted-foreground mr-3 inline-block opacity-50 transition-all group-hover:translate-x-1 group-hover:opacity-100">
             &gt;
           </span>
-          {project.name}
+          {title}
+          {subtitle && (
+            <span className="text-muted-foreground ml-2 hidden font-normal sm:inline-block">
+              — {subtitle}
+            </span>
+          )}
         </h3>
 
         <div className="ms-2 flex min-w-0 shrink-0 items-center gap-4">
@@ -80,33 +86,38 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         </div>
       </button>
 
-      <motion.div
+      <div
         id={panelId}
         role="region"
         aria-labelledby={buttonId}
-        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
-        style={{ overflow: 'hidden', height: 0, opacity: 0 }}
+        className={cn(
+          'grid transition-all duration-300 ease-in-out',
+          open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0',
+        )}
       >
-        <div className={cn('px-4 pt-2 pb-6', open && 'bg-muted/20')}>
-          <div className="ml-3 space-y-4 pl-0.5">
-            <p className="text-muted-foreground text-pretty md:text-base">{project.blurb}</p>
+        <div className="overflow-hidden">
+          <div className={cn('px-4 pt-2 pb-6', open && 'bg-muted/20')}>
+            <div className="ml-3 space-y-4 pl-0.5">
+              <p className="text-muted-foreground text-pretty md:text-base">{project.blurb}</p>
 
-            {project.stack?.length > 0 && (
-              <div className="flex flex-wrap gap-1.5">
-                {project.stack.map((stack) => (
-                  <span
-                    key={stack}
-                    className="border-border bg-muted/20 text-muted-foreground hover:text-foreground hover:border-foreground/30 inline-flex items-center rounded border px-2 py-0.5 text-xs font-medium transition-colors"
-                  >
-                    {stack}
-                  </span>
-                ))}
+              <div className="flex flex-col gap-3">
+                {project.stack?.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.stack.map((stack) => (
+                      <span
+                        key={stack}
+                        className="border-border bg-muted/20 text-muted-foreground hover:text-foreground hover:border-foreground/30 inline-flex items-center rounded border px-2 py-0.5 text-xs font-medium transition-colors"
+                      >
+                        {stack}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </li>
   );
 }

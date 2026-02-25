@@ -13,7 +13,6 @@
     "@tabler/icons-react": "^3.35.0",
     "@tailwindcss/vite": "^4.1.13",
     "clsx": "^2.1.1",
-    "motion": "^12.23.19",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwind-merge": "^3.3.1",
@@ -39,9 +38,6 @@
     "vite-react-ssg": "^0.8.9"
   },
   "pnpm": {
-    "overrides": {
-      "vite": "npm:rolldown-vite@7.1.12"
-    },
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide"
     ]
@@ -60,5 +56,8 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ]
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.12"
   }
 }
