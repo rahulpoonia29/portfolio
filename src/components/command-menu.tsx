@@ -21,7 +21,7 @@ export default function CommandMenu() {
         return;
       }
 
-      // if (!isOpen) return; // Only handle other keys if open
+      if (!isOpen) return;
 
       switch (e.key) {
         case 'Escape':

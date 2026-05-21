@@ -7,6 +7,13 @@ export interface ExperienceItem {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
+    title: 'Full‑Stack Developer',
+    company: 'Neosophical Labs',
+    duration: 'May 2025 – Present',
+    description:
+      'Building AI automation and systems engineering solutions at an AI-first company. Developing conversational agents, internal copilots, and end-to-end automation infrastructure for enterprise systems including CRM, lead routing, payments, and analytics pipelines.',
+  },
+  {
     title: 'Backend Developer',
     company: 'OpenSoft (GC), IIT Kharagpur',
     duration: 'Mar 2025',

@@ -17,6 +17,8 @@ export const TECH_STACK: {
           },
           { name: 'Python', iconUrl: 'https://svgl.app/library/python.svg' },
           { name: 'Go', iconUrl: 'https://svgl.app/library/golang.svg' },
+          { name: 'Rust', iconUrl: 'https://svgl.app/library/rust.svg' },
+          { name: 'Kotlin', iconUrl: 'https://svgl.app/library/kotlin.svg' },
         ],
       },
     ],
@@ -29,6 +31,8 @@ export const TECH_STACK: {
         items: [
           { name: 'React', iconUrl: 'https://svgl.app/library/react_light.svg' },
           { name: 'Next.js', iconUrl: 'https://svgl.app/library/nextjs_icon_dark.svg' },
+          { name: 'React Native', iconUrl: 'https://svgl.app/library/react_light.svg' },
+          { name: 'Expo' },
         ],
       },
       {
@@ -86,21 +90,24 @@ export const TECH_STACK: {
     ],
   },
   {
-    category: 'LLM',
+    category: 'LLM & AI',
     clusters: [
       {
         label: 'AI Tools',
         items: [
-          {
-            name: 'llama.cpp',
-            // iconUrl: 'https://svgl.app/library/ollama.svg'
-          },
+          { name: 'LangChain' },
           { name: 'Hugging Face', iconUrl: 'https://svgl.app/library/hugging_face.svg' },
-          {
-            name: 'LangChain',
-            // iconUrl: 'https://svgl.app/library/langchain.svg'
-          },
+          { name: 'Gemini API' },
           { name: 'Vector Search' },
+        ],
+      },
+      {
+        label: 'Data & Scraping',
+        items: [
+          { name: 'Web Scraping' },
+          { name: 'BeautifulSoup' },
+          { name: 'FastAPI', iconUrl: 'https://svgl.app/library/fastapi.svg' },
+          { name: 'Real-time Pipelines' },
         ],
       },
     ],

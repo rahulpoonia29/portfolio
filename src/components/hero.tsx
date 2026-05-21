@@ -21,9 +21,9 @@ export default function Hero() {
           B.Tech student at <span className="text-foreground font-medium">IIT Kharagpur</span>{' '}
           interested in software development and backend systems. I enjoy exploring new ideas and
           turning some of them into working projects, from web apps and React Native applications to
-          building a Go library like{' '}
-          <span className="text-foreground font-medium">Extractous-Go</span>. Currently
-          experimenting on tracking real-time train data through web scraping.
+          building libraries and full-stack systems like{' '}
+          <span className="text-foreground font-medium">Extractous-Go</span> and{' '}
+          <span className="text-foreground font-medium">Trano</span>.
         </p>
 
         <div className="space-y-2">
@@ -32,11 +32,15 @@ export default function Hero() {
             {[
               'TypeScript',
               'Go',
+              'Rust',
               'Python',
+              'Kotlin',
               'React',
+              'React Native',
               'Next.js',
               'Node.js',
               'PostgreSQL',
+              'WebScraping',
               'Docker',
               'AWS',
             ].map((t) => (

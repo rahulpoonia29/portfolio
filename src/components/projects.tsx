@@ -55,7 +55,7 @@ function ProjectItem({ project, index }: ProjectItemProps) {
         id={buttonId}
         aria-expanded={open}
         aria-controls={panelId}
-        className="group hover:bg-muted flex w-full cursor-pointer items-center justify-between gap-3 py-3 pe-2 text-left transition-colors"
+        className="group hover:bg-muted flex w-full cursor-pointer items-center justify-between gap-3 py-3 px-2 text-left transition-colors"
       >
         <h3 className="text-foreground max-w-[75%] truncate text-base font-bold md:max-w-[66%]">
           <span className="text-muted-foreground mr-3 inline-block opacity-50 transition-all group-hover:translate-x-1 group-hover:opacity-100">

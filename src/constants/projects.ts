@@ -2,6 +2,28 @@ import type { Project } from '@/types/project';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'trano',
+    name: 'Trano — Real-Time Train Tracking System',
+    blurb:
+      'A full-stack web scraping and tracking system for real-time Indian railway data. Built with a Go poller for metrics collection, a React frontend with shadcn/ui, and a scalable backend architecture featuring status monitoring, metrics aggregation, and live data pipelines.',
+    stack: ['Go', 'React', 'TypeScript', 'Web Scraping', 'Real-Time Data', 'Metrics', 'shadcn/ui'],
+    tags: ['Full-Stack', 'Real-Time', 'Data Pipeline'],
+    links: {
+      code: 'https://github.com/rahulpoonia29/trano',
+    },
+  },
+  {
+    id: 'butter',
+    name: 'Butter — AI-Powered Android Keyboard',
+    blurb:
+      'A Gboard-like Android keyboard with AI-driven reply suggestions. Built with React Native and Kotlin, it leverages the Accessibility API to read chat context and intelligently suggest responses. Features a custom toolbar for clipboard, screenshots, and media insertion.',
+    stack: ['React Native', 'Kotlin', 'Accessibility API', 'Expo', 'Android'],
+    tags: ['Mobile', 'AI Integration', 'Android'],
+    links: {
+      code: 'https://github.com/rahulpoonia29/butter',
+    },
+  },
+  {
     id: 'extractous',
     name: 'Extractous Go — Document Extraction Library',
     blurb:
